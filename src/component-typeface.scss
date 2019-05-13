@@ -1,0 +1,31 @@
+// need two typeface files bacause otherwise
+// there's path problem during build for template and
+// components
+html {
+  // Adjust font size
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  // Font variant
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  // Smoothing
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+@import url('../../../../node_modules/typeface-roboto/index.css');
+@font-face {
+  font-family: 'FmhIcons';
+  src: url('../../assets/fonts/fmh.eot');
+  src:url('../../assets/fonts/fmh.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/fmh.svg#fmh') format('svg'),
+    url('../../assets/fonts/fmh.woff') format('woff'),
+    url('../../assets/fonts/fmh.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+

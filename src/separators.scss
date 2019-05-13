@@ -1,0 +1,12 @@
+@mixin separator {
+  height: 0px;
+  border: none;
+  border-bottom: 1px solid transparent;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@mixin separator--line {
+  border-bottom: 1px solid #ddd;
+}
+

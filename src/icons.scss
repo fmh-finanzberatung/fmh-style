@@ -1,0 +1,238 @@
+$geldanlageberater:     "\e00a";
+$bausparberater:        "\e010";
+$wohn-riester:          "\e000";
+$hypotheken-darlehen:   "\e008";
+$forward-darlehen:      "\e00b";
+$fmh:                   "\e00c";
+$ratenkredite:          "\e006";
+$girokonto:             "\e009";
+$tagesgeld:             "\e001";
+$festgeld:              "\e00e";
+$langfristige-anlagen:  "\e007";
+$sparbuch:              "\e004";
+$sparplan:              "\e003";
+$zuwachssparen:         "\e005";
+$depotbank:             "\e00f";
+$foerderdarlehen:       "\e00b";
+$kreditkarte:           "\e009";
+$up:                    "\e012";
+$down:                  "\e013";
+$remain:                "\e014";
+$new:                   "\e015";
+$lt:                    "\f104";
+$gt:                    "\f105";
+$folder-closed:         "\f114";
+$folder-open:           "\f115";
+$graph:                 "\e018";
+$rechner:               "\e019";
+$iphone:                "\e017";
+$android:               "\e01a";
+$pdf:                   "\e01b";
+$doc:                   "\e020";
+$add:                   "\e01c";
+$tools:                 "\e01d";
+$exclamation:           "\e01e";
+$spyglass:              "\e011";
+$quick:                 "\e01f";
+$table:                 "\f0ce";
+$baufinanzierungfragen: "\e021";
+$baufinanzierungdialog: "\e022";
+$staat:                 "\e602";
+$persoenlich:           "\e600";
+$individuell:           "\e601";
+$tipp:                  "\e603";
+$handset:               "\e604";
+$quotation:             "\’\’";
+$faq_speech_bubble:     "\e605";
+$fmhindex:              "\e606";
+$award:                 "\e607";
+$article:               "\e608";
+$presse:                "\e609";
+$zinsvergleich:         "\e60a";
+$rechner_invers:        "\e60b";
+$arrow-left:            "\e60c";
+$arrow-down:            "\e60d";
+$arrow-up:              "\e60e";
+$arrow-right:           "\e60f";
+$more:                  "\e610";
+$ok:                    "\e611";
+$schornstein:           "\e612";
+$phone:                 "\e901";
+$mobile-menu-double-down: "\e61b";
+$mobile-menu-double-up:  "\e61a";
+$mobile-menu-close:     "\e619";
+$mobile-disclosure:     "\e618";
+$mobile-circle:         "\e617";
+$mobile-list:           "\e616";
+$mobile-back:           "\e615";
+$mobile-next:           "\e614";
+$mobile-drop:           "\e613";
+$pointer-down:          "\e61d";
+$rect:                  "\e61c";
+$mobile-list-menu-inverse:   "\e61e";
+$immo-haus:             "\e61f";
+$immo-user:             "\e620";
+$immo-arrow-down:       "\e621";
+$immo-minus:            "\e622";
+$immo-cancel:           "\e623";
+$immo-bag:              "\e624";
+$immo-check:            "\e625";
+$immo-camera:           "\e626";
+$immo-smiley:           "\e627";
+$immo-sad:              "\e628";
+$immo-dollar:           "\e629";
+$immo-pig:              "\e62a";
+$immo-question:         "\f128";
+$rating:                "\e902";
+$info:                  "\e903";
+$star:                  "\e908";
+$telefon:               "\e909";
+$star-full:             "\e90e";
+$star-half:             "\e90d";
+
+.icon {
+  &::before {
+    font-family: 'FmhIcons'; 
+  }
+}
+
+
+.icon--hypothek {
+  &::before {
+    content: $hypotheken-darlehen;  
+  }
+}
+
+.icon--forward {
+  &::before {
+    content: $forward-darlehen;  
+  }
+}
+
+.icon--ratenkredit {
+  &::before {
+    content: $ratenkredite;  
+  }
+}
+
+.icon--girokonto {
+  &::before {
+    content: $girokonto;  
+  }
+}
+
+.icon--tagesgeld {
+  &::before {
+    content: $tagesgeld;  
+  }
+}
+
+.icon--festgeld {
+  &::before {
+    content: $festgeld;  
+  }
+}
+
+.icon--bausparen {
+  &::before {
+    content: $bausparberater;  
+  }
+}
+
+.icon--depotbank {
+  &::before {
+    content: $depotbank;  
+  }
+}
+
+.icon--ansparplan {
+  &::before {
+    content: $sparplan;  
+  }
+}
+
+.icon--zuwachssparen {
+  &::before {
+    content: $zuwachssparen;  
+  }
+}
+
+.icon--sparbuch {
+  &::before {
+    content: $sparbuch;  
+  }
+}
+
+.icon--giro {
+  &::before {
+    content: $girokonto;  
+  }
+}
+
+.icon--langfrist {
+  &::before {
+    content: $langfristige-anlagen;  
+  }
+}
+
+
+
+.icon--hamburger {
+  &::before {
+    content: $mobile-list-menu-inverse;
+  }
+}
+
+.icon--gt {
+  &::before {
+    content: $gt;
+  }
+}
+
+.icon--more {
+  &::before {
+    content: $more;
+  }
+}
+
+.icon--star-full {
+  &::before {
+    content: $star-full;
+  }
+}
+
+.icon--star-half {
+  &::before {
+    content: $star-half;
+  }
+}
+
+.icon--arrow-up {
+  &::before {
+    content: $arrow-up;
+  }
+}
+
+.icon--arrow-down {
+  &::before {
+    content: $arrow-down;
+  }
+}
+
+.icon--arrow-left {
+  &::before {
+    content: $arrow-left;
+  }
+}
+
+.icon--arrow-right {
+  &::before {
+    content: $arrow-right;
+  }
+}
+
+.icon--speech-bubble {
+  &::before {
+    content: $faq_speech_bubble;
+  }
+}

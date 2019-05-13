@@ -1,0 +1,227 @@
+@import './colors.scss';
+/*
+html,body {
+  height:100%; // fix IE11 
+  min-height:100%; // fix IE11   
+}
+body {
+  width: 100%
+}
+*/
+
+@mixin border-box {
+  box-sizing: border-box;
+}
+
+@mixin reset-box {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@mixin rounded-corner($vertical, $horizontal, $border-radius) {
+  border-#{$vertical}-#{$horizontal}-radius: $border-radius;
+}
+
+@mixin gradient-background($top-color, $bottom-color) {
+  background: $top-color; /* Old browsers */
+  background: linear-gradient(to bottom, $top-color 1%,$bottom-color 100%); /* W3C */
+}
+
+@mixin slide-in {
+
+}
+
+@mixin slide-out {
+
+}
+
+@mixin show {
+    //top: 0px;
+    transition: all .35s linear;
+    //transition: overflow 1s ease-in;//, opacity 1s ease-out;
+    //visibility: visible;
+    //height: auto;
+    overflow: visible;
+    max-height: 1000px;
+    width: auto;
+    //width: 100%;
+    //opacity: 1;
+    @media screen and (min-width: 1075px) {
+        top: auto;
+    }
+
+}
+
+@mixin hide {
+    //top: -500px;
+    //transition: overflow 1s ease-out;
+    //visibility: hidden;
+    max-height: 0;
+    width: 0;
+    //opacity: 0;
+    overflow: hidden;
+    //border-bottom: 1px solid transparent;
+    @media screen and (min-width: 1075px) {
+        top: auto;
+    }
+}
+
+@mixin dotted-background($colorA, $colorB) {
+    //padding: 2.25em 1.6875em;
+
+    background-image: -webkit-repeating-radial-gradient(center center,
+        $colorA, $colorB 1px,
+        transparent 1px, transparent 100%);
+    background-image: -moz-repeating-radial-gradient(center center,
+        $colorA, $colorB 1px,
+        transparent 1px, transparent 100%);
+    background-image: -ms-repeating-radial-gradient(center center,
+        $colorA, $colorB 1px,
+        transparent 1px, transparent 100%);
+
+    background-image: repeating-radial-gradient(center center,
+        $colorA, $colorB 1px,
+        transparent 1px, transparent 100%);
+
+    -webkit-background-size: 10px 10px;
+    -moz-background-size: 10px 10px;
+    background-size: 10px 10px;
+}
+
+@mixin base-dark-color-background {
+  @include gradient-background(#003f8d, #1a6aaf);
+}
+
+@mixin base-medium-color-background {
+  @include gradient-background($base-light-color, $base-medium-color);
+}
+
+@mixin base-medium-color-background-reverse {
+  @include gradient-background($base-medium-color $base-light-color);
+}
+
+
+@mixin base-light-grey-background {
+  @include gradient-background($neutralLightColor, white);
+}
+
+@mixin base-light-grey-background-reverse {
+  @include gradient-background(#efefef, #fff);
+}
+
+@mixin base-medium-grey-background {
+  @include gradient-background(#ddd, #ccc);
+}
+
+@mixin headline-font {
+  font-family: 'Roboto', arial, helvetica, sans-serif;
+}
+
+@mixin standard-font {
+  font-family: arial, helvetica, sans-serif;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}
+}
+
+@mixin scaleY($scale) {
+  -webkit-transform: scaleY($scale);
+  -ms-transform: scaleY($scale);
+  transform: scaleY($scale);
+}
+
+@mixin g($point) {
+
+  /*
+
+  $xlarge-threshold: 1;
+
+  $medium-threshold: 1;
+
+  $small-threshold: 1;
+
+  $xsmall-threshold: 1;
+
+  */
+
+  //*
+
+  $xlarge-threshold: 1275;
+
+  $medium-threshold: 800;
+
+  $small-threshold: 640;
+
+  $xsmall-threshold: 480;
+
+  //*/
+
+  $g-xlarge: "(min-width: #{$xlarge-threshold}px)";
+  $g-large: "(max-width: #{$xlarge-threshold - 1}px)"; // applies to all cases except desktop
+  $g-medium: "(max-width: #{$medium-threshold - 1}px)";
+  $g-small: "(max-width: #{$small-threshold - 1}px)";
+  $g-xsmall: "(max-width: #{$xsmall-threshold - 1}px)";
+
+
+  @if $point == xlarge {
+      @media #{$g-xlarge} { @content }
+  }
+  @else if $point == large {
+      @media #{$g-large} { @content }
+  }
+  @else if $point == medium {
+      @media #{$g-medium} { @content }
+  }
+  @else if $point == small {
+      @media #{$g-small} { @content }
+  }
+  @else if $point == xsmall {
+      @media #{$g-xsmall} { @content }
+  }
+
+}
+
+$base-total: 1000;
+
+$base-margin: 15;
+
+$base-slim: 310;//(1000 - (4*$base-margin)) / 3; // one third
+
+$base-wide: 660;//($base-slim * 2) + ($base-margin * 2) ; // two thirds
+
+$base-half: 485;
+
+$base-fourth: 227.5;
+
+$base-three-fourths: 742.5;
+
+$base-narrow: 220;
+
+$base-banner: 750;
+
+$base-outline-total: 1000 + (2*$base-margin);
+
+$margin: percentage($base-margin/$base-outline-total);
+
+$slim: percentage($base-slim/$base-outline-total);
+
+$wide: percentage($base-wide/$base-outline-total);
+
+$half: percentage($base-half/$base-outline-total);
+
+$fourth: percentage($base-fourth/$base-outline-total);
+
+$three-fourths: percentage($base-three-fourths/$base-outline-total);
+
+$narrow: percentage($base-narrow/$base-outline-total);
+
+$banner: percentage($base-banner/$base-outline-total);
+
+$total: percentage($base-total/$base-outline-total);
+
+

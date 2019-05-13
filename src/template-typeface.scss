@@ -1,0 +1,18 @@
+// need two typeface files bacause otherwise
+// there's path problem during build for template and
+// components
+html {
+  // Adjust font size
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  // Font variant
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  // Smoothing
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+@import url('../../../node_modules/typeface-roboto/index.css');
