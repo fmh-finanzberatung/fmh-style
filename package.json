@@ -1,0 +1,12 @@
+{
+  "name": "fmh-style",
+  "version": "0.0.2",
+  "description": "FMH SCSS styles",
+  "main": "index.js",
+  "repository": "https://github.com/fmh-finanzberatung/fmh-style.git",
+  "author": "Michael Kastner <kastner@galt.de>",
+  "license": "MIT",
+  "devDependencies": {
+    "typeface-roboto": "^0.0.54"
+  }
+}
