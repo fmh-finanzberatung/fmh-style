@@ -1,11 +1,22 @@
 @import './separators.scss';
 
+$layout__max-width: 1200px;
+
+$layout__box--hor-margin: 10px;
+$layout__box--vert-margin: 15px;
+$layout__box--min-width: 250px;
+
+
+$horMargin: $layout__box--hor-margin; // $horMargin  deprecated 
+$vertMargin: $layout__box--vert-margin; // $vertMargin deprecated
+
+// total width of visible  elements
+
 .layout {
-  //border: 1px solid red;
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: calc(100% - #{2 * $layout__box--hor-margin});
   // before making changes check with separators 
-  max-width: 1220px;
+  max-width: #{$layout__max-width + (2 * $layout__box--vert-margin)};
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;  
@@ -16,21 +27,17 @@
 
 
 // flex shorthand for flex-grow, flex-shrink and flex-basis
-$horMargin: 10px; 
-$vertMargin: 15px;
 
 @mixin calcFlex(
   $fraction,
   $times: 1 
 ) {
   $percentage: (100 / $fraction) * $times;
-  $calculatedHorMargin: 2 * $horMargin;
+  $calculatedHorMargin: 2 * $layout__box--hor-margin;
   $growth: 100 / $fraction;
   $shink: 100 / $fraction;
-  min-width: 250px;
-  margin: $vertMargin $horMargin; 
-  //flex: $growth $growth calc(#{$percentage}% - #{$calculatedHorMargin});
-  //flex: 1 1 calc(#{$percentage}% - #{$calculatedHorMargin});
+  min-width: $layout__box--min-width;
+  margin: $layout__box--vert-margin $layout__box--hor-margin; 
 
   flex-grow: 1;//$times;
   flex-shrink: 1;//$times;
@@ -97,6 +104,17 @@ $vertMargin: 15px;
 // fifth 1 / 5 
 .layout__5 {
   // flex: 1 1 20%;
-  @include calcFlex(4);
+  @include calcFlex(5);
+}
+
+// fifth 1 / 5 
+.layout__5x2 {
+  // flex: 1 1 40%;
+  @include calcFlex(5,2);
+}
+
+.layout__5x3 {
+  // flex: 1 1 60%;
+  @include calcFlex(5,3);
 }
 
