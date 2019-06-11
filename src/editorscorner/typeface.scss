@@ -1,0 +1,51 @@
+html {
+  // Adjust font size
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  // Font variant
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  // Smoothing
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+@import '../fonts.scss';
+@import 'font_roboto';
+@import 'font_fmh';
+@import "font_awesome";
+
+.headline {
+  font-family: $headline-font-family;
+  font-size: $headline-font-size;
+  line-height: $headline-line-height;
+  margin: $title-margin;
+}
+
+.title {
+  font-family: $headline-font-family;
+  font-size: $title-font-size;
+  line-height: $headline-line-height;
+  margin: $title-margin;
+}
+
+.standard {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  line-height: $standard-line-height;
+  margin: $subtitle-margin;
+}
+
+.small {
+  font-family: $standard-font-family;
+  font-size: $small-font-size;
+  line-height: $standard-line-height;
+  margin: $subtitle-margin;
+}
+
+
+
+

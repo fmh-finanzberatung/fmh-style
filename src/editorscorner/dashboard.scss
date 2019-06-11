@@ -1,0 +1,46 @@
+.editorscorner__dashboard {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  max-width: 1220px; // Variable ????
+  margin: auto;
+  padding: 2px;
+
+  .dashboard {
+
+    &__products {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 0 3em 0;
+      padding: 4px;
+      height: 5em;
+      @media only screen and (max-width: $bp-s) {
+        display: block;
+        margin: 0.5em 0.5em 3em 0.5em;
+        height: auto;
+      }
+    }
+
+    &__productname, &__productoption {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      justify-content:center;
+      text-align: center;
+      padding: 0.8em 1.2em;
+      overflow: hidden;
+      border: solid 4px white;
+      background: $neutralBaseColor;
+      @media only screen and (max-width: $bp-s) {
+        display: block;
+        width: 100%;
+        border: none;
+        border-bottom: 1px $neutralMediumColor solid;
+      }
+    }
+
+    &__productname {
+      font-weight: bold;
+    }
+
+  }
+}

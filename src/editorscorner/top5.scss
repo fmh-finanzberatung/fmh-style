@@ -1,0 +1,300 @@
+.editorscorner__top5 {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  max-width: 1220px;
+  margin: auto;
+  padding: 6px;
+
+  .top5 {
+    &__wrapper {
+      margin: 0 0.5rem;
+    }
+
+    &__settings {
+      width: 100%;
+      padding: 8px;
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      border: 2px $neutralBaseColor solid;
+
+      &--label {
+        font-size: 0.8rem;
+      }
+
+      &--value {
+        font-size: 0.8rem;
+      }
+
+    }
+
+    &__table {
+      .top5 {
+        &__entries {
+          margin-top: 0.5rem;
+          margin-bottom: 2rem;
+        }
+
+        &__entry, &__header {
+          display: flex;
+          flex-grow: 1;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: left;
+          text-align: left;
+          padding: 0.5rem;
+          overflow: hidden;
+        }
+
+        &__header {
+          background: $neutralBaseColor;
+          border-bottom: 2px white solid;
+        }
+
+        &__footer {
+          background: $neutralBaseColor;
+          border-bottom: 2px white solid;
+          .footer-more {
+            text-align: right;
+            padding: 0.25rem 0.5rem;
+            a {
+              &:before {
+                margin: 0 .25em 0 -.75em;
+                display: inline-block;
+                content: "\BB";
+              }
+              display: inline-block;
+              font-size: 14.5px;
+              color: #1792d0;
+              line-height: 1.4em;
+              vertical-align: middle;
+              margin: .4em 0 .4em .8em;
+              text-decoration: none;
+            }
+          }
+        }
+
+        &__entry {
+          background: $neutralLightColor;
+          border-bottom: 2px solid white;
+          align-items: flex-start;
+
+        }
+
+        &__header, &__entry {
+          @media only screen and (max-width: $bp-m) {
+            font-size: 90%;
+          }
+          @media only screen and (max-width: $bp-s) {
+            font-size: 85%;
+          }
+          @media only screen and (max-width: $bp-xs) {
+            font-size: 80%;
+          }
+
+          .col-prio-2 {
+            @media only screen and (max-width: $bp-s) {
+              display: none;
+            }
+          }
+          .col-prio-3 {
+            @media only screen and (max-width: $bp-m) {
+              display: none;
+            }
+          }
+          .col-bank {
+            width: 28%;
+            font-weight: bold;
+          }
+
+          .col-item {
+            width: 14%;
+            @media only screen and (max-width: $bp-m) {
+              width: 18%;
+            }
+            @media only screen and (max-width: $bp-s) {
+              width: 24%;
+            }
+          }
+        }
+
+        &__header-col {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 0.7rem;
+          margin-bottom: 0.25rem;
+        }
+
+        &__entry-col {
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+
+    &__overview {
+      margin-bottom: 1rem;
+    }
+
+    &__cards {
+      $top1Color: #008800;
+      $topLevelStep: -10%;
+      $top2Color: scale-color($top1Color, $lightness: $topLevelStep);
+      $top3Color: scale-color($top1Color, $lightness: $topLevelStep*2);
+      $top4Color: scale-color($top1Color, $lightness: $topLevelStep*3);
+      $top5Color: scale-color($top1Color, $lightness: $topLevelStep*4);
+      $topZColor: #dd0000;
+      $cardWidthL: 16.4%;
+      $cardWidthM: 33%;
+      $cardWidthS: 50%;
+
+      .top5 {
+        &__headline1 {
+          margin-top: 1rem;
+        }
+
+        &__headline2 {
+          margin-top: 0.5rem;
+          margin-bottom: 0.0rem;
+        }
+
+        &__chart, &__card {
+
+        }
+
+        &__chart {
+          border-radius: 0;
+          border: $neutralMediumColor 1px solid;
+          width: calc(#{$cardWidthL * 2} );
+          @media only screen and (max-width: $bp-l) {
+            width: calc(#{$cardWidthM * 2} - 15px);
+          }
+          @media only screen and (max-width: $bp-s) {
+            width: calc(#{$cardWidthS * 2} - 15px);
+          }
+          @media only screen and (max-width: $bp-xs) {
+            width: 100%;
+          }
+          .chart-image {
+            margin-left: auto;
+            margin-right: auto;
+            width: 375px;
+            @media only screen and (max-width: $bp-xs) {
+              width: 320px;
+            }
+          }
+        }
+        &__card {
+          border-radius: 0;
+          border: $neutralMediumColor 1px solid;
+          width: calc(#{$cardWidthL} - 15px);
+          @media only screen and (max-width: $bp-l) {
+            width: calc(#{$cardWidthM} - 15px);
+          }
+          @media only screen and (max-width: $bp-s) {
+            width: calc(#{$cardWidthS} - 15px);
+          }
+          @media only screen and (max-width: $bp-xs) {
+            width: 100%;
+          }
+
+          .top5__segment {
+            &-head {
+              height: 4.25rem;
+              div {
+                padding: 0;
+              }
+
+              .head-count {
+                float: left;
+                font-size: 2rem;
+              }
+
+              .head-bank {
+                margin-top: -5px;
+                margin-left: 2rem;
+                font-weight: bold;
+                .bankname {
+                  text-transform: uppercase;
+                }
+                .productname {
+                  font-size: smaller;
+                }
+              }
+            }
+
+            &-items {
+              border-top: 2px black solid;
+              .top5__item {
+                padding: 0;
+                div {
+                  padding: 0;
+                }
+                .label {
+                  font-size: 70%;
+                  color: $dark-grey-text-color;
+                }
+                .value {
+                  font-size: 80%;
+                  text-align: right;
+                }
+              }
+            }
+          }
+
+          &.top1 {
+            .top5__segment-head .head-count {
+              color: $top1Color;
+            }
+            .top5__segment-items {
+              border-top: 2px $top1Color solid;
+            }
+          }
+          &.top2 {
+            .top5__segment-head .head-count {
+              color: $top2Color;
+            }
+            .top5__segment-items {
+              border-top: 2px $top2Color solid;
+            }
+          }
+          &.top3 {
+            .top5__segment-head .head-count {
+              color: $top3Color;
+            }
+            .top5__segment-items {
+              border-top: 2px $top3Color solid;
+            }
+          }
+          &.top4 {
+            .top5__segment-head .head-count {
+              color: $top4Color;
+            }
+            .top5__segment-items {
+              border-top: 2px $top4Color solid;
+            }
+          }
+          &.top5 {
+            .top5__segment-head .head-count {
+              color: $top5Color;
+            }
+            .top5__segment-items {
+              border-top: 2px $top5Color solid;
+            }
+          }
+          &.topZ {
+            .top5__segment-head .head-count {
+              color: $topZColor;
+            }
+            .top5__segment-items {
+              border-top-color: $topZColor;
+            }
+          }
+        }
+      }
+    }
+
+    &__noentries {
+      margin: 0.5rem;
+    }
+  }
+}
