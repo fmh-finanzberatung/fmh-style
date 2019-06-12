@@ -1,0 +1,21 @@
+.toggleBox {
+
+  &__wrapper {
+
+  }
+
+  &__button {
+    color: black;
+    &isOpen {
+      color: red;
+    }
+  }
+
+  &__box {
+    display: none;
+    &.showBox {
+      display: block;
+    }
+  }
+
+}
