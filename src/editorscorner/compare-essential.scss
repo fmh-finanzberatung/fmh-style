@@ -1,0 +1,373 @@
+
+.editorscorner__compare-essential {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  max-width: 1220px;
+  margin: auto;
+  padding: 6px;
+
+  .compare__block {
+    margin: 10px;
+    border: 2px solid $neutralBaseColor;
+
+    .compare__overview {
+      display: flex;
+      .compare__bank {
+        width: calc(33% - 15px);
+        padding: 8px;
+
+        .compare__logo {
+          // TODO
+        }
+
+        .compare__bankname {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        .compare__produktname {
+          font-weight: bold;
+          margin-bottom: 0.5rem
+        }
+        .compare__guarantee, .compare__rating {
+           font-size: 0.7rem;
+           margin-bottom: 0;
+        }
+
+      }
+
+      .compare__diffs {
+        width: calc(67% - 15px);
+        padding: 6px;
+        display: flex;
+
+        .compare__diff-item {
+          width: 25%;
+          border: 1px solid $neutralBaseColor;
+          padding: 6px;
+          margin: 0 6px;
+          font-size: 0.8rem;
+
+          .item-type {
+              font-size: 1rem;
+              font-weight: bold;
+              line-height: 1.4rem;
+            }
+
+          .item-ab {
+            text-align: left !important;
+            line-height: 0.95rem;
+            font-style: italic;
+            font-weight: bold;
+            padding: 4px 0;
+            label {
+              font-weight: normal;
+            }
+          }
+
+          .item-values {
+            display: flex;
+            align-items: flex-end;
+            height: calc(100% - 1.4rem);
+
+            .item-table {
+              width: 50%;
+
+              .item-cell-value {
+                text-align: right;
+              }
+
+              .item-cell-colspan {
+                font-weight: bold;
+                label {
+                  font-weight: normal;
+                }
+              }
+            }
+
+            .item-icon {
+              width: 50%;
+              position: relative;
+
+              &-wrapper {
+                text-align: center;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+              }
+
+              .item-arrow {
+                &.good {
+                  color: $tendence-good-color-dark;
+                }
+                &.bad {
+                  color: $tendence-bad-color-dark;
+                }
+                &.down {
+                  &:before {
+                    @include fa-icon-solid('arrow-alt-circle-down');
+                    font-size: 2.5rem;
+                  }
+                }
+                &.up {
+                  &:before {
+                    @include fa-icon-solid('arrow-alt-circle-up');
+                    font-size: 2.5rem;
+                  }
+                }
+                &.minus {
+                  &:before {
+                    @include fa-icon-solid('minus-circle');
+                    font-size: 2.5rem;
+                  }
+                }
+                &.plus {
+                  &:before {
+                    @include fa-icon-solid('plus-circle');
+                    font-size: 2.5rem;
+                  }
+                }
+                &.change {
+                  &:before {
+                    @include fa-icon-solid('arrows-alt-h');
+                    font-size: 1.5rem;
+                    border-radius: 50%;
+                    color: white;
+                    padding: 0.5rem;
+                  }
+                  &.good:before {
+                    background-color: $tendence-good-color-dark;
+                  }
+                  &.bad:before {
+                    background-color: $tendence-bad-color-dark;
+                  }
+                  margin-bottom: 0.5rem;
+                }
+              }
+
+              .item-diff {
+                padding-top: 2px;
+                font-weight: bold;
+
+                &.good {
+                  color: $tendence-good-color-dark;
+                }
+                &.bad {
+                  color: $tendence-bad-color-dark;
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+
+    .compare__table {
+      padding: 6px;
+
+      &--title {
+        display: inline-block;
+        padding-bottom: 4px;
+      }
+      .compare__zinsen {
+        width: 100%;
+        .compare__header {
+          background: $neutralBaseColor;
+          border: solid 2px $neutralBaseColor;
+        }
+        .compare__tablename {
+          color: $base-medium-color;
+        }
+        .compare__header-col {
+          width: 20%;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 0.7rem;
+          margin-bottom: 0.25rem;
+          @media only screen and (max-width: $bp-s) {
+            width: 33%;
+          }
+          padding: 0.25rem;
+          text-align: left;
+        }
+        .compare__row-odd {
+          background: white;
+          border-left: solid 2px $neutralBaseColor;
+          border-right: solid 2px $neutralBaseColor;
+          &:last-child {
+            border-bottom: solid 2px $neutralBaseColor;
+            //td { padding-bottom: 1rem };
+          }
+        }
+
+        .compare__row-even {
+          background: $neutralBaseColor;
+          border: solid 2px $neutralBaseColor;
+          &:first-child {
+            //td { padding-top: 1rem };
+          }
+        }
+
+        .compare__entry {
+        }
+
+        .compare__entry-col {
+          width: 20%;
+          margin-bottom: 0.5rem;
+          @media only screen and (max-width: $bp-s) {
+            width: 33%;
+          }
+          padding: 0.25rem;
+
+        }
+        .compare__entry-label {
+          font-size: 0.7rem;
+          line-height: 1.4rem;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+  }
+}
+.comparexxx {
+  &__bankname {
+    width: 40%;
+    font-weight: bold;
+    @media only screen and (max-width: $bp-s) {
+      width: 66%;
+    }
+  }
+
+  &__guarantee, &__rating {
+    width: 20%;
+
+
+  }
+
+  &__guarantee {
+    @media only screen and (max-width: $bp-s) {
+      width: 33%;
+    }
+  }
+
+  &__rating {
+    @media only screen and (max-width: $bp-s) {
+      width: 66%;
+    }
+  }
+
+  &__entries {
+    //
+    margin-bottom: 3rem;
+    width: 100%;
+  }
+
+  &__entry, &__header {
+    //display: table-row;
+    //padding: 0.5rem;
+    overflow: hidden;
+  }
+
+  &__header {
+    background: $neutralBaseColor;
+    border: solid 2px $neutralBaseColor;
+  }
+
+  &__row-odd {
+    background: white;
+    border-left: solid 2px $neutralBaseColor;
+    border-right: solid 2px $neutralBaseColor;
+    &:last-child {
+      border-bottom: solid 2px $neutralBaseColor;
+      //td { padding-bottom: 1rem };
+    }
+  }
+
+  &__row-even {
+    background: $neutralBaseColor;
+    border: solid 2px $neutralBaseColor;
+    &:first-child {
+      //td { padding-top: 1rem };
+    }
+  }
+
+  &__entry {
+    span.UpChange {
+      margin-left: -20px;
+      color: $badColor;
+      &:after {
+        content: $arrow-up;
+        font-family: 'FmhIcons';
+        font-size: 0.8rem;
+        padding-right: 4px;
+      }
+    }
+    span.DownChange {
+      margin-left: -20px;
+      color: green;
+      &:before {
+        content: $arrow-down;
+        font-family: 'FmhIcons';
+        font-size: 0.8rem;
+        padding-right: 4px;
+      }
+    }
+    span.BadChange {
+      color: $badColor;
+    }
+    span.GoodChange {
+      color: $goodColor;
+    }
+  }
+
+  &__header-col {
+    width: 20%;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-bottom: 0.25rem;
+    @media only screen and (max-width: $bp-s) {
+      width: 33%;
+    }
+    padding: 0.25rem;
+  }
+
+  &__header-label2 {
+    display: none;
+    @media only screen and (max-width: $bp-s) {
+      display: block;
+    }
+  }
+
+  &__entry-col {
+    width: 20%;
+    margin-bottom: 0.5rem;
+    @media only screen and (max-width: $bp-s) {
+      width: 33%;
+    }
+    padding: 0.25rem;
+    &.col-state-new {
+      color: $goodColor;
+    }
+    &.col-state-remove {
+      color: $badColor;
+    }
+  }
+
+  &__entry-label, &__entry-label2 {
+    font-size: 0.7rem;
+    line-height: 1.4rem;
+  }
+  &__entry-label {
+    padding-left: 0.5rem;
+  }
+  &__entry-label2 {
+    display: none;
+    @media only screen and (max-width: $bp-s) {
+      display: block;
+    }
+  }
+
+}
+
