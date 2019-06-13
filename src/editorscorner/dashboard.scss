@@ -5,14 +5,14 @@
   margin: auto;
   padding: 2px;
 
+  $defaultPadding: 6px;
+
   .dashboard {
 
     &__products {
       display: flex;
-      flex-wrap: wrap;
       margin: 0 0 3em 0;
-      padding: 4px;
-      height: 5em;
+      padding: $defaultPadding;
       @media only screen and (max-width: $bp-s) {
         display: block;
         margin: 0.5em 0.5em 3em 0.5em;
@@ -21,13 +21,9 @@
     }
 
     &__productname, &__productoption {
-      display: flex;
-      flex-grow: 1;
-      align-items: center;
-      justify-content:center;
+      width: 25%;
       text-align: center;
-      padding: 0.8em 1.2em;
-      overflow: hidden;
+      padding: $defaultPadding;
       border: solid 4px white;
       background: $neutralBaseColor;
       @media only screen and (max-width: $bp-s) {
@@ -39,12 +35,89 @@
     }
 
     &__productname {
+      // margin-bottom: auto;
+      // margin-top: auto;
       font-weight: bold;
+      font-size: $headline-font-size;
+      line-height: 2em;
+      vertical-align: middle;
+      &:before {
+        font-family: FmhIcons;
+        font-size: 1.0em;
+        line-height: 2em;
+        vertical-align: middle;
+        content: "\E001";
+        padding-right: 8px;
+      }
     }
 
     &__productoption {
       text-decoration: none;
       color: black;
+      font-size: $small-font-size;
+      // text-align: center;
+      .option {
+        &-text {
+          padding-top: $defaultPadding;
+          font-weight: bold;
+          font-size: $title-font-size;
+        }
+        &-desc {
+          padding-top: $defaultPadding;
+          padding-bottom: calc(3em + #{$defaultPadding} * 2);
+        }
+        &-changes {
+          text-align: center;
+          padding-top: $defaultPadding;
+        }
+        &-top {
+          width: 80%;
+          margin: $defaultPadding auto;
+        }
+        &-bank {
+          text-align: left;
+        }
+        &-diff {
+          text-align: right;
+          &.good {
+            color: $tendence-good-color-dark;
+            vertical-align: middle;
+            &:after {
+              font-family: FmhIcons;
+              font-size: 90%;
+              content: $arrow-up;
+              padding-left: 0.5em;
+              vertical-align: top;
+            }
+          }
+          &.bad {
+            color: $tendence-bad-color-dark;
+            vertical-align: middle;
+            &:after {
+              font-family: FmhIcons;
+              font-size: 90%;
+              content: $arrow-down;
+              padding-left: 0.5em;
+              vertical-align: top;
+            }
+          }
+        }
+        &-more {
+          width: 50%;
+          background-color: white;
+          border: 2px solid $base-link-color;
+          color: $base-link-color;
+          padding: $defaultPadding;
+          margin-top: $defaultPadding;
+          margin-bottom: $defaultPadding;
+          &:before {
+            font-family: FmhIcons;
+            font-size: 80%;
+            content: $arrow-right;
+            padding-right: 0.5em;
+          }
+        }
+      }
     }
 
   }
