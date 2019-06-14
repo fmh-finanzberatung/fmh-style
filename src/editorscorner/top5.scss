@@ -1,7 +1,7 @@
 .editorscorner__top5 {
   font-family: $standard-font-family;
   font-size: $standard-font-size;
-  max-width: 1220px;
+  max-width: 1230px;
   margin: auto;
   padding: 6px;
 
@@ -132,6 +132,7 @@
     }
 
     &__overview {
+      margin-top: 0.5rem;
       margin-bottom: 1rem;
     }
 
@@ -146,6 +147,13 @@
       $cardWidthL: 16.4%;
       $cardWidthM: 33%;
       $cardWidthS: 50%;
+      $gutter: 15px;
+      $halfGutter: $gutter / 2;
+      $defaultPadding: 10px;
+
+      display: flex;
+      //border: 1px solid $neutralBaseColor;
+      margin: $halfGutter * -1;
 
       .top5 {
         &__headline1 {
@@ -158,11 +166,12 @@
         }
 
         &__chart, &__card {
-
+          margin: $halfGutter;
+          padding: 0;
         }
 
         &__chart {
-          border-radius: 0;
+          //border-radius: 0;
           border: $neutralMediumColor 1px solid;
           width: calc(#{$cardWidthL * 2} );
           @media only screen and (max-width: $bp-l) {
@@ -198,6 +207,10 @@
           }
 
           .top5__segment {
+            &-head, &-content {
+              padding: $defaultPadding;
+            }
+
             &-head {
               height: 4.25rem;
               div {
@@ -205,12 +218,13 @@
               }
 
               .head-count {
+                margin-top: -10px;
                 float: left;
-                font-size: 2rem;
+                font-size: 2.4rem;
               }
 
               .head-bank {
-                margin-top: -5px;
+                margin-top: -3px;
                 margin-left: 2rem;
                 font-weight: bold;
                 .bankname {
@@ -222,14 +236,17 @@
               }
             }
 
-            &-items {
+            &-content {
               border-top: 2px black solid;
+
               .top5__item {
-                padding: 0;
-                div {
-                  padding: 0;
-                }
+                display: flex;
+                line-height: 1.5rem;
+                vertical-align: middle;
+                justify-content: space-between;
+
                 .label {
+                  width: 50%;
                   font-size: 70%;
                   color: $dark-grey-text-color;
                 }
@@ -245,7 +262,7 @@
             .top5__segment-head .head-count {
               color: $top1Color;
             }
-            .top5__segment-items {
+            .top5__segment-content {
               border-top: 2px $top1Color solid;
             }
           }
@@ -253,7 +270,7 @@
             .top5__segment-head .head-count {
               color: $top2Color;
             }
-            .top5__segment-items {
+            .top5__segment-content {
               border-top: 2px $top2Color solid;
             }
           }
@@ -261,7 +278,7 @@
             .top5__segment-head .head-count {
               color: $top3Color;
             }
-            .top5__segment-items {
+            .top5__segment-content {
               border-top: 2px $top3Color solid;
             }
           }
@@ -269,7 +286,7 @@
             .top5__segment-head .head-count {
               color: $top4Color;
             }
-            .top5__segment-items {
+            .top5__segment-content {
               border-top: 2px $top4Color solid;
             }
           }
@@ -277,7 +294,7 @@
             .top5__segment-head .head-count {
               color: $top5Color;
             }
-            .top5__segment-items {
+            .top5__segment-content {
               border-top: 2px $top5Color solid;
             }
           }
@@ -285,7 +302,7 @@
             .top5__segment-head .head-count {
               color: $topZColor;
             }
-            .top5__segment-items {
+            .top5__segment-content {
               border-top-color: $topZColor;
             }
           }

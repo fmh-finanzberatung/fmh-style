@@ -9,9 +9,10 @@ $defaultPadding: 6px;
 
   .compare-content {
     display: flex;
+    flex-wrap: wrap;
 
     .compare__block {
-      width: 50%;
+      width: 48%;
       margin: 10px;
       border: 2px solid $neutralBaseColor;
 

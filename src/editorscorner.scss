@@ -54,3 +54,7 @@ $tendence-bad-color-dark: scale-color(red, $lightness: -20%);
   margin-right: 2em;
 }
 
+.page.layout section {
+  margin-left: 25px;
+  flex-basis: calc(66.6667% - 35px);
+}

@@ -14,8 +14,8 @@ html {
 }
 
 @import '../fonts.scss';
-@import 'font_roboto';
-@import 'font_fmh';
+//@import 'font_roboto';  // TODO: for Patternlab move to separate SCSS,
+//@import 'font_fmh';     // TODO: in Django they are already loaded over the cms-template
 @import "font_awesome";
 
 .headline {
