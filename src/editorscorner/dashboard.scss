@@ -10,6 +10,144 @@
   .dashboard {
 
     &__products {
+      margin: 10px;
+
+
+      .product {
+        &__box {
+          border: 2px solid $neutralBaseColor;
+          margin-top: 20px;
+        }
+
+        &__title {
+          background-color: $neutralBaseColor;
+          padding: $defaultPadding;
+        }
+
+        &__name {
+          font-weight: bold;
+          font-size: $headline-font-size;
+          line-height: 1.5em;
+          vertical-align: baseline;
+          padding-left: 4px;
+          &:before {
+            font-family: FmhIcons;
+            font-size: 0.8em;
+            line-height: 1.5em;
+            vertical-align: baseline;
+            content: " "; // "\E001";
+            padding-right: 10px;
+          }
+          &.tagesgeld:before {
+            content: $tagesgeld; // "\e001";
+          }
+          &.festgeld:before {
+            content: $festgeld; // "\e00e";
+          }
+        }
+
+        &__options {
+          display: flex;
+          margin: 0;
+          padding: 0;
+
+          .option {
+            &__box {
+              border-right: 2px solid $neutralBaseColor;
+              &:last-child {
+                border-right: none;
+              }
+              padding: $defaultPadding;
+              width: 25%;
+              text-align: center;
+              text-decoration: none;
+              color: black;
+              font-size: $small-font-size;
+            }
+
+            &__text {
+              padding-top: $defaultPadding;
+              font-weight: bold;
+              font-size: $title-font-size;
+            }
+            &__changes {
+              text-align: center;
+              padding-top: $defaultPadding;
+            }
+            &__top {
+              width: 80%;
+              margin: $defaultPadding auto;
+            }
+            &__bank {
+              text-align: left;
+            }
+            &__date {
+              text-align: left;
+              width: 2rem;
+            }
+            &__rang {
+              text-align: left;
+              width: 1rem;
+            }
+            &__interest {
+              text-align: right;
+              //padding-left: 4rem;
+            }
+            &__diff {
+              text-align: right;
+              &.good {
+                color: $tendence-good-color-dark;
+                vertical-align: middle;
+                &:after {
+                  font-family: FmhIcons;
+                  font-size: 90%;
+                  content: $arrow-up;
+                  padding-left: 0.5em;
+                  vertical-align: top;
+                }
+              }
+              &.bad {
+                color: $tendence-bad-color-dark;
+                vertical-align: middle;
+                &:after {
+                  font-family: FmhIcons;
+                  font-size: 90%;
+                  content: $arrow-down;
+                  padding-left: 0.5em;
+                  vertical-align: top;
+                }
+              }
+            }
+            &__more {
+              width: 80%;
+              background-color: white;
+              border: 2px solid $base-link-color;
+              color: $base-link-color;
+              padding: $defaultPadding;
+              margin-top: $defaultPadding + 20px;
+              margin-bottom: $defaultPadding;
+              &:before {
+                font-family: FmhIcons;
+                font-size: 80%;
+                content: $arrow-right;
+                padding-right: 0.5em;
+              }
+            }
+            &__chart {
+              margin-top: -6px;
+              .chart-image {
+                height: 160px;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  .xxx {
+    &__products {
       display: flex;
       margin: 0 0 3em 0;
       padding: $defaultPadding;
