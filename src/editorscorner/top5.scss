@@ -10,6 +10,16 @@
       margin: 0 0.5rem;
     }
 
+    &__headline1 {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__headline2 {
+      margin-top: 0;
+      margin-bottom: 0.25rem;
+    }
+
     &__settings {
       width: 100%;
       padding: 8px;
@@ -131,6 +141,87 @@
       }
     }
 
+    &__table.combi-var {
+      .top5 {
+
+        &__entry {
+          background: white;
+          border-bottom: 2px solid $neutralBaseColor;
+
+          .col-bank {
+            display: flex;
+            padding-top: $defaultPadding;
+
+            .bank {
+              &__logo {
+                width: 50%;
+                img {
+                  width: 120px;
+                }
+              }
+              &__names {
+                width: 50%;
+                line-height: 1.2em;
+              }
+              &__name {
+                font-weight: bold;
+                text-transform: uppercase;
+              }
+              &__product {
+                font-weight: bold;
+                margin-bottom: 0.5rem
+              }
+            }
+          }
+        }
+
+        &__header, &__entry {
+          .col-bank {
+            width: 28%;
+          }
+          .col-item {
+            width: 18%;
+          }
+        }
+
+        &__entries.newclients {
+          .top5__header, .top5__entry {
+            .col-bank {
+              width: 24%;
+            }
+            .col-item {
+              width: 12.5%;
+            }
+          }
+        }
+
+        &__footer {
+          // display: inline-block;
+          text-align: right;
+          .footer-more {
+            font-size: 14.5px;
+            width: 220px;
+            background-color: white;
+            border: 2px solid $base-link-color;
+            color: $base-link-color;
+            padding: 0.25rem 0.5rem;
+            line-height: 1.4em;
+            vertical-align: middle;
+            margin: 0.4em;
+            text-decoration: none;
+
+            &:before {
+              font-family: FmhIcons;
+              font-size: 80%;
+              content: $arrow-right;
+              padding-right: 0.5em;
+            }
+          }
+        }
+
+      }
+    }
+
     &__overview {
       margin-top: 0.5rem;
       margin-bottom: 1rem;
@@ -156,14 +247,6 @@
       margin: $halfGutter * -1;
 
       .top5 {
-        &__headline1 {
-          margin-top: 1rem;
-        }
-
-        &__headline2 {
-          margin-top: 0.5rem;
-          margin-bottom: 0.0rem;
-        }
 
         &__chart, &__card {
           margin: $halfGutter;
@@ -218,7 +301,8 @@
               }
 
               .head-count {
-                margin-top: -10px;
+                // margin-top: -10px;
+                margin-top: 4px;    // TODO: it's differnt in patternlab then django! Why???
                 float: left;
                 font-size: 2.4rem;
               }
