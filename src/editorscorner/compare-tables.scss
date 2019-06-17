@@ -1,0 +1,117 @@
+$defaultPadding: 6px;
+
+.editorscorner__compare-tables {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  max-width: 1220px;
+  margin: auto;
+  padding: $defaultPadding;
+
+  .compare__group {
+    margin: 10px;
+
+    .compare {
+      &__grouptitle {
+        margin-top: 2rem;
+      }
+      &__subtitle {
+        margin-top: 0;
+      }
+
+      &__table {
+        width: 100%;
+        //margin-left: $defaultPadding * -1;
+
+        .compare {
+          &__header {
+            .header-col {
+              background: $neutralBaseColor;
+              //width: 12%;
+              font-weight: bold;
+              text-transform: uppercase;
+              font-size: 0.7rem;
+              padding: $defaultPadding;
+              text-align: left;
+            }
+          }
+          &__entries {
+            .entry-col {
+              padding: $defaultPadding;
+              padding-top: 0;
+              padding-bottom: 0;
+              font-size: 0.8rem;
+              vertical-align: middle;
+              line-height: 1.2rem;
+              border-bottom: 2px solid $neutralBaseColor;
+            }
+            .entry {
+              &__bank {
+                display: flex;
+                padding-top: $defaultPadding;
+
+                .bank {
+                  &__logo {
+                    width: 50%;
+                    img {
+                      width: 120px;
+                    }
+                  }
+                  &__names {
+                    width: 50%;
+                    line-height: 1.2em;
+                  }
+                  &__name {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                  }
+                  &__product {
+                    font-weight: bold;
+                    margin-bottom: 0.5rem
+                  }
+                }
+
+              }
+
+              &__interest {
+                &--diff {
+                  $iconSize: 1.2rem;
+                  text-align: left;
+                  padding-top: 2px;
+                  vertical-align: middle;
+                  line-height: $iconSize;
+                  &.good {
+                    color: $tendence-good-color-dark;
+                  }
+                  &.bad {
+                    color: $tendence-bad-color-dark;
+                  }
+                  &.down {
+                    &:before {
+                      @include fa-icon-solid('arrow-alt-circle-down');
+                      font-size: $iconSize;
+                      padding-right: $defaultPadding;
+                      vertical-align: middle;
+                    }
+                  }
+                  &.up {
+                    &:before {
+                      @include fa-icon-solid('arrow-alt-circle-up');
+                      font-size: $iconSize;
+                      padding-right: $defaultPadding;
+                      vertical-align: middle;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
