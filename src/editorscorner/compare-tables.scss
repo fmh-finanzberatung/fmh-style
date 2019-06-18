@@ -19,6 +19,7 @@ $defaultPadding: 6px;
       }
 
       &__table {
+//        display: none;
         width: 100%;
 
         .compare {
@@ -33,6 +34,7 @@ $defaultPadding: 6px;
             }
           }
           &__entries {
+            margin: 6px 0;
             .entry-col {
               padding: $defaultPadding;
               padding-top: 0;
@@ -107,6 +109,11 @@ $defaultPadding: 6px;
             }
           }
         }
+      }
+
+      &__cards {
+          display: none;
+
       }
     }
   }

@@ -1,0 +1,17 @@
+button {
+  &.button-more {
+    background-color: white;
+    border: 2px solid $base-link-color;
+    color: $base-link-color;
+    padding: $defaultPadding;
+    margin-top: $defaultPadding + 20px;
+    margin-bottom: $defaultPadding;
+    &:before {
+      font-family: FmhIcons;
+      font-size: 80%;
+      content: $arrow-right;
+      padding-right: 0.5em;
+    }
+  }
+
+}
