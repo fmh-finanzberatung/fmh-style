@@ -20,13 +20,11 @@ $defaultPadding: 6px;
 
       &__table {
         width: 100%;
-        //margin-left: $defaultPadding * -1;
 
         .compare {
           &__header {
             .header-col {
               background: $neutralBaseColor;
-              //width: 12%;
               font-weight: bold;
               text-transform: uppercase;
               font-size: 0.7rem;
@@ -74,7 +72,7 @@ $defaultPadding: 6px;
 
               &__interest {
                 &--diff {
-                  $iconSize: 1.2rem;
+                  $iconSize: 0.8rem;
                   text-align: left;
                   padding-top: 2px;
                   vertical-align: middle;
@@ -87,7 +85,8 @@ $defaultPadding: 6px;
                   }
                   &.down {
                     &:before {
-                      @include fa-icon-solid('arrow-alt-circle-down');
+                      font-family: "FmhIcons";
+                      content: '\E014';
                       font-size: $iconSize;
                       padding-right: $defaultPadding;
                       vertical-align: middle;
@@ -95,7 +94,8 @@ $defaultPadding: 6px;
                   }
                   &.up {
                     &:before {
-                      @include fa-icon-solid('arrow-alt-circle-up');
+                      font-family: "FmhIcons";
+                      content: '\E012';
                       font-size: $iconSize;
                       padding-right: $defaultPadding;
                       vertical-align: middle;
