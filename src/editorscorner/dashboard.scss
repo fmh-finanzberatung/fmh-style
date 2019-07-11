@@ -12,7 +12,6 @@
     &__products {
       margin: 10px;
 
-
       .product {
         &__box {
           border: 2px solid $neutralBaseColor;
@@ -48,17 +47,36 @@
 
         &__options {
           display: flex;
+          flex-wrap: wrap;
           margin: 0;
           padding: 0;
 
           .option {
             &__box {
+              width: 25%;
               border-right: 2px solid $neutralBaseColor;
               &:last-child {
                 border-right: none;
               }
+              @media only screen and (max-width: $bp-l) {
+                width: 50%;
+                border-bottom: 2px solid $neutralBaseColor;
+                &:nth-child(2n) {
+                  border-right: none;
+                }
+                &:nth-last-child(-n+2) {
+                  border-bottom: none;
+                }
+              }
+              @media only screen and (max-width: $bp-s) {
+                width: 100%;
+                border-right: none;
+                &:last-child {
+                  border-bottom: none;
+                }
+
+              }
               padding: $defaultPadding;
-              width: 25%;
               text-align: center;
               text-decoration: none;
               color: black;
