@@ -20,40 +20,15 @@
       margin-bottom: 0.25rem;
     }
 
-    &__settings {
-      width: 100%;
-      padding: 8px;
-      display: flex;
-      flex-grow: 1;
-      flex-wrap: wrap;
-      border: 2px $neutralBaseColor solid;
-
-      &--label {
-        font-size: 0.8rem;
-      }
-
-      &--value {
-        font-size: 0.8rem;
-      }
-
-    }
-
     &__table {
       .top5 {
         &__entries {
+          @media only screen and (max-width: $bp-m) {
+            display: none;
+          }
           margin-top: 0.5rem;
           margin-bottom: 2rem;
-        }
-
-        &__entry, &__header {
-          display: flex;
-          flex-grow: 1;
-          flex-wrap: wrap;
-          align-items: center;
-          justify-content: left;
-          text-align: left;
-          padding: 0.5rem;
-          overflow: hidden;
+          width: 100%;
         }
 
         &__header {
@@ -61,112 +36,40 @@
           border-bottom: 2px white solid;
         }
 
-        &__footer {
-          background: $neutralBaseColor;
-          border-bottom: 2px white solid;
-          .footer-more {
-            text-align: right;
-            padding: 0.25rem 0.5rem;
-            a {
-              &:before {
-                margin: 0 .25em 0 -.75em;
-                display: inline-block;
-                content: "\BB";
-              }
-              display: inline-block;
-              font-size: 14.5px;
-              color: #1792d0;
-              line-height: 1.4em;
-              vertical-align: middle;
-              margin: .4em 0 .4em .8em;
-              text-decoration: none;
-            }
-          }
-        }
-
-        &__entry {
-          background: $neutralLightColor;
-          border-bottom: 2px solid white;
-          align-items: flex-start;
-
-        }
-
-        &__header, &__entry {
-          @media only screen and (max-width: $bp-m) {
-            font-size: 90%;
-          }
-          @media only screen and (max-width: $bp-s) {
-            font-size: 85%;
-          }
-          @media only screen and (max-width: $bp-xs) {
-            font-size: 80%;
-          }
-
-          .col-prio-2 {
-            @media only screen and (max-width: $bp-s) {
-              display: none;
-            }
-          }
-          .col-prio-3 {
-            @media only screen and (max-width: $bp-m) {
-              display: none;
-            }
-          }
-          .col-bank {
-            width: 28%;
-            font-weight: bold;
-          }
-
-          .col-item {
-            width: 14%;
-            @media only screen and (max-width: $bp-m) {
-              width: 18%;
-            }
-            @media only screen and (max-width: $bp-s) {
-              width: 24%;
-            }
-          }
-        }
-
-        &__header-col {
-          font-weight: bold;
-          text-transform: uppercase;
-          font-size: 0.7rem;
-          margin-bottom: 0.25rem;
-        }
-
-        &__entry-col {
-          margin-bottom: 0.5rem;
-        }
-      }
-    }
-
-    &__table.combi-var {
-      .top5 {
-
         &__entry {
           background: white;
           border-bottom: 2px solid $neutralBaseColor;
 
           .col-bank {
-            display: flex;
             padding-top: $defaultPadding;
 
             .bank {
+              &__wrapper {
+                display: flex;
+                @media only screen and (max-width: $bp-l) {
+                  display: block;
+                }
+              }
+
               &__logo {
-                width: 50%;
+                @media only screen and (max-width: $bp-l) {
+                  width: 100%;
+                }
                 img {
                   width: 120px;
                 }
               }
+
               &__names {
-                width: 50%;
                 line-height: 1.2em;
+                padding-left: $defaultPadding;
               }
+
               &__name {
                 font-weight: bold;
                 text-transform: uppercase;
               }
+
               &__product {
                 font-weight: bold;
                 margin-bottom: 0.5rem
@@ -176,12 +79,26 @@
         }
 
         &__header, &__entry {
+          padding: 0.5rem;
           .col-bank {
-            width: 28%;
+            width: 33%;
           }
           .col-item {
-            width: 18%;
+            width: 17%;
           }
+        }
+
+        &__header-col {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 0.7rem;
+          margin-bottom: 0.25rem;
+          padding: 0.75rem 0.5rem;
+        }
+
+        &__entry-col {
+          margin-bottom: 0.5rem;
+          padding-left: 0.5rem;
         }
 
         &__entries.newclients {
@@ -196,15 +113,20 @@
         }
 
         &__footer {
-          // display: inline-block;
-          text-align: right;
+          background: $neutralBaseColor;
+          border-bottom: 2px white solid;
+          td {
+            text-align: right;
+          }
+
           .footer-more {
+            text-align: right;
+            padding: 0.25rem 0.5rem;
             font-size: 14.5px;
             width: 220px;
             background-color: white;
             border: 2px solid $base-link-color;
             color: $base-link-color;
-            padding: 0.25rem 0.5rem;
             line-height: 1.4em;
             vertical-align: middle;
             margin: 0.4em;
@@ -219,6 +141,135 @@
           }
         }
 
+      }
+    }
+
+    &__table-cards {
+      display: none;
+      @media only screen and (max-width: $bp-m) {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      margin-top: 1rem;
+
+      &-title {
+        width: 100%;
+        background-color: $neutralBaseColor;
+        margin: $defaultPadding 0;
+        padding: $defaultPadding;
+      }
+
+      .top5__table-card {
+        border: 1px solid $neutralBaseColor;
+        margin: $defaultPadding;
+        &:nth-child(3n+2) {
+          margin-left: 0;
+        }
+        &:nth-child(3n+4) {
+          margin-right: 0;
+        }
+        width: calc(33% - #{$defaultPadding});
+        @media only screen and (max-width: $bp-s) {
+          width: calc(50% - #{$defaultPadding});
+          margin: $defaultPadding;
+          &:nth-child(2n) {
+            margin-left: 0;
+            margin-right: $defaultPadding;
+          }
+          &:nth-child(2n+1) {
+            margin-left: $defaultPadding;
+            margin-right: 0;
+          }
+        }
+        @media only screen and (max-width: $bp-xs) {
+          width: 100%;
+          margin: $defaultPadding 0 !important;
+        }
+
+        .card__bank {
+          display: flex;
+          flex-wrap: wrap;
+          margin: $defaultPadding;
+
+          .bank {
+            &__logo {
+              text-align: center;
+              width: 100%;
+              img {
+                width: 120px;
+              }
+            }
+
+            &__names {
+              width: 100%;
+              text-align: center;
+              line-height: 1.2em;
+            }
+
+            &__name {
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+
+            &__product {
+              font-weight: bold;
+              margin-bottom: 0.5rem
+            }
+          }
+
+        }
+
+        .card__extended {
+          font-size: $small-font-size;
+          margin: $defaultPadding;
+
+          .extended__table {
+            width: 100%;
+          }
+
+          .extended__label {
+            font-variant: small-caps;
+            font-size: 90%;
+          }
+
+          .extended__value {
+            padding-left: 4px;
+          }
+
+        }
+
+        &.card__more {
+          position: relative;
+          border: none;
+          min-height: 2rem;
+          a {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+          }
+          .footer-more {
+            text-align: right;
+            padding: 0.25rem 0.5rem;
+            font-size: 14.5px;
+            width: 220px;
+            background-color: white;
+            border: 2px solid $base-link-color;
+            color: $base-link-color;
+            line-height: 1.4em;
+            vertical-align: middle;
+            margin: 0;
+            text-decoration: none;
+
+            &:before {
+              font-family: FmhIcons;
+              font-size: 80%;
+              content: $arrow-right;
+              padding-right: 0.5em;
+            }
+          }
+        }
       }
     }
 
@@ -243,11 +294,10 @@
       $defaultPadding: 10px;
 
       display: flex;
-      //border: 1px solid $neutralBaseColor;
+      flex-wrap: wrap;
       margin: $halfGutter * -1;
 
       .top5 {
-
         &__chart, &__card {
           margin: $halfGutter;
           padding: 0;
