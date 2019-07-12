@@ -53,7 +53,7 @@
 
           .option {
             &__box {
-              width: 25%;
+              width: 23%;
               border-right: 2px solid $neutralBaseColor;
               &:last-child {
                 border-right: none;
@@ -122,7 +122,7 @@
                   font-size: 90%;
                   content: '\E012';
                   padding-left: 0.5em;
-                  vertical-align: top;
+                  vertical-align: baseline;
                 }
               }
               &.bad {
@@ -133,7 +133,7 @@
                   font-size: 90%;
                   content: '\E014';
                   padding-left: 0.5em;
-                  vertical-align: top;
+                  vertical-align: baseline;
                 }
               }
             }
