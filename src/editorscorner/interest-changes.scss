@@ -1,9 +1,9 @@
 .editorscorner__interest-changes {
   font-family: $standard-font-family;
   font-size: $standard-font-size;
-  max-width: 1220px;
-  margin: auto;
+  max-width: $fullwidth;
   padding: $defaultPadding;
+  margin: auto;
 
   .interest-group {
     margin: 10px;
