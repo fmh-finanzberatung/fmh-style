@@ -1,11 +1,11 @@
-.editorscorner__top5 {
+.editorscorner__top-offer {
   font-family: $standard-font-family;
   font-size: $standard-font-size;
-  max-width: 1230px;
+  max-width: $fullwidth;
+  padding: $defaultPadding;
   margin: auto;
-  padding: 6px;
 
-  .top5 {
+  .top-offer {
     &__wrapper {
       margin: 0 0.5rem;
     }
@@ -21,7 +21,7 @@
     }
 
     &__table {
-      .top5 {
+      .top-offer {
         &__entries {
           @media only screen and (max-width: $bp-m) {
             display: none;
@@ -102,7 +102,7 @@
         }
 
         &__entries.newclients {
-          .top5__header, .top5__entry {
+          .top-offer__header, .top-offer__entry {
             .col-bank {
               width: 24%;
             }
@@ -159,7 +159,7 @@
         padding: $defaultPadding;
       }
 
-      .top5__table-card {
+      .top-offer__table-card {
         border: 1px solid $neutralBaseColor;
         margin: $defaultPadding;
         &:nth-child(3n+2) {
@@ -297,14 +297,13 @@
       flex-wrap: wrap;
       margin: $halfGutter * -1;
 
-      .top5 {
+      .top-offer {
         &__chart, &__card {
           margin: $halfGutter;
           padding: 0;
         }
 
         &__chart {
-          //border-radius: 0;
           border: $neutralMediumColor 1px solid;
           width: calc(#{$cardWidthL * 2} );
           @media only screen and (max-width: $bp-l) {
@@ -339,7 +338,7 @@
             width: 100%;
           }
 
-          .top5__segment {
+          .top-offer__segment {
             &-head, &-content {
               padding: $defaultPadding;
             }
@@ -373,7 +372,7 @@
             &-content {
               border-top: 2px black solid;
 
-              .top5__item {
+              .top-offer__item {
                 display: flex;
                 line-height: 1.5rem;
                 vertical-align: middle;
@@ -393,50 +392,50 @@
           }
 
           &.top1 {
-            .top5__segment-head .head-count {
+            .top-offer__segment-head .head-count {
               color: $top1Color;
             }
-            .top5__segment-content {
+            .top-offer__segment-content {
               border-top: 2px $top1Color solid;
             }
           }
           &.top2 {
-            .top5__segment-head .head-count {
+            .top-offer__segment-head .head-count {
               color: $top2Color;
             }
-            .top5__segment-content {
+            .top-offer_segment-content {
               border-top: 2px $top2Color solid;
             }
           }
           &.top3 {
-            .top5__segment-head .head-count {
+            .top-offer__segment-head .head-count {
               color: $top3Color;
             }
-            .top5__segment-content {
+            .top-offer__segment-content {
               border-top: 2px $top3Color solid;
             }
           }
           &.top4 {
-            .top5__segment-head .head-count {
+            .top-offer__segment-head .head-count {
               color: $top4Color;
             }
-            .top5__segment-content {
+            .top-offer__segment-content {
               border-top: 2px $top4Color solid;
             }
           }
           &.top5 {
-            .top5__segment-head .head-count {
+            .top-offer__segment-head .head-count {
               color: $top5Color;
             }
-            .top5__segment-content {
+            .top-offer__segment-content {
               border-top: 2px $top5Color solid;
             }
           }
           &.topZ {
-            .top5__segment-head .head-count {
+            .top-offer__segment-head .head-count {
               color: $topZColor;
             }
-            .top5__segment-content {
+            .top-offer__segment-content {
               border-top-color: $topZColor;
             }
           }

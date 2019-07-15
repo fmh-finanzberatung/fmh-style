@@ -1,25 +1,23 @@
-$defaultPadding: 6px;
-
-.editorscorner__compare-tables {
+.editorscorner__interest-changes {
   font-family: $standard-font-family;
   font-size: $standard-font-size;
   max-width: 1220px;
   margin: auto;
   padding: $defaultPadding;
 
-  .compare__group {
+  .interest-group {
     margin: 10px;
 
-    .compare {
-      &__grouptitle {
-        margin-top: 2rem;
-        margin-bottom: 0;
-      }
-      &__subtitle {
-        margin-top: 1rem;
-        margin-bottom: 0;
-      }
+    &__grouptitle {
+      margin-top: 2rem;
+      margin-bottom: 0;
+    }
+    &__subtitle {
+      margin-top: 1rem;
+      margin-bottom: 0;
+    }
 
+    .group {
       &__table {
         margin-top: 1rem;
         width: 100%;
@@ -27,7 +25,7 @@ $defaultPadding: 6px;
           display: none;
         }
 
-        .compare {
+        .table {
           &__header {
             .header-col {
               background: $neutralBaseColor;
@@ -38,7 +36,7 @@ $defaultPadding: 6px;
               text-align: left;
             }
           }
-          &__entries {
+          &__entry {
             margin: 6px 0;
             .entry-col {
               padding: $defaultPadding;
@@ -131,7 +129,7 @@ $defaultPadding: 6px;
           flex-wrap: wrap;
         }
 
-        .compare__card {
+        .cards__card {
           border: 1px solid $neutralBaseColor;
           margin: 0 $defaultPadding;
           &:nth-child(3n+1) {
