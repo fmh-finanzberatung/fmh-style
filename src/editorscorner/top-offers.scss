@@ -20,258 +20,243 @@
       margin-bottom: 0.25rem;
     }
 
-    &__table {
-      .top-offer {
-        &__entries {
-          @media only screen and (max-width: $bp-m) {
-            display: none;
+    &__fullist {
+
+      .top-offer__table {
+        @media only screen and (max-width: $bp-m) {
+          display: none;
+        }
+        margin-top: 0.5rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-collapse: collapse;
+
+        .table {
+          &__header {
+            background: $neutralBaseColor;
           }
-          margin-top: 0.5rem;
-          margin-bottom: 2rem;
-          width: 100%;
-        }
 
-        &__header {
-          background: $neutralBaseColor;
-          border-bottom: 2px white solid;
-        }
+          &__entry {
+            background: white;
+            border-bottom: 2px solid $neutralBaseColor !important;
 
-        &__entry {
-          background: white;
-          border-bottom: 2px solid $neutralBaseColor;
+            .col-bank {
+              padding-top: $defaultPadding;
 
-          .col-bank {
-            padding-top: $defaultPadding;
-
-            .bank {
-              &__wrapper {
-                display: flex;
-                @media only screen and (max-width: $bp-l) {
-                  display: block;
+              .bank {
+                &__wrapper {
+                  display: flex;
+                  @media only screen and (max-width: $bp-l) {
+                    display: block;
+                  }
                 }
-              }
 
-              &__logo {
-                @media only screen and (max-width: $bp-l) {
-                  width: 100%;
+                &__logo {
+                  @media only screen and (max-width: $bp-l) {
+                    width: 100%;
+                  }
+                  img {
+                    width: 120px;
+                  }
                 }
-                img {
-                  width: 120px;
+
+                &__names {
+                  line-height: 1.2em;
+                  padding-left: $defaultPadding;
                 }
-              }
 
-              &__names {
-                line-height: 1.2em;
-                padding-left: $defaultPadding;
-              }
+                &__name {
+                  font-weight: bold;
+                  text-transform: uppercase;
+                }
 
-              &__name {
-                font-weight: bold;
-                text-transform: uppercase;
-              }
-
-              &__product {
-                font-weight: bold;
-                margin-bottom: 0.5rem
+                &__product {
+                  font-weight: bold;
+                  margin-bottom: 0.5rem
+                }
               }
             }
           }
-        }
 
-        &__header, &__entry {
-          padding: 0.5rem;
-          .col-bank {
-            width: 33%;
-          }
-          .col-item {
-            width: 17%;
-          }
-        }
-
-        &__header-col {
-          font-weight: bold;
-          text-transform: uppercase;
-          font-size: 0.7rem;
-          margin-bottom: 0.25rem;
-          padding: 0.75rem 0.5rem;
-        }
-
-        &__entry-col {
-          margin-bottom: 0.5rem;
-          padding-left: 0.5rem;
-        }
-
-        &__entries.newclients {
-          .top-offer__header, .top-offer__entry {
+          &__header, &__entry {
+            padding: 0.5rem;
             .col-bank {
-              width: 24%;
+              width: 33%;
             }
             .col-item {
-              width: 12.5%;
+              width: 17%;
             }
           }
-        }
 
-        &__footer {
-          background: $neutralBaseColor;
-          border-bottom: 2px white solid;
-          td {
-            text-align: right;
+          &__header-col {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+            margin-bottom: 0.25rem;
+            padding: 0.75rem 0.5rem;
           }
 
-          .footer-more {
-            text-align: right;
-            padding: 0.25rem 0.5rem;
-            font-size: 14.5px;
-            width: 220px;
-            background-color: white;
-            border: 2px solid $base-link-color;
-            color: $base-link-color;
-            line-height: 1.4em;
-            vertical-align: middle;
-            margin: 0.4em;
-            text-decoration: none;
-
-            &:before {
-              font-family: FmhIcons;
-              font-size: 80%;
-              content: $arrow-right;
-              padding-right: 0.5em;
-            }
+          &__entry-col {
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
           }
-        }
 
-      }
-    }
-
-    &__table-cards {
-      display: none;
-      @media only screen and (max-width: $bp-m) {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      margin-top: 1rem;
-
-      &-title {
-        width: 100%;
-        background-color: $neutralBaseColor;
-        margin: $defaultPadding 0;
-        padding: $defaultPadding;
-      }
-
-      .top-offer__table-card {
-        border: 1px solid $neutralBaseColor;
-        margin: $defaultPadding;
-        &:nth-child(3n+2) {
-          margin-left: 0;
-        }
-        &:nth-child(3n+4) {
-          margin-right: 0;
-        }
-        width: calc(33% - #{$defaultPadding});
-        @media only screen and (max-width: $bp-s) {
-          width: calc(50% - #{$defaultPadding});
-          margin: $defaultPadding;
-          &:nth-child(2n) {
-            margin-left: 0;
-            margin-right: $defaultPadding;
-          }
-          &:nth-child(2n+1) {
-            margin-left: $defaultPadding;
-            margin-right: 0;
-          }
-        }
-        @media only screen and (max-width: $bp-xs) {
-          width: 100%;
-          margin: $defaultPadding 0 !important;
-        }
-
-        .card__bank {
-          display: flex;
-          flex-wrap: wrap;
-          margin: $defaultPadding;
-
-          .bank {
-            &__logo {
-              text-align: center;
-              width: 100%;
-              img {
-                width: 120px;
+          &__entries.newclients {
+            .table__header, .table__entry {
+              .col-bank {
+                width: 24%;
+              }
+              .col-item {
+                width: 12.5%;
               }
             }
-
-            &__names {
-              width: 100%;
-              text-align: center;
-              line-height: 1.2em;
-            }
-
-            &__name {
-              font-weight: bold;
-              text-transform: uppercase;
-            }
-
-            &__product {
-              font-weight: bold;
-              margin-bottom: 0.5rem
-            }
           }
 
+          &__footer {
+            background: $neutralBaseColor;
+            border-bottom: 2px white solid;
+            td {
+              text-align: right;
+              padding: $defaultPadding;
+            }
+          }
         }
+      }
 
-        .card__extended {
-          font-size: $small-font-size;
-          margin: $defaultPadding;
+      .top-offer__table-cards {
+        display: none;
+        @media only screen and (max-width: $bp-m) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        margin-top: 1rem;
 
-          .extended__table {
+        .table-cards {
+
+          &__title {
             width: 100%;
+            background-color: $neutralBaseColor;
+            margin: $defaultPadding 0;
+            padding: $defaultPadding;
           }
 
-          .extended__label {
-            font-variant: small-caps;
-            font-size: 90%;
-          }
+          &__card {
+            border: 1px solid $neutralBaseColor;
+            margin: $defaultPadding;
+            &:nth-child(3n+2) {
+              margin-left: 0;
+            }
+            &:nth-child(3n+4) {
+              margin-right: 0;
+            }
+            width: calc(33% - #{$defaultPadding});
+            @media only screen and (max-width: $bp-s) {
+              width: calc(50% - #{$defaultPadding});
+              margin: $defaultPadding;
+              &:nth-child(2n) {
+                margin-left: 0;
+                margin-right: $defaultPadding;
+              }
+              &:nth-child(2n+1) {
+                margin-left: $defaultPadding;
+                margin-right: 0;
+              }
+            }
+            @media only screen and (max-width: $bp-xs) {
+              width: 100%;
+              margin: $defaultPadding 0 !important;
+            }
 
-          .extended__value {
-            padding-left: 4px;
-          }
+            .card__bank {
+              display: flex;
+              flex-wrap: wrap;
+              margin: $defaultPadding;
 
-        }
+              .bank {
+                &__logo {
+                  text-align: center;
+                  width: 100%;
+                  img {
+                    width: 120px;
+                  }
+                }
 
-        &.card__more {
-          position: relative;
-          border: none;
-          min-height: 2rem;
-          a {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            text-align: center;
-          }
-          .footer-more {
-            text-align: right;
-            padding: 0.25rem 0.5rem;
-            font-size: 14.5px;
-            width: 220px;
-            background-color: white;
-            border: 2px solid $base-link-color;
-            color: $base-link-color;
-            line-height: 1.4em;
-            vertical-align: middle;
-            margin: 0;
-            text-decoration: none;
+                &__names {
+                  width: 100%;
+                  text-align: center;
+                  line-height: 1.2em;
+                }
 
-            &:before {
-              font-family: FmhIcons;
-              font-size: 80%;
-              content: $arrow-right;
-              padding-right: 0.5em;
+                &__name {
+                  font-weight: bold;
+                  text-transform: uppercase;
+                }
+
+                &__product {
+                  font-weight: bold;
+                  margin-bottom: 0.5rem
+                }
+              }
+
+            }
+
+            .card__extended {
+              font-size: $small-font-size;
+              margin: $defaultPadding;
+
+              .extended__table {
+                width: 100%;
+              }
+
+              .extended__label {
+                font-variant: small-caps;
+                font-size: 90%;
+              }
+
+              .extended__value {
+                padding-left: 4px;
+              }
+
+            }
+
+            &.card__more {
+              position: relative;
+              border: none;
+              min-height: 2rem;
+              a {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                text-align: center;
+              }
+              .footer-more {
+                text-align: right;
+                padding: 0.25rem 0.5rem;
+                font-size: 14.5px;
+                width: 220px;
+                background-color: white;
+                border: 2px solid $base-link-color;
+                color: $base-link-color;
+                line-height: 1.4em;
+                vertical-align: middle;
+                margin: 0;
+                text-decoration: none;
+
+                &:before {
+                  font-family: FmhIcons;
+                  font-size: 80%;
+                  content: $arrow-right;
+                  padding-right: 0.5em;
+                }
+              }
             }
           }
         }
       }
     }
+
+
 
     &__overview {
       margin-top: 0.5rem;
@@ -297,20 +282,20 @@
       flex-wrap: wrap;
       margin: $halfGutter * -1;
 
-      .top-offer {
-        &__chart, &__card {
+      .box {
+        &-chart, &-card {
           margin: $halfGutter;
           padding: 0;
         }
 
-        &__chart {
+        &-chart {
           border: $neutralMediumColor 1px solid;
-          width: calc(#{$cardWidthL * 2} );
+          width: calc(#{$cardWidthL * 2} - #{$gutter});
           @media only screen and (max-width: $bp-l) {
-            width: calc(#{$cardWidthM * 2} - 15px);
+            width: calc(#{$cardWidthM * 2} - #{$gutter});
           }
           @media only screen and (max-width: $bp-s) {
-            width: calc(#{$cardWidthS * 2} - 15px);
+            width: calc(#{$cardWidthS * 2} - #{$gutter});
           }
           @media only screen and (max-width: $bp-xs) {
             width: 100%;
@@ -324,21 +309,21 @@
             }
           }
         }
-        &__card {
+        &-card {
           border-radius: 0;
           border: $neutralMediumColor 1px solid;
-          width: calc(#{$cardWidthL} - 15px);
+          width: calc(#{$cardWidthL} - #{$gutter});
           @media only screen and (max-width: $bp-l) {
-            width: calc(#{$cardWidthM} - 15px);
+            width: calc(#{$cardWidthM} - #{$gutter});
           }
           @media only screen and (max-width: $bp-s) {
-            width: calc(#{$cardWidthS} - 15px);
+            width: calc(#{$cardWidthS} - #{$gutter});
           }
           @media only screen and (max-width: $bp-xs) {
             width: 100%;
           }
 
-          .top-offer__segment {
+          .segment {
             &-head, &-content {
               padding: $defaultPadding;
             }
@@ -350,8 +335,8 @@
               }
 
               .head-count {
-                // margin-top: -10px;
-                margin-top: 4px;    // TODO: it's differnt in patternlab then django! Why???
+                margin-top: -10px;
+                // margin-top: 4px;    // TODO: it's differnt in patternlab then django! Why???
                 float: left;
                 font-size: 2.4rem;
               }
@@ -372,7 +357,7 @@
             &-content {
               border-top: 2px black solid;
 
-              .top-offer__item {
+              .item {
                 display: flex;
                 line-height: 1.5rem;
                 vertical-align: middle;
@@ -392,7 +377,7 @@
           }
 
           &.top1 {
-            .top-offer__segment-head .head-count {
+            .segment-head .head-count {
               color: $top1Color;
             }
             .top-offer__segment-content {
@@ -400,42 +385,42 @@
             }
           }
           &.top2 {
-            .top-offer__segment-head .head-count {
+            .segment-head .head-count {
               color: $top2Color;
             }
-            .top-offer_segment-content {
+            .segment-content {
               border-top: 2px $top2Color solid;
             }
           }
           &.top3 {
-            .top-offer__segment-head .head-count {
+            .segment-head .head-count {
               color: $top3Color;
             }
-            .top-offer__segment-content {
+            .segment-content {
               border-top: 2px $top3Color solid;
             }
           }
           &.top4 {
-            .top-offer__segment-head .head-count {
+            .segment-head .head-count {
               color: $top4Color;
             }
-            .top-offer__segment-content {
+            .segment-content {
               border-top: 2px $top4Color solid;
             }
           }
           &.top5 {
-            .top-offer__segment-head .head-count {
+            .segment-head .head-count {
               color: $top5Color;
             }
-            .top-offer__segment-content {
+            .segment-content {
               border-top: 2px $top5Color solid;
             }
           }
           &.topZ {
-            .top-offer__segment-head .head-count {
+            .segment-head .head-count {
               color: $topZColor;
             }
-            .top-offer__segment-content {
+            .segment-content {
               border-top-color: $topZColor;
             }
           }
