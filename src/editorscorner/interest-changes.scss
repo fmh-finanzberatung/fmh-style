@@ -7,9 +7,10 @@
 
   .interest-group {
     margin: 10px;
+    margin-bottom: 2rem;
 
     &__grouptitle {
-      margin-top: 2rem;
+      margin-top: 1.5rem;
       margin-bottom: 0;
     }
     &__subtitle {
@@ -19,11 +20,12 @@
 
     .group {
       &__table {
-        margin-top: 1rem;
-        width: 100%;
         @media only screen and (max-width: $bp-m) {
           display: none;
         }
+        margin-top: 1rem;
+        width: 100%;
+        border-collapse: collapse;
 
         .table {
           &__header {
@@ -36,6 +38,7 @@
               text-align: left;
             }
           }
+
           &__entry {
             margin: 6px 0;
             .entry-col {
@@ -131,28 +134,32 @@
 
         .cards__card {
           border: 1px solid $neutralBaseColor;
-          margin: 0 $defaultPadding;
+          margin: $defaultPadding;
           &:nth-child(3n+1) {
             margin-left: 0;
           }
           &:nth-child(3n+3) {
             margin-right: 0;
           }
-          width: calc(33% - 6px);
+          width: calc(33% - #{$defaultPadding} - 6px);
           @media only screen and (max-width: $bp-s) {
-            width: calc(49% - 6px);
+            width: calc(49% - #{$defaultPadding} - 6px);
             margin-top: $defaultPadding;
             margin-bottom: $defaultPadding;
             &:nth-child(2n+1) {
               margin-left: 0;
+              margin-right: $defaultPadding;
             }
             &:nth-child(2n+2) {
+              margin-left: $defaultPadding;
               margin-right: 0;
             }
           }
           @media only screen and (max-width: $bp-xs) {
             width: 100%;
-            margin: $defaultPadding 0;
+            margin: $defaultPadding;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
           }
 
           .card__bank {

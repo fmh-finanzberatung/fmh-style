@@ -7,7 +7,7 @@
 
   .top-offer {
     &__wrapper {
-      margin: 0 0.5rem;
+      margin: 0 0.5rem 1rem;
     }
 
     &__headline1 {
@@ -141,6 +141,9 @@
             background-color: $neutralBaseColor;
             margin: $defaultPadding 0;
             padding: $defaultPadding;
+            h5 {
+              margin: 0;
+            }
           }
 
           &__card {
@@ -152,15 +155,15 @@
             &:nth-child(3n+4) {
               margin-right: 0;
             }
-            width: calc(33% - #{$defaultPadding});
+            width: calc(33% - #{$defaultPadding}  - 6px);
             @media only screen and (max-width: $bp-s) {
-              width: calc(50% - #{$defaultPadding});
+              width: calc(50% - #{$defaultPadding} - 6px);
               margin: $defaultPadding;
-              &:nth-child(2n) {
+              &:nth-child(2n+2) {
                 margin-left: 0;
                 margin-right: $defaultPadding;
               }
-              &:nth-child(2n+1) {
+              &:nth-child(2n+3) {
                 margin-left: $defaultPadding;
                 margin-right: 0;
               }
@@ -315,12 +318,12 @@
         &-card {
           border-radius: 0;
           border: $neutralMediumColor 1px solid;
-          width: calc(#{$cardWidthL} - #{$gutter});
+          width: calc(#{$cardWidthL} - #{$gutter} - 3px);
           @media only screen and (max-width: $bp-l) {
-            width: calc(#{$cardWidthM} - #{$gutter});
+            width: calc(#{$cardWidthM} - #{$gutter} - 3px);
           }
           @media only screen and (max-width: $bp-s) {
-            width: calc(#{$cardWidthS} - #{$gutter});
+            width: calc(#{$cardWidthS} - #{$gutter} - 3px);
           }
           @media only screen and (max-width: $bp-xs) {
             width: 100%;
