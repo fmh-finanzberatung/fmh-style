@@ -102,11 +102,12 @@
             }
             &__bank {
               text-align: left;
-              //text-transform: initial;
+              vertical-align: top;
               font-variant:small-caps;
             }
             &__date {
               text-align: left;
+              vertical-align: top;
               width: 2rem;
             }
             &__rang {
@@ -118,9 +119,10 @@
             }
             &__diff {
               text-align: right;
+              vertical-align: top;
+              min-width: 65px;
               &.good {
                 color: $tendence-good-color-dark;
-                vertical-align: middle;
                 &:after {
                   font-family: FmhIcons;
                   font-size: 90%;
@@ -131,7 +133,6 @@
               }
               &.bad {
                 color: $tendence-bad-color-dark;
-                vertical-align: middle;
                 &:after {
                   font-family: FmhIcons;
                   font-size: 90%;
