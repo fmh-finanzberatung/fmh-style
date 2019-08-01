@@ -79,11 +79,20 @@
               text-decoration: none;
               color: black;
               font-size: $small-font-size;
+              position: relative;
 
-              button {
+              a {
+                vertical-align: bottom;
+                position: absolute;
+                bottom: 0;
+                width: 250px;
+                left: calc(50% - 125px);
+
+                button {
                 margin-top: $defaultPadding + 12px;
                 margin-bottom: $defaultPadding;
                 width: 80%;
+              }
               }
             }
 
@@ -99,6 +108,7 @@
             &__top {
               width: 80%;
               margin: $defaultPadding auto;
+              margin-bottom: 40px;
             }
             &__bank {
               text-align: left;
