@@ -11,6 +11,7 @@
       margin: 10px;
 
       .section {
+
         &__box {
           border: 2px solid $neutralBaseColor;
           margin-top: 20px;
@@ -50,6 +51,7 @@
           padding: 0;
 
           .card {
+
             &__box {
               width: 23%;
               border-right: 2px solid $neutralBaseColor;
@@ -101,32 +103,39 @@
               font-weight: bold;
               font-size: $title-font-size;
             }
+
             &__changes {
               text-align: center;
               padding-top: $defaultPadding;
             }
+
             &__top {
               width: 80%;
               margin: $defaultPadding auto;
               margin-bottom: 40px;
             }
+
             &__bank {
               text-align: left;
               vertical-align: top;
               font-variant:small-caps;
             }
+
             &__date {
               text-align: left;
               vertical-align: top;
               width: 2rem;
             }
+
             &__rang {
               text-align: left;
               width: 1rem;
             }
+
             &__interest {
               text-align: right;
             }
+
             &__diff {
               text-align: right;
               vertical-align: top;
@@ -151,6 +160,12 @@
                   vertical-align: baseline;
                 }
               }
+            }
+
+            &__noentries {
+              padding-top: 2rem;
+              font-variant: small-caps;
+              font-size: 125%;
             }
 
             &__chart {
