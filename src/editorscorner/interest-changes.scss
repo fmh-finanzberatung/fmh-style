@@ -5,124 +5,88 @@
   padding: $defaultPadding;
   margin: auto;
 
-  .interest-group {
-    margin: 10px;
-    margin-bottom: 2rem;
+  .common__cards {
+    margin-top: $defaultPadding;
+  }
+  .segment__interest {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $defaultPadding;
+    background-color: $neutralBaseColor;
+    font-size: $small-font-size;
+    font-weight: bold;
 
-    &__grouptitle {
-      margin-top: 1.5rem;
-      margin-bottom: 0;
-    }
-    &__subtitle {
-      margin-top: 1rem;
-      margin-bottom: 0;
+    .interest__title {
+      width: 100%;
+      font-variant: small-caps;
     }
 
-    .group {
-      &__table {
-        @media only screen and (max-width: $bp-m) {
-          display: none;
+    .interest__values {
+      width: 50%;
+
+      .label {
+        font-variant: small-caps;
+        font-size: 90%;
+      }
+    }
+
+    .interest__changes {
+      width: 50%;
+      text-align: center;
+      margin: auto;
+
+      .change__icon {
+        margin: auto;
+        $iconSize: 0.8rem;
+        text-align: center;
+        line-height: $iconSize;
+
+        &.good {
+          color: $tendence-good-color-dark;
         }
-        margin-top: 1rem;
-        width: 100%;
-        border-collapse: collapse;
 
-        .table {
-          &__header {
-            .header-col {
-              background: $neutralBaseColor;
-              font-weight: bold;
-              text-transform: uppercase;
-              font-size: 0.7rem;
-              padding: $defaultPadding;
-              text-align: left;
-            }
+        &.bad {
+          color: $tendence-bad-color-dark;
+        }
+
+        &.down {
+          &:before {
+            font-family: "FmhIcons";
+            content: '\E014';
+            font-size: $iconSize;
+            padding-right: $defaultPadding;
+            vertical-align: middle;
           }
+        }
 
-          &__entry {
-            margin: 6px 0;
-            .entry-col {
-              padding: $defaultPadding;
-              padding-top: 0;
-              padding-bottom: 0;
-              font-size: 0.8rem;
-              vertical-align: middle;
-              line-height: 1.2rem;
-              border-bottom: 2px solid $neutralBaseColor;
-            }
-            .entry {
-              &__bank {
-                display: flex;
-                flex-wrap: wrap;
-                padding-top: $defaultPadding;
-
-                .bank {
-                  &__logo {
-                    width: 50%;
-                    @media only screen and (max-width: $bp-l) {
-                      width: 100%;
-                    }
-                    img {
-                      width: 120px;
-                    }
-                  }
-                  &__names {
-                    width: 50%;
-                    @media only screen and (max-width: $bp-l) {
-                      width: 100%;
-                    }
-                    line-height: 1.2em;
-                  }
-                  &__name {
-                    font-weight: bold;
-                    text-transform: uppercase;
-                  }
-                  &__product {
-                    font-weight: bold;
-                    margin-bottom: 0.5rem
-                  }
-                }
-
-              }
-
-              &__interest {
-                &--diff {
-                  $iconSize: 0.8rem;
-                  text-align: left;
-                  padding-top: 2px;
-                  vertical-align: middle;
-                  line-height: $iconSize;
-                  &.good {
-                    color: $tendence-good-color-dark;
-                  }
-                  &.bad {
-                    color: $tendence-bad-color-dark;
-                  }
-                  &.down {
-                    &:before {
-                      font-family: "FmhIcons";
-                      content: '\E014';
-                      font-size: $iconSize;
-                      padding-right: $defaultPadding;
-                      vertical-align: middle;
-                    }
-                  }
-                  &.up {
-                    &:before {
-                      font-family: "FmhIcons";
-                      content: '\E012';
-                      font-size: $iconSize;
-                      padding-right: $defaultPadding;
-                      vertical-align: middle;
-                    }
-                  }
-                }
-              }
-
-            }
+        &.up {
+          &:before {
+            font-family: "FmhIcons";
+            content: '\E012';
+            font-size: $iconSize;
+            padding-right: $defaultPadding;
+            vertical-align: middle;
           }
         }
       }
+
+      .change__value {
+
+        &.good {
+          color: $tendence-good-color-dark;
+        }
+
+        &.bad {
+          color: $tendence-bad-color-dark;
+        }
+      }
+
+    }
+
+
+  }
+
+    .Xgroup {
 
       &__cards {
         margin-top: 1rem;
@@ -203,71 +167,7 @@
             font-size: $small-font-size;
             font-weight: bold;
 
-            .interest__title {
-              width: 100%;
-              font-variant: small-caps;
-            }
 
-            .interest__values {
-              width: 50%;
-
-              .label {
-                font-variant: small-caps;
-                font-size: 90%;
-              }
-            }
-
-            .interest__changes {
-              width: 50%;
-              text-align: center;
-
-              .change__icon {
-                margin: auto;
-                $iconSize: 0.8rem;
-                text-align: center;
-                line-height: $iconSize;
-
-                &.good {
-                  color: $tendence-good-color-dark;
-                }
-
-                &.bad {
-                  color: $tendence-bad-color-dark;
-                }
-
-                &.down {
-                  &:before {
-                    font-family: "FmhIcons";
-                    content: '\E014';
-                    font-size: $iconSize;
-                    padding-right: $defaultPadding;
-                    vertical-align: middle;
-                  }
-                }
-
-                &.up {
-                  &:before {
-                    font-family: "FmhIcons";
-                    content: '\E012';
-                    font-size: $iconSize;
-                    padding-right: $defaultPadding;
-                    vertical-align: middle;
-                  }
-                }
-              }
-
-              .change__value {
-
-                &.good {
-                  color: $tendence-good-color-dark;
-                }
-
-                &.bad {
-                  color: $tendence-bad-color-dark;
-                }
-              }
-
-            }
           }
 
           .card__extended {
@@ -288,7 +188,7 @@
 
       }
     }
-  }
+
 }
 
 

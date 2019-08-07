@@ -1,0 +1,187 @@
+$gutter: 15px;
+$halfGutter: $gutter / 2;
+$defaultPadding: 10px;
+
+@mixin set-cards-with($l-width, $m-width, $s-width, $xs-width) {
+    width: calc(#{$l-width} - #{$gutter});
+    @media only screen and (max-width: $bp-l) {
+      width: calc(#{$m-width} - #{$gutter});
+    }
+    @media only screen and (max-width: $bp-s) {
+      width: calc(#{$s-width} - #{$gutter});
+    }
+    @media only screen and (max-width: $bp-xs) {
+      width: $xs-width;
+    }
+}
+
+.cards__6cols, .common__cards {
+  .card, .card__single {
+    @include set-cards-with(16.66%, 33.33%, 50%, 100%);
+  }
+  .card__double {
+    @include set-cards-with(33.33%, 66.66%, 100%, 100%);
+  }
+}
+.cards__4cols {
+  .card, .card__single {
+    @include set-cards-with(25%, 50%, 100%, 100%);
+  }
+  .card__double {
+    @include set-cards-with(50%, 100%, 100%, 100%);
+  }
+}
+
+.common__cards, .cards__6cols, .cards__4cols {
+  display: flex;
+  flex-wrap: wrap;
+  margin: $halfGutter * -1;
+
+  .cards__title {
+    width: 100%;
+    background-color: $neutralBaseColor;
+    margin: $defaultPadding $halfGutter;
+    padding: $defaultPadding;
+    * {
+      margin: 0;
+    }
+  }
+
+  .card, .card__single, .card__double, .card__more {
+    border: $neutralMediumColor 1px solid;
+    position: relative;
+    margin: $halfGutter;
+    padding: 0;
+
+    .segment {
+
+      &__ranking {
+        padding: $defaultPadding;
+        height: 4.25rem;
+        div {
+          padding: 0;
+        }
+
+        .ranking__count {
+          margin-top: -10px;
+          // margin-top: 4px;    // TODO: it's differnt in patternlab then django! Why???
+          float: left;
+          font-size: 2.4rem;
+        }
+
+        .ranking__bank {
+          margin-top: -3px;
+          margin-left: 2rem;
+          font-weight: bold;
+          .bankname {
+            text-transform: uppercase;
+          }
+          .productname {
+            font-size: smaller;
+          }
+        }
+      }
+
+      &__bank {
+        display: flex;
+        flex-wrap: wrap;
+        margin: $defaultPadding;
+
+        .bank {
+          &__logo {
+            text-align: center;
+            width: 100%;
+            img {
+              width: 120px;
+            }
+          }
+
+          &__names {
+            width: 100%;
+            text-align: center;
+            line-height: 1.2em;
+          }
+
+          &__name {
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+
+          &__product {
+            font-weight: bold;
+            margin-bottom: 0.5rem
+          }
+        }
+
+      }
+
+      &__content, &__highlight {
+        font-size: $small-font-size;
+        padding: $defaultPadding;
+
+        &.separator {
+          border-top: 2px black solid;
+        }
+
+        .content {
+
+          &__ranking {
+            .item {
+              display: flex;
+              line-height: 1.5rem;
+              vertical-align: middle;
+              justify-content: space-between;
+
+              .label {
+                width: 50%;
+                font-size: 70%;
+                color: $dark-grey-text-color;
+              }
+              .value {
+                font-size: 80%;
+                text-align: right;
+              }
+            }
+          }
+
+          &__table {
+            width: 100%;
+
+            .item__label {
+              font-variant: small-caps;
+              font-size: 90%;
+            }
+
+            .item__value {
+              padding-left: 4px;
+            }
+
+          }
+
+        }
+      }
+
+      &__highlight {
+        background-color: $neutralBaseColor;
+      }
+
+      &__title {
+        padding: $defaultPadding;
+        font-weight: bold;
+        font-size: $title-font-size;
+
+      }
+
+      &__bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: $defaultPadding;
+      }
+    }
+
+
+  }
+
+}

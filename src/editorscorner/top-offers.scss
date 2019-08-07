@@ -6,430 +6,94 @@
   margin: auto;
 
   .top-offer {
-    &__wrapper {
-      margin: 0 0.5rem 1rem;
-    }
-
-    &__headline1 {
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-    }
-
-    &__headline2 {
-      margin-top: 0;
-      margin-bottom: 0.25rem;
-    }
-
-    &__fullist {
-
-      .top-offer__table {
-        @media only screen and (max-width: $bp-m) {
-          display: none;
-        }
-        margin-top: 0.5rem;
-        margin-bottom: 2rem;
-        width: 100%;
-        border-collapse: collapse;
-
-        .table {
-          &__header {
-            background: $neutralBaseColor;
-          }
-
-          &__entry {
-            background: white;
-            border-bottom: 2px solid $neutralBaseColor !important;
-
-            .col-bank {
-              padding-top: $defaultPadding;
-
-              .bank {
-                &__wrapper {
-                  display: flex;
-                  @media only screen and (max-width: $bp-l) {
-                    display: block;
-                  }
-                }
-
-                &__logo {
-                  @media only screen and (max-width: $bp-l) {
-                    width: 100%;
-                  }
-                  img {
-                    width: 100px;
-                    margin-right: 15px;
-                    margin-top: auto;
-                    margin-bottom: auto;
-                  }
-                }
-
-                &__names {
-                  line-height: 1.2em;
-                  padding-left: $defaultPadding;
-                }
-
-                &__name {
-                  font-weight: bold;
-                  text-transform: uppercase;
-                }
-
-                &__product {
-                  font-weight: bold;
-                  margin-bottom: 0.5rem
-                }
-              }
-            }
-          }
-
-          &__header, &__entry {
-            padding: 0.5rem;
-            .col-bank {
-              width: 33%;
-            }
-            .col-item {
-              width: 17%;
-            }
-          }
-
-          &__header-col {
-            font-weight: bold;
-            text-transform: uppercase;
-            font-size: 0.7rem;
-            margin-bottom: 0.25rem;
-            padding: 0.75rem 0.5rem;
-            text-align: left;
-          }
-
-          &__entry-col {
-            margin-bottom: 0.5rem;
-            padding-left: 0.5rem;
-          }
-
-          &__entries.newclients {
-            .table__header, .table__entry {
-              .col-bank {
-                width: 24%;
-              }
-              .col-item {
-                width: 12.5%;
-              }
-            }
-          }
-
-          &__footer {
-            background: $neutralBaseColor;
-            border-bottom: 2px white solid;
-            td {
-              text-align: right;
-              padding: $defaultPadding;
-            }
-          }
-        }
-      }
-
-      .top-offer__table-cards {
-        display: none;
-        @media only screen and (max-width: $bp-m) {
-          display: flex;
-          flex-wrap: wrap;
-        }
-        margin-top: 1rem;
-
-        .table-cards {
-
-          &__title {
-            width: 100%;
-            background-color: $neutralBaseColor;
-            margin: $defaultPadding 0;
-            padding: $defaultPadding;
-            h5 {
-              margin: 0;
-            }
-          }
-
-          &__card {
-            border: 1px solid $neutralBaseColor;
-            margin: $defaultPadding;
-            &:nth-child(3n+2) {
-              margin-left: 0;
-            }
-            &:nth-child(3n+4) {
-              margin-right: 0;
-            }
-            width: calc(33% - #{$defaultPadding}  - 6px);
-            @media only screen and (max-width: $bp-s) {
-              width: calc(50% - #{$defaultPadding} - 6px);
-              margin: $defaultPadding;
-              &:nth-child(2n+2) {
-                margin-left: 0;
-                margin-right: $defaultPadding;
-              }
-              &:nth-child(2n+3) {
-                margin-left: $defaultPadding;
-                margin-right: 0;
-              }
-            }
-            @media only screen and (max-width: $bp-xs) {
-              width: 100%;
-              margin: $defaultPadding 0 !important;
-            }
-
-            .card__bank {
-              display: flex;
-              flex-wrap: wrap;
-              margin: $defaultPadding;
-
-              .bank {
-                &__logo {
-                  text-align: center;
-                  width: 100%;
-                  img {
-                    width: 120px;
-                  }
-                }
-
-                &__names {
-                  width: 100%;
-                  text-align: center;
-                  line-height: 1.2em;
-                }
-
-                &__name {
-                  font-weight: bold;
-                  text-transform: uppercase;
-                }
-
-                &__product {
-                  font-weight: bold;
-                  margin-bottom: 0.5rem
-                }
-              }
-
-            }
-
-            .card__extended {
-              font-size: $small-font-size;
-              margin: $defaultPadding;
-
-              .extended__table {
-                width: 100%;
-              }
-
-              .extended__label {
-                font-variant: small-caps;
-                font-size: 90%;
-              }
-
-              .extended__value {
-                padding-left: 4px;
-              }
-
-            }
-
-            &.card__more {
-              position: relative;
-              border: none;
-              min-height: 2rem;
-              a {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                text-align: center;
-              }
-              .footer-more {
-                text-align: right;
-                padding: 0.25rem 0.5rem;
-                font-size: 14.5px;
-                width: 220px;
-                background-color: white;
-                border: 2px solid $base-link-color;
-                color: $base-link-color;
-                line-height: 1.4em;
-                vertical-align: middle;
-                margin: 0;
-                text-decoration: none;
-
-                &:before {
-                  font-family: FmhIcons;
-                  font-size: 80%;
-                  content: $arrow-right;
-                  padding-right: 0.5em;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
-
-
     &__overview {
       margin-top: 0.5rem;
       margin-bottom: 1rem;
+
+      .card-ranking- {
+        $top1Color: #008800;
+        $topLevelStep: -10%;
+        $top2Color: scale-color($top1Color, $lightness: $topLevelStep);
+        $top3Color: scale-color($top1Color, $lightness: $topLevelStep*2);
+        $top4Color: scale-color($top1Color, $lightness: $topLevelStep*3);
+        $top5Color: scale-color($top1Color, $lightness: $topLevelStep*4);
+        $topZColor: #dd0000;
+
+        &top1 {
+          .segment__ranking .ranking__count {
+            color: $top1Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top1Color solid;
+          }
+        }
+        &top2 {
+          .segment__ranking .ranking__count {
+            color: $top2Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top2Color solid;
+          }
+        }
+        &top3 {
+          .segment__ranking .ranking__count {
+            color: $top3Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top3Color solid;
+          }
+        }
+        &top4 {
+          .segment__ranking .ranking__count {
+            color: $top4Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top4Color solid;
+          }
+        }
+        &top5 {
+          .segment__ranking .ranking__count {
+            color: $top5Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top5Color solid;
+          }
+        }
+        &topZ {
+          .segment__ranking .ranking__count {
+            color: $topZColor;
+          }
+          .segment__content.separator {
+            border-top-color: $topZColor;
+          }
+        }
+      }
+
+      .card-chart .chart-image {
+        margin-left: auto;
+        margin-right: auto;
+        width: 375px;
+        @media only screen and (max-width: $bp-xs) {
+          width: 320px;
+        }
+      }
+
     }
 
-    &__cards {
-      $top1Color: #008800;
-      $topLevelStep: -10%;
-      $top2Color: scale-color($top1Color, $lightness: $topLevelStep);
-      $top3Color: scale-color($top1Color, $lightness: $topLevelStep*2);
-      $top4Color: scale-color($top1Color, $lightness: $topLevelStep*3);
-      $top5Color: scale-color($top1Color, $lightness: $topLevelStep*4);
-      $topZColor: #dd0000;
-      $cardWidthL: 16.4%;
-      $cardWidthM: 33%;
-      $cardWidthS: 50%;
-      $gutter: 15px;
-      $halfGutter: $gutter / 2;
-      $defaultPadding: 10px;
-
-      display: flex;
-      flex-wrap: wrap;
-      margin: $halfGutter * -1;
-
-      .box {
-        &-chart, &-card {
-          margin: $halfGutter;
+    &__fullist {
+      .card__more {
+          //height: calc(100% - #{$gutter});
+        text-align: center;
+        @media only screen and (max-width: $bp-s) {
+          border: none;
+          min-height: 3rem;
+          width: 100%;
           padding: 0;
-        }
-
-        &-chart {
-          border: $neutralMediumColor 1px solid;
-          width: calc(#{$cardWidthL * 2} - #{$gutter});
-          @media only screen and (max-width: $bp-l) {
-            width: calc(#{$cardWidthM * 2} - #{$gutter});
+          div {
+            padding: 0;
           }
-          @media only screen and (max-width: $bp-s) {
-            width: calc(#{$cardWidthS * 2} - #{$gutter});
-          }
-          @media only screen and (max-width: $bp-xs) {
+          button {
             width: 100%;
-          }
-          .chart-image {
-            margin-left: auto;
-            margin-right: auto;
-            width: 375px;
-            @media only screen and (max-width: $bp-xs) {
-              width: 320px;
-            }
-          }
-        }
-        &-card {
-          border-radius: 0;
-          border: $neutralMediumColor 1px solid;
-          width: calc(#{$cardWidthL} - #{$gutter} - 3px);
-          @media only screen and (max-width: $bp-l) {
-            width: calc(#{$cardWidthM} - #{$gutter} - 3px);
-          }
-          @media only screen and (max-width: $bp-s) {
-            width: calc(#{$cardWidthS} - #{$gutter} - 3px);
-          }
-          @media only screen and (max-width: $bp-xs) {
-            width: 100%;
-          }
-
-          .segment {
-            &-head, &-content {
-              padding: $defaultPadding;
-            }
-
-            &-head {
-              height: 4.25rem;
-              div {
-                padding: 0;
-              }
-
-              .head-count {
-                margin-top: -10px;
-                // margin-top: 4px;    // TODO: it's differnt in patternlab then django! Why???
-                float: left;
-                font-size: 2.4rem;
-              }
-
-              .head-bank {
-                margin-top: -3px;
-                margin-left: 2rem;
-                font-weight: bold;
-                .bankname {
-                  text-transform: uppercase;
-                }
-                .productname {
-                  font-size: smaller;
-                }
-              }
-            }
-
-            &-content {
-              border-top: 2px black solid;
-
-              .item {
-                display: flex;
-                line-height: 1.5rem;
-                vertical-align: middle;
-                justify-content: space-between;
-
-                .label {
-                  width: 50%;
-                  font-size: 70%;
-                  color: $dark-grey-text-color;
-                }
-                .value {
-                  font-size: 80%;
-                  text-align: right;
-                }
-              }
-            }
-          }
-
-          &.top1 {
-            .segment-head .head-count {
-              color: $top1Color;
-            }
-            .top-offer__segment-content {
-              border-top: 2px $top1Color solid;
-            }
-          }
-          &.top2 {
-            .segment-head .head-count {
-              color: $top2Color;
-            }
-            .segment-content {
-              border-top: 2px $top2Color solid;
-            }
-          }
-          &.top3 {
-            .segment-head .head-count {
-              color: $top3Color;
-            }
-            .segment-content {
-              border-top: 2px $top3Color solid;
-            }
-          }
-          &.top4 {
-            .segment-head .head-count {
-              color: $top4Color;
-            }
-            .segment-content {
-              border-top: 2px $top4Color solid;
-            }
-          }
-          &.top5 {
-            .segment-head .head-count {
-              color: $top5Color;
-            }
-            .segment-content {
-              border-top: 2px $top5Color solid;
-            }
-          }
-          &.topZ {
-            .segment-head .head-count {
-              color: $topZColor;
-            }
-            .segment-content {
-              border-top-color: $topZColor;
-            }
           }
         }
       }

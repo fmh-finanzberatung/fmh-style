@@ -1,0 +1,120 @@
+.common__table {
+  @media only screen and (max-width: $bp-m) {
+    display: none;
+  }
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+
+  .table {
+
+    &__header {
+
+      .header__col {
+        background: $neutralBaseColor;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 0.7rem;
+        padding: $defaultPadding;
+        text-align: left;
+      }
+    }
+
+    &__entry {
+      margin: 6px 0;
+
+      .entry__col {
+        padding: $defaultPadding;
+        padding-top: 0;
+        padding-bottom: 0;
+        font-size: 0.8rem;
+        vertical-align: middle;
+        line-height: 1.2rem;
+        border-bottom: 2px solid $neutralBaseColor;
+      }
+
+      .entry {
+        &__bank {
+          display: flex;
+          flex-wrap: wrap;
+          padding-top: $defaultPadding;
+
+          .bank {
+            &__logo {
+              width: 50%;
+              @media only screen and (max-width: $bp-l) {
+                width: 100%;
+              }
+              img {
+                width: 120px;
+              }
+            }
+            &__names {
+              width: 50%;
+              @media only screen and (max-width: $bp-l) {
+                width: 100%;
+              }
+              line-height: 1.2em;
+            }
+            &__name {
+              font-weight: bold;
+              text-transform: uppercase;
+            }
+            &__product {
+              font-weight: bold;
+              margin-bottom: 0.5rem
+            }
+          }
+
+        }
+
+        &__diff-tendence {
+
+          $iconSize: 0.8rem;
+          text-align: left;
+          padding-top: 2px;
+          vertical-align: middle;
+          line-height: $iconSize;
+
+          &.good {
+            color: $tendence-good-color-dark;
+          }
+          &.bad {
+            color: $tendence-bad-color-dark;
+          }
+
+          &.down {
+            &:before {
+              font-family: "FmhIcons";
+              content: '\E014';
+              font-size: $iconSize;
+              padding-right: $defaultPadding;
+              vertical-align: middle;
+            }
+          }
+          &.up {
+            &:before {
+              font-family: "FmhIcons";
+              content: '\E012';
+              font-size: $iconSize;
+              padding-right: $defaultPadding;
+              vertical-align: middle;
+            }
+          }
+
+        }
+
+      }
+    }
+
+    &__footer {
+      background: $neutralBaseColor;
+      border-bottom: 2px white solid;
+      td {
+        padding: $defaultPadding;
+      }
+
+    }
+
+  }
+}

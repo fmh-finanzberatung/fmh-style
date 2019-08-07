@@ -3,6 +3,7 @@ $defaultPadding: 6px;
 .button-bar {
   width: 100%;
   text-align: right;
+  padding: $defaultPadding;
 }
 
 button {

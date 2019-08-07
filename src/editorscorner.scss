@@ -12,14 +12,23 @@
 @import "typeface";
 
 /***************************************
+* Own Globals
+****************************************/
+@import "global/variables";
+
+/***************************************
 * Import general used elements
 ****************************************/
 @import "elements/buttons";
+@import "elements/sections";
+@import "elements/tables";
+@import "elements/cards";
+@import "elements/responsive";
+
 
 /***************************************
 * Own Imports
 ****************************************/
-@import "editorscorner/variables";
 @import "editorscorner/general";
 @import "editorscorner/dashboard";
 @import "editorscorner/interest-changes";
