@@ -34,160 +34,31 @@
       width: 50%;
       text-align: center;
       margin: auto;
+      padding-top: 4px;
 
       .change__icon {
         margin: auto;
-        $iconSize: 0.8rem;
         text-align: center;
-        line-height: $iconSize;
 
-        &.good {
-          color: $tendence-good-color-dark;
+        @include tendence-color();
+        @include direction-arrows();
+        &.down::after, &.up::after {
+          padding-left: 0;
+          padding-right: 4px;
         }
 
-        &.bad {
-          color: $tendence-bad-color-dark;
-        }
-
-        &.down {
-          &:before {
-            font-family: "FmhIcons";
-            content: '\E014';
-            font-size: $iconSize;
-            padding-right: $defaultPadding;
-            vertical-align: middle;
-          }
-        }
-
-        &.up {
-          &:before {
-            font-family: "FmhIcons";
-            content: '\E012';
-            font-size: $iconSize;
-            padding-right: $defaultPadding;
-            vertical-align: middle;
-          }
-        }
       }
 
       .change__value {
 
-        &.good {
-          color: $tendence-good-color-dark;
-        }
+        @include tendence-color();
 
-        &.bad {
-          color: $tendence-bad-color-dark;
-        }
       }
 
     }
 
 
   }
-
-    .Xgroup {
-
-      &__cards {
-        margin-top: 1rem;
-        display: none;
-        @media only screen and (max-width: $bp-m) {
-          display: flex;
-          flex-wrap: wrap;
-        }
-
-        .cards__card {
-          border: 1px solid $neutralBaseColor;
-          margin: $defaultPadding;
-          &:nth-child(3n+1) {
-            margin-left: 0;
-          }
-          &:nth-child(3n+3) {
-            margin-right: 0;
-          }
-          width: calc(33% - #{$defaultPadding} - 6px);
-          @media only screen and (max-width: $bp-s) {
-            width: calc(49% - #{$defaultPadding} - 6px);
-            margin-top: $defaultPadding;
-            margin-bottom: $defaultPadding;
-            &:nth-child(2n+1) {
-              margin-left: 0;
-              margin-right: $defaultPadding;
-            }
-            &:nth-child(2n+2) {
-              margin-left: $defaultPadding;
-              margin-right: 0;
-            }
-          }
-          @media only screen and (max-width: $bp-xs) {
-            width: 100%;
-            margin: $defaultPadding;
-            margin-left: 0 !important;
-            margin-right: 0 !important;
-          }
-
-          .card__bank {
-            display: flex;
-            flex-wrap: wrap;
-            margin: $defaultPadding;
-
-            .bank {
-              &__logo {
-                text-align: center;
-                width: 100%;
-                img {
-                  width: 120px;
-                }
-              }
-
-              &__names {
-                width: 100%;
-                text-align: center;
-                line-height: 1.2em;
-              }
-
-              &__name {
-                font-weight: bold;
-                text-transform: uppercase;
-              }
-
-              &__product {
-                font-weight: bold;
-                margin-bottom: 0.5rem
-              }
-            }
-
-          }
-
-          .card__interest {
-            display: flex;
-            flex-wrap: wrap;
-            padding: $defaultPadding;
-            background-color: $neutralBaseColor;
-            font-size: $small-font-size;
-            font-weight: bold;
-
-
-          }
-
-          .card__extended {
-            font-size: $small-font-size;
-            margin: $defaultPadding;
-
-            .extended__label {
-              font-variant: small-caps;
-              font-size: 90%;
-            }
-
-            .extended__value {
-              padding-left: 4px;
-            }
-
-          }
-        }
-
-      }
-    }
 
 }
 

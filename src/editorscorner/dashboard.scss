@@ -79,31 +79,15 @@
         &__diff {
           text-align: right;
           vertical-align: top;
-          min-width: 70px;
-          &.good {
-            color: $tendence-good-color-dark;
-            &:after {
-              font-family: FmhIcons;
-              font-size: 90%;
-              content: '\E012';
-              padding-left: 0.5em;
-              vertical-align: baseline;
-            }
-          }
-          &.bad {
-            color: $tendence-bad-color-dark;
-            &:after {
-              font-family: FmhIcons;
-              font-size: 90%;
-              content: '\E014';
-              padding-left: 0.5em;
-              vertical-align: baseline;
-            }
-          }
+          min-width: 74px;
+
+          @include tendence-color();
+          @include direction-arrows();
+
         }
 
         &__noentries {
-          padding-top: 1.5rem;
+          padding-top: 2rem;
           font-variant: small-caps;
           font-size: 120%;
           text-align: center;
@@ -117,177 +101,6 @@
         }
       }
     }
-
-/*
-    .section {
-
-      &__boxX {
-        border: 2px solid $neutralBaseColor;
-        margin-top: 20px;
-      }
-
-      &__titleX {
-        background-color: $neutralBaseColor;
-        padding: $defaultPadding;
-      }
-
-      &__nameX {
-        font-weight: bold;
-        font-size: $headline-font-size;
-        line-height: 1.5em;
-        vertical-align: baseline;
-        padding-left: 4px;
-        &:before {
-          font-family: FmhIcons;
-          font-size: 0.8em;
-          line-height: 1.5em;
-          vertical-align: baseline;
-          content: " "; // "\E001";
-          padding-right: 10px;
-        }
-        &.tagesgeld:before {
-          content: $tagesgeld; // "\e001";
-        }
-        &.festgeld:before {
-          content: $festgeld; // "\e00e";
-        }
-      }
-
-      &__cards {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0;
-        padding: 0;
-
-        .card {
-
-          &__box {
-            width: 23%;
-            border-right: 2px solid $neutralBaseColor;
-            &:last-child {
-              border-right: none;
-            }
-            @media only screen and (max-width: $bp-l) {
-              width: 50%;
-              border-bottom: 2px solid $neutralBaseColor;
-              &:nth-child(2n) {
-                border-right: none;
-              }
-              &:nth-last-child(-n+2) {
-                border-bottom: none;
-              }
-            }
-            @media only screen and (max-width: $bp-s) {
-              width: 100%;
-              border-right: none;
-              &:last-child {
-                border-bottom: none;
-              }
-
-            }
-            padding: $defaultPadding;
-            text-align: center;
-            text-decoration: none;
-            color: black;
-            font-size: $small-font-size;
-            position: relative;
-
-            a {
-              vertical-align: bottom;
-              position: absolute;
-              bottom: 0;
-              width: 250px;
-              left: calc(50% - 125px);
-
-              button {
-              margin-top: $defaultPadding + 12px;
-              margin-bottom: $defaultPadding;
-              width: 80%;
-            }
-            }
-          }
-
-          &__text {
-            padding-top: $defaultPadding;
-            font-weight: bold;
-            font-size: $title-font-size;
-          }
-
-          &__changes {
-            text-align: center;
-            padding-top: $defaultPadding;
-          }
-
-          &__top {
-            width: 80%;
-            margin: $defaultPadding auto;
-            margin-bottom: 40px;
-          }
-
-          &__bank {
-            text-align: left;
-            vertical-align: top;
-            font-variant:small-caps;
-          }
-
-          &__date {
-            text-align: left;
-            vertical-align: top;
-            width: 2rem;
-          }
-
-          &__rang {
-            text-align: left;
-            width: 1rem;
-          }
-
-          &__interest {
-            text-align: right;
-          }
-
-          &__diff {
-            text-align: right;
-            vertical-align: top;
-            min-width: 65px;
-            &.good {
-              color: $tendence-good-color-dark;
-              &:after {
-                font-family: FmhIcons;
-                font-size: 90%;
-                content: '\E012';
-                padding-left: 0.5em;
-                vertical-align: baseline;
-              }
-            }
-            &.bad {
-              color: $tendence-bad-color-dark;
-              &:after {
-                font-family: FmhIcons;
-                font-size: 90%;
-                content: '\E014';
-                padding-left: 0.5em;
-                vertical-align: baseline;
-              }
-            }
-          }
-
-          &__noentries {
-            padding-top: 2rem;
-            font-variant: small-caps;
-            font-size: 125%;
-          }
-
-          &__chart {
-            margin-top: -6px;
-            .chart-image {
-              height: 160px;
-            }
-          }
-        }
-      }
-
-    }
-    */
 
   }
 }

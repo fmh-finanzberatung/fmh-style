@@ -1,0 +1,37 @@
+//TODO Documentation
+@mixin tendence-color() {
+  // TODO: get inverse for Hypotheken
+  &.good {
+    color: $tendence-good-color-dark;
+  }
+  &.bad {
+    color: $tendence-bad-color-dark;
+  }
+}
+
+//TODO Documentation
+@mixin direction-arrows() {
+  // TODO: get inverse for Hypotheken
+  &.down {
+    &:after {
+      font-family: "FmhIcons";
+      content: '\E014';
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-left: $defaultPadding;
+      padding-bottom: 2px;
+    }
+  }
+  &.up {
+    &:after {
+      font-family: "FmhIcons";
+      content: '\E012';
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-left: $defaultPadding;
+      padding-bottom: 2px;
+    }
+  }
+}

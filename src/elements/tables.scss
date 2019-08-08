@@ -69,38 +69,13 @@
         }
 
         &__diff-tendence {
-
-          $iconSize: 0.8rem;
           text-align: left;
           padding-top: 2px;
           vertical-align: middle;
-          line-height: $iconSize;
+          line-height: $small-font-size;
 
-          &.good {
-            color: $tendence-good-color-dark;
-          }
-          &.bad {
-            color: $tendence-bad-color-dark;
-          }
-
-          &.down {
-            &:before {
-              font-family: "FmhIcons";
-              content: '\E014';
-              font-size: $iconSize;
-              padding-right: $defaultPadding;
-              vertical-align: middle;
-            }
-          }
-          &.up {
-            &:before {
-              font-family: "FmhIcons";
-              content: '\E012';
-              font-size: $iconSize;
-              padding-right: $defaultPadding;
-              vertical-align: middle;
-            }
-          }
+          @include tendence-color();
+          @include direction-arrows();
 
         }
 
