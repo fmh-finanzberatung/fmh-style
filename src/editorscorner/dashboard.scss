@@ -93,15 +93,13 @@
           text-align: center;
         }
 
-        &__chart {
-          margin-top: -6px;
-          .chart-image {
-            height: 160px;
-          }
-        }
+
       }
     }
 
+    .segment__chart {
+      padding: $defaultPadding;
+    }
   }
 }
 
