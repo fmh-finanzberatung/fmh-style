@@ -6,8 +6,26 @@
   width: 100%;
   border-collapse: collapse;
 
-  .table {
+  .boolicon {
+      &:before {
+      font-family: "FmhIcons";
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-right: $defaultPadding;
+      padding-bottom:  2px;
+    }
+    &.check:before {
+      color: $goodColor;
+      content: '\e625';
+    }
+    &.cancel:before {
+      color: $badColor;
+      content: '\e623';
+    }
+  }
 
+  .table {
     &__header {
 
       .header__col {
