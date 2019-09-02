@@ -26,6 +26,11 @@
           .segment__content.separator {
             border-top: 2px $top1Color solid;
           }
+          .segment__banner {
+            border-top: 2px $top1Color solid;
+            border-bottom: 2px $top1Color solid;
+            background-color: $top1Color;
+          }
         }
         &top2 {
           .segment__ranking .ranking__count {
@@ -33,6 +38,11 @@
           }
           .segment__content.separator {
             border-top: 2px $top2Color solid;
+          }
+          .segment__banner {
+            border-top: 2px $top2Color solid;
+            border-bottom: 2px $top2Color solid;
+            background-color: $top2Color;
           }
         }
         &top3 {
@@ -42,6 +52,12 @@
           .segment__content.separator {
             border-top: 2px $top3Color solid;
           }
+          .segment__banner {
+            border-top: 2px $top3Color solid;
+            border-bottom: 2px $top3Color solid;
+            background-color: $top3Color;
+          }
+
         }
         &top4 {
           .segment__ranking .ranking__count {
@@ -49,6 +65,11 @@
           }
           .segment__content.separator {
             border-top: 2px $top4Color solid;
+          }
+          .segment__banner {
+            border-top: 2px $top4Color solid;
+            border-bottom: 2px $top4Color solid;
+            background-color: $top4Color;
           }
         }
         &top5 {
@@ -58,6 +79,11 @@
           .segment__content.separator {
             border-top: 2px $top5Color solid;
           }
+          .segment__banner {
+            border-top: 2px $top5Color solid;
+            border-bottom: 2px $top5Color solid;
+            background-color: $top5Color;
+          }
         }
         &topZ {
           .segment__ranking .ranking__count {
@@ -65,6 +91,11 @@
           }
           .segment__content.separator {
             border-top-color: $topZColor;
+          }
+          .segment__banner {
+            border-top: 2px $topZColor solid;
+            border-bottom: 2px $topZColor solid;
+            background-color: $topZColor;
           }
         }
       }
@@ -82,7 +113,6 @@
 
     &__fullist {
       .card__more {
-          //height: calc(100% - #{$gutter});
         text-align: center;
         @media only screen and (max-width: $bp-s) {
           border: none;

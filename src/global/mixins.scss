@@ -1,4 +1,18 @@
 //TODO Documentation
+@mixin set-cards-with($l-width, $m-width, $s-width, $xs-width) {
+    width: calc(#{$l-width} - #{$gutter});
+    @media only screen and (max-width: $bp-l) {
+      width: calc(#{$m-width} - #{$gutter});
+    }
+    @media only screen and (max-width: $bp-s) {
+      width: calc(#{$s-width} - #{$gutter});
+    }
+    @media only screen and (max-width: $bp-xs) {
+      width: $xs-width;
+    }
+}
+
+//TODO Documentation
 @mixin tendence-color() {
   // TODO: get inverse for Hypotheken
   &.good {

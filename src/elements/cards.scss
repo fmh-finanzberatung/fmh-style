@@ -1,20 +1,3 @@
-$gutter: 15px;
-$halfGutter: $gutter / 2;
-$defaultPadding: 10px;
-
-@mixin set-cards-with($l-width, $m-width, $s-width, $xs-width) {
-    width: calc(#{$l-width} - #{$gutter});
-    @media only screen and (max-width: $bp-l) {
-      width: calc(#{$m-width} - #{$gutter});
-    }
-    @media only screen and (max-width: $bp-s) {
-      width: calc(#{$s-width} - #{$gutter});
-    }
-    @media only screen and (max-width: $bp-xs) {
-      width: $xs-width;
-    }
-}
-
 .cards__6cols, .common__cards {
   .card, .card__single {
     @include set-cards-with(16.66%, 33.33%, 50%, 100%);
@@ -115,16 +98,25 @@ $defaultPadding: 10px;
 
       }
 
-      &__content, &__highlight {
+      &__banner {
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 6px;
+        border-top: 2px $neutralDarkColor solid;
+        border-top: 2px $neutralDarkColor solid;
+        background-color: $neutralDarkColor;
+      }
+
+      &__content, &__highlight, &__emphasise {
         font-size: $small-font-size;
         padding: $defaultPadding;
 
         &.separator {
-          border-top: 2px black solid;
+          border-top: 2px $neutralDarkColor solid;
         }
 
         .content {
-
           &__ranking {
             .item {
               display: flex;
@@ -163,6 +155,13 @@ $defaultPadding: 10px;
 
       &__highlight {
         background-color: $neutralBaseColor;
+      }
+
+      &__emphasise {
+        font-style: italic;
+        text-align: center;
+        padding-bottom: 0;
+
       }
 
       &__title {
