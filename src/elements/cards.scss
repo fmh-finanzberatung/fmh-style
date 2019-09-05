@@ -20,13 +20,22 @@
   flex-wrap: wrap;
   margin: $halfGutter * -1;
 
-  .cards__title {
+  .cards__title, .cards__footer {
     width: 100%;
     background-color: $neutralBaseColor;
     margin: $defaultPadding $halfGutter;
     padding: $defaultPadding;
     * {
       margin: 0;
+    }
+  }
+
+  .cards__title .title__grouptitle {
+    color: $base-medium-color;
+  }
+  .cards__footer {
+    .button-bar {
+      padding: 0;
     }
   }
 
