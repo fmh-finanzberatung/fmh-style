@@ -46,8 +46,8 @@
         }
 
         .ranking__count {
-          margin-top: -18px;
-          // margin-top: 4px;    // TODO: it's differnt in patternlab then django! Why???
+          // margin-top: -18px;
+          margin-top: -12px;    //  TODO: it's differnt in patternlab then django! Why???
           float: left;
           font-size: 2.8rem;
         }
@@ -181,6 +181,7 @@
 
       &__chart {
         padding: $defaultPadding;
+
       }
     }
 
