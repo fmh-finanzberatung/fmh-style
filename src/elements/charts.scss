@@ -3,7 +3,6 @@
   ul {
     list-style: none;
     margin: 0;
-    // padding-left: $defaultPadding;
   }
 
   li {
@@ -17,7 +16,7 @@
       font-size: $small-font-size;
       line-height: $small-font-size;
       vertical-align: middle;
-      content: "\e622"; /* icon-minus */
+      content: $immo-minus; /* "\e622"*/
       padding-right: 4px;
     }
 
