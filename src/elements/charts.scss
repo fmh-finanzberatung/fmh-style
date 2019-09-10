@@ -1,0 +1,38 @@
+.chart-legend {
+
+  ul {
+    list-style: none;
+    margin: 0;
+    // padding-left: $defaultPadding;
+  }
+
+  li {
+    display: inline-block;
+    font-size: $small-font-size;
+    margin-right: 10px;
+    color: $neutralDarkColor;
+
+    &:before {
+      font-family: "FmhIcons";
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      content: "\e622"; /* icon-minus */
+      padding-right: 4px;
+    }
+
+    &.orange {
+      color: $alertBaseColor;
+      &:before {
+        color: $alertBaseColor;
+      }
+    }
+    &.blue {
+      color: $base-dark-color;
+      &:before {
+        color: $base-dark-color;
+      }
+    }
+
+  }
+}
