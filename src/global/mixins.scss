@@ -14,18 +14,28 @@
 
 //TODO Documentation
 @mixin tendence-color() {
-  // TODO: get inverse for Hypotheken
   &.good {
     color: $tendence-good-color-dark;
   }
   &.bad {
     color: $tendence-bad-color-dark;
   }
+  &.inverted.good {
+    color: $tendence-bad-color-dark;
+  }
+  &.inverted.bad {
+    color: $tendence-good-color-dark;
+  }
+  &.normal.good {
+    color: $tendence-good-color-dark;
+  }
+  &.normal.bad {
+    color: $tendence-bad-color-dark;
+  }
 }
 
 //TODO Documentation
 @mixin direction-arrows() {
-  // TODO: get inverse for Hypotheken
   &.down {
     &:after {
       font-family: "FmhIcons";
