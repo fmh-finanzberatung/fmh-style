@@ -14,10 +14,10 @@
     }
 
     .section__title {
-      background-color: $neutralBaseColor;
+      background-color: $base-medium-color;
       margin: $defaultPadding 0;
       padding: 0 $defaultPadding;
-      color: $base-medium-color;
+      color: white;
     }
 
     .section__name-with-icon {
@@ -39,6 +39,9 @@
       }
       &.festgeld:before {
         content: $festgeld; // "\e00e";
+      }
+      &.hypotheken:before {
+        content: $hypotheken-darlehen; // "\e008";
       }
     }
 

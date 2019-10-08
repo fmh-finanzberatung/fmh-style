@@ -19,7 +19,7 @@
       .subtable {
         &__box {
           margin: $halfGutter;
-          margin-bottom: 3rem;
+          margin-bottom: 2rem;
           @include set-cards-with(33.33%, 50%, 100%, 100%);
           @media only screen and (max-width: $bp-s) {
             margin-top: $gutter * 2;
@@ -48,7 +48,6 @@
 
   .table {
     &__header {
-
       .header__col {
         background: $neutralBaseColor;
         font-weight: bold;
@@ -56,6 +55,7 @@
         font-size: 0.7rem;
         padding: $defaultPadding;
         text-align: left;
+        height: 2.5rem;
       }
     }
 
@@ -81,20 +81,19 @@
 
           .bank {
             &__logo {
-              width: 50%;
+              width: 130px;
               @media only screen and (max-width: $bp-l) {
                 width: 100%;
               }
-
               img {
                 width: 120px;
               }
             }
 
             &__names {
-              width: 50%;
+              padding-left: $defaultPadding;
               @media only screen and (max-width: $bp-l) {
-                width: 100%;
+                padding-left: 0;
               }
               line-height: 1.2em;
             }
@@ -139,36 +138,26 @@
   }
 }
 
-th[role=columnheader]:not([data-sort-method="none"]) {
-	cursor: pointer;
+.tablesort {
+  th[role=columnheader]:not([data-sort-method="none"]) {
+    cursor: pointer;
+    &:after {
+      content: $arrow-down;
+      font-family: FmhIcons;
+      font-size:  10px;
+      color: $neutralDarkColor;
+      padding-left: $defaultPadding;
+      margin-top: 7px;
+      visibility: visible;
+      opacity: 1;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+  }
+  th[aria-sort=ascending]:not([data-sort-method="none"]):after {
+    content: $arrow-up;
+  }
 }
 
-th[role=columnheader]:not([data-sort-method="none"]):after {
-	content: '';
-	float: right;
-	margin-top: 7px;
-	border-width: 0 4px 4px;
-	border-style: solid;
-	border-color: #404040 transparent;
-	visibility: hidden;
-	opacity: 0;
-	-ms-user-select: none;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	user-select: none;
-}
-
-th[aria-sort=ascending]:not([data-sort-method="none"]):after {
-	border-bottom: none;
-	border-width: 4px 4px 0;
-}
-
-th[aria-sort]:not([data-sort-method="none"]):after {
-	visibility: visible;
-	opacity: 0.4;
-}
-
-th[role=columnheader]:not([data-sort-method="none"]):hover:after {
-	visibility: visible;
-	opacity: 1;
-}
