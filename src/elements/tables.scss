@@ -55,7 +55,7 @@
         font-size: 0.7rem;
         padding: $defaultPadding;
         text-align: left;
-        height: 2.5rem;
+        height: 40px !important;
       }
     }
 
@@ -96,6 +96,10 @@
                 padding-left: 0;
               }
               line-height: 1.2em;
+              &.bank_only {
+                line-height: 42px;
+                vertical-align: middle;
+              }
             }
 
             &__name {
