@@ -150,16 +150,17 @@
             width: 100%;
 
             .item__label {
+              height: 24px;
               font-variant: small-caps;
-              font-size: 90%;
+              font-size: 100%;
             }
 
             .item__value {
+              height: 24px;
               padding-left: 4px;
+              font-size: 105%;
             }
-
           }
-
         }
       }
 
