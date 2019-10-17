@@ -89,6 +89,36 @@
           @include direction-arrows();
 
         }
+        &__category {
+          width: 33%;
+        }
+        &__price {
+          font-weight: bold;
+          width: 33%;
+        }
+        &__trend {
+          width: 1px;
+          @include tendence-color();
+          @include direction-arrows();
+        }
+        &__location {
+          width: 50%;
+        }
+        &__amount {
+          font-weight: bold;
+          width: 15%;
+        }
+        &__lights {
+          width:  35%;
+          @include ligths-circles();
+        }
+        &__comparename {
+          width: 50%;
+        }
+        &__priceright {
+          width: 50%;
+          text-align: right;
+        }
 
         &__noentries {
           padding-top: 2rem;
@@ -104,4 +134,21 @@
   }
 }
 
+.dashboard__domain {
+  margin-top: 3rem;
+
+  .logobar {
+    width: 100%;
+    text-align: right;
+    float: right;
+    padding: $defaultPadding;
+    margin-bottom: -4rem;
+
+    .logo {
+      //height: 36px;
+      width: 300px;
+    }
+  }
+
+}
 

@@ -16,6 +16,7 @@ button {
     border-radius: 4px;
     padding: 5px 5px;
     cursor: pointer;
+    min-width: 120px;
     &:before {
       font-family: FmhIcons;
       font-size: 80%;

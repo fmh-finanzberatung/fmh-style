@@ -59,3 +59,43 @@
     }
   }
 }
+
+//TODO Documentation
+@mixin ligths-circles() {
+  &.greenlight {
+    &:before {
+      font-family: "FmhIcons";
+      content: '\e90a';
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-right: $defaultPadding;
+      padding-bottom: 2px;
+      color: $goodColor;
+    }
+  }
+  &.yellowlight {
+    &:before {
+      font-family: "FmhIcons";
+      content: '\e90a';
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-right: $defaultPadding;
+      padding-bottom: 2px;
+      color: $neutralColor;
+    }
+  }
+  &.redlight {
+    &:before {
+      font-family: "FmhIcons";
+      content: '\e90a';
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-right: $defaultPadding;
+      padding-bottom: 2px;
+      color: $badColor;
+    }
+  }
+}
