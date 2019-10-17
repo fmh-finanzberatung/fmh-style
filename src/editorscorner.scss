@@ -18,6 +18,12 @@
 @import "global/mixins";
 
 /***************************************
+* Flavors (color schemes) => FMH, IIB
+****************************************/
+@import "flavours/fmh";
+@import "flavours/iib";
+
+/***************************************
 * Import general used elements
 ****************************************/
 @import "elements/icons";
