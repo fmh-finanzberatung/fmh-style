@@ -196,3 +196,88 @@
     text-align: right;
   }
 }
+
+.domains__scrollist {
+  display: flex;
+
+  .subline {
+    margin: 6px 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a, a:hover, a:visited {
+    text-decoration: none;
+    color: $neutralDarkColor;
+    box-shadow: none;
+
+  }
+
+  .company__list {
+    padding-left: 19px;
+    width: 50%;
+
+    .logo {
+      width: 360px;
+    }
+  }
+
+  .section__list {
+    padding-left: 0px;
+    li {
+      &:hover a {
+        color: $base-link-color;
+
+      }
+      &:before {
+        font-family: "FmhIcons";
+        content: $arrow-down;
+        font-size: $small-font-size;
+        line-height: $small-font-size;
+        vertical-align: middle;
+        padding-right: $defaultPadding;
+        padding-bottom: 2px;
+        color: $neutralDarkColor;
+      }
+      &:hover:before {
+        color: $base-link-color;
+      }
+    }
+  }
+
+}
+
+.domains__backtotop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 99;
+  outline: none;
+  background-color: white;
+
+  &.show {
+    display: block;
+  }
+
+  button {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    border: 2px solid white;
+    padding: $defaultPadding;
+    font-size: $standard-font-size;
+    cursor: pointer;
+    background-color: $neutralDarkColor;
+    color: $neutralLightColor;
+    box-shadow: none;
+    &:hover {
+      background-color: $neutralLightColor;
+      border-color: $neutralDarkColor;
+      color: $neutralDarkColor;
+    }
+  }
+}
