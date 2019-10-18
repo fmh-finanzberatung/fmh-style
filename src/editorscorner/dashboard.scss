@@ -133,7 +133,23 @@
 
   }
 }
+.dashboard__domains {
 
+  .domains {
+    &__intro {
+      padding: 22px;
+    }
+    &__tabby {
+      padding: 22px;
+
+      .logo {
+        height: 42px;
+      }
+
+    }
+
+  }
+}
 .dashboard__domain {
   margin-top: 3rem;
 
@@ -145,10 +161,38 @@
     margin-bottom: -4rem;
 
     .logo {
-      //height: 36px;
       width: 300px;
     }
   }
 
 }
 
+.domain__localizator {
+  margin: 12px;
+  border: 1px solid $primary-color-main;
+  padding: $defaultPadding;
+  border-radius: 4px;
+  display: flex;
+
+  .current, .search {
+    width: 50%;
+    height: 2rem;
+  }
+  .current {
+    span {
+      line-height: 2em;
+      vertical-align: middle;
+    }
+  }
+  .label {
+    font-style: italic;
+  }
+  .city {
+    font-size: 1.1em;
+    color: $primary-color-main;
+    font-weight: bold;
+  }
+  .button {
+    text-align: right;
+  }
+}
