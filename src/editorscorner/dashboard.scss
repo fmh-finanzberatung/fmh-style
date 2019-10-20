@@ -221,11 +221,12 @@
 
     .logo {
       width: 360px;
+      padding-right: 19px;
     }
   }
 
   .section__list {
-    padding-left: 0px;
+    padding-left: 0;
     li {
       &:hover a {
         color: $base-link-color;
