@@ -159,6 +159,7 @@
     float: right;
     padding: $defaultPadding;
     margin-bottom: -4rem;
+    padding-right: 19px;
 
     .logo {
       width: 300px;
@@ -218,7 +219,9 @@
   .company__list {
     padding-left: 19px;
     width: 50%;
-
+    .logobox {
+      height: 52px;
+    }
     .logo {
       width: 360px;
       padding-right: 19px;
@@ -254,10 +257,10 @@
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  right: 10px;
   z-index: 99;
   outline: none;
-  background-color: white;
+  background-color: unset;
 
   &.show {
     display: block;
@@ -265,6 +268,9 @@
 
   button {
     display: block;
+    @media only screen and (max-width: $bp-s) {
+      display: inline;
+    }
     height: 3rem;
     width: 3rem;
     border-radius: 1.5rem;
