@@ -1,0 +1,290 @@
+.dashboard {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  max-width:  $fullwidth;
+  margin: auto;
+  padding: 2px;
+
+  .dashboard__sections {
+    margin: 10px;
+
+    .section__group {
+      margin: 0;
+      margin-bottom: 2.5rem
+    }
+
+    .section__title {
+      background-color: $base-medium-color;
+      margin: $defaultPadding 0;
+      padding: 0 $defaultPadding;
+      color: white;
+    }
+
+    .section__name-with-icon {
+      font-weight: bold;
+      font-size: $headline-font-size;
+      line-height: 1.5em;
+      vertical-align: baseline;
+      padding-left: 4px;
+      &:before {
+        font-family: FmhIcons;
+        font-size: 0.8em;
+        line-height: 1.5em;
+        vertical-align: baseline;
+        content: " "; // "\E001";
+        padding-right: 10px;
+      }
+      &.tagesgeld:before {
+        content: $tagesgeld; // "\e001";
+      }
+      &.festgeld:before {
+        content: $festgeld; // "\e00e";
+      }
+      &.hypotheken:before {
+        content: $hypotheken-darlehen; // "\e008";
+      }
+    }
+
+    .segment__title {
+      padding-bottom: 0;
+    }
+
+    .segment__bottom {
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .segment__content {
+      margin-bottom: 2.5rem;
+
+      .item {
+        &__bank {
+          text-align: left;
+          vertical-align: top;
+          font-variant:small-caps;
+        }
+
+        &__date {
+          text-align: left;
+          vertical-align: top;
+          width: 2rem;
+        }
+
+        &__rang {
+          text-align: left;
+          width: 1rem;
+        }
+
+        &__interest {
+          text-align: right;
+        }
+
+        &__diff {
+          text-align: right;
+          vertical-align: top;
+          min-width: 74px;
+
+          @include tendence-color();
+          @include direction-arrows();
+
+        }
+        &__category {
+          width: 33%;
+        }
+        &__price {
+          font-weight: bold;
+          width: 33%;
+        }
+        &__trend {
+          width: 1px;
+          @include tendence-color();
+          @include direction-arrows();
+        }
+        &__location {
+          width: 50%;
+        }
+        &__amount {
+          font-weight: bold;
+          width: 15%;
+        }
+        &__lights {
+          width:  35%;
+          @include ligths-circles();
+        }
+        &__comparename {
+          width: 50%;
+        }
+        &__priceright {
+          width: 50%;
+          text-align: right;
+        }
+
+        &__noentries {
+          padding-top: 2rem;
+          font-variant: small-caps;
+          font-size: 120%;
+          text-align: center;
+        }
+
+
+      }
+    }
+
+  }
+}
+.dashboard__domains {
+
+  .domains {
+    &__intro {
+      padding: 22px;
+    }
+    &__tabby {
+      padding: 22px;
+
+      .logo {
+        height: 42px;
+      }
+
+    }
+
+  }
+}
+.dashboard__domain {
+  margin-top: 3rem;
+
+  .logobar {
+    width: 100%;
+    text-align: right;
+    float: right;
+    padding: $defaultPadding;
+    margin-bottom: -4rem;
+    padding-right: 19px;
+
+    .logo {
+      width: 300px;
+    }
+  }
+
+}
+
+.domain__localizator {
+  margin: 12px;
+  border: 1px solid $primary-color-main;
+  padding: $defaultPadding;
+  border-radius: 4px;
+  display: flex;
+
+  .current, .search {
+    width: 50%;
+    height: 2rem;
+  }
+  .current {
+    span {
+      line-height: 2em;
+      vertical-align: middle;
+    }
+  }
+  .label {
+    font-style: italic;
+  }
+  .city {
+    font-size: 1.1em;
+    color: $primary-color-main;
+    font-weight: bold;
+  }
+  .button {
+    text-align: right;
+  }
+}
+
+.domains__scrollist {
+  display: flex;
+
+  .subline {
+    margin: 6px 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a, a:hover, a:visited {
+    text-decoration: none;
+    color: $neutralDarkColor;
+    box-shadow: none;
+
+  }
+
+  .company__list {
+    padding-left: 19px;
+    width: 50%;
+    .logobox {
+      height: 52px;
+    }
+    .logo {
+      width: 360px;
+      padding-right: 19px;
+    }
+  }
+
+  .section__list {
+    padding-left: 0;
+    li {
+      &:hover a {
+        color: $base-link-color;
+
+      }
+      &:before {
+        font-family: "FmhIcons";
+        content: $arrow-down;
+        font-size: $small-font-size;
+        line-height: $small-font-size;
+        vertical-align: middle;
+        padding-right: $defaultPadding;
+        padding-bottom: 2px;
+        color: $neutralDarkColor;
+      }
+      &:hover:before {
+        color: $base-link-color;
+      }
+    }
+  }
+
+}
+
+.domains__backtotop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  outline: none;
+  background-color: unset;
+
+  &.show {
+    display: block;
+  }
+
+  button {
+    display: block;
+    @media only screen and (max-width: $bp-s) {
+      display: inline;
+    }
+    height: 3rem;
+    width: 3rem;
+    border-radius: 1.5rem;
+    border: 2px solid white;
+    padding: $defaultPadding;
+    font-size: $standard-font-size;
+    cursor: pointer;
+    background-color: $neutralDarkColor;
+    color: $neutralLightColor;
+    box-shadow: none;
+    &:hover {
+      background-color: $neutralLightColor;
+      border-color: $neutralDarkColor;
+      color: $neutralDarkColor;
+    }
+  }
+}

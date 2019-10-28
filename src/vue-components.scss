@@ -1,0 +1,24 @@
+/**************************************
+* Import FMH-Styles
+**************************************/
+@import 'colors.scss';
+@import 'fonts.scss';
+@import 'form.scss';
+@import 'icons.scss';
+@import 'global.scss';
+@import 'layout.scss';
+@import 'separators.scss';
+@import 'shared.scss';
+@import "typeface";
+
+/***************************************
+* Own Globals
+****************************************/
+@import "global/variables";
+@import "global/mixins";
+
+/***************************************
+* Flavors (color schemes) => FMH, IIB
+****************************************/
+@import "flavours/fmh";
+@import "flavours/iib";
