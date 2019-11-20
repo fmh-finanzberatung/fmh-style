@@ -1,4 +1,10 @@
-.chart__component canvas {
+.chart__component {
+  width: calc(100% - 8px);
+  height: 150px;
+  position: relative;
+}
+
+.chart__component canvas{
   width: calc(100% - 8px);
   height: 150px;
   position: relative;
