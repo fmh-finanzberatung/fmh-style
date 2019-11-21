@@ -1,0 +1,14 @@
+/*************************************
+* Transitions for the Vue-Components
+**************************************/
+.slide-and-fade-enter-active, .slide-and-fade-leave-active {
+  transition: max-height 1s ease-in-out, opacity 500ms ease-in-out;
+}
+.slide-and-fade-enter, .slide-and-fade-leave-to  {
+  max-height: 50px;
+  opacity: 0;
+}
+.slide-and-fade-enter-to, .slide-and-fade-leave {
+  max-height: 250px;
+  opacity: 1;
+}

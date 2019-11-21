@@ -46,6 +46,11 @@
       }
     }
 
+    .card__single {
+      transition: height 3s;
+
+    }
+
     .segment__title {
       padding-bottom: 0;
     }
@@ -58,6 +63,17 @@
 
     .segment__content {
       margin-bottom: 2.5rem;
+        //opacity: 0;
+        //transition: opacity 3000ms ease-in-out;
+
+      &.loading {
+        opacity: 0;
+        transition: opacity 3000ms ease-in-out;
+      }
+      &.loaded {
+        opacity: 1;
+        transition: opacity 3000ms ease-in-out;
+      }
 
       .item {
         &__bank {
