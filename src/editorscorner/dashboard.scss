@@ -14,7 +14,7 @@
     }
 
     .section__title {
-      background-color: $base-medium-color;
+      background-color: green;
       margin: $defaultPadding 0;
       padding: 0 $defaultPadding;
       color: white;
@@ -57,7 +57,14 @@
 
     .segment__content {
       margin-bottom: 2.5rem;
-
+      &.loading {
+        opacity: 0;
+        transition:opacity 500ms ease-out;
+      }
+      &.loaded {
+        opacity: 1;
+        transition: opacity 500ms ease-out;
+      }
       .item {
         &__bank {
           text-align: left;
