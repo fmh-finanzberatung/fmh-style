@@ -18,6 +18,20 @@
 @import "global/mixins";
 
 /***************************************
+* Elements
+****************************************/
+@import 'elements/cards';
+@import 'elements/charts';
+@import 'elements/sections';
+@import 'elements/buttons';
+
+/***************************************
+* Vue-Components
+****************************************/
+@import 'vue-components/dashboard';
+@import 'vue-components/transitions';
+
+/***************************************
 * Flavors (color schemes) => FMH, IIB
 ****************************************/
 @import "flavours/fmh";
