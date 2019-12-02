@@ -5,6 +5,7 @@ $defaultPadding: 6px;
   text-align: right;
   padding: $defaultPadding;
   margin-bottom: -1rem;
+  font-family: $standard-font-family;
 }
 
 button {
@@ -44,6 +45,7 @@ button {
   }
 
   &.menu-button {
+    font-family: $standard-font-family;
     text-transform: uppercase;
     color: $button-active_color;
     background: $button-active_background repeat scroll 0 0;

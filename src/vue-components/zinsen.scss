@@ -1,0 +1,67 @@
+.editorscorner__zinsen {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  max-width: $fullwidth;
+  padding: $defaultPadding;
+  margin: auto;
+
+  .common__cards {
+    margin-top: $defaultPadding;
+  }
+  .segment__interest {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $defaultPadding;
+    background-color: $neutralBaseColor;
+    font-size: $small-font-size;
+    font-weight: bold;
+
+    .interest__title {
+      width: 100%;
+      font-variant: small-caps;
+    }
+
+    .interest__values {
+      width: 50%;
+
+      .label {
+        font-variant: small-caps;
+        font-size: 90%;
+      }
+    }
+
+    .interest__changes {
+      width: 50%;
+      text-align: center;
+      margin: auto;
+      padding-top: 4px;
+
+      .change__icon {
+        margin: auto;
+        text-align: center;
+
+        @include tendence-color();
+        @include direction-arrows();
+        &.down::after, &.up::after {
+          padding-left: 0;
+          padding-right: 4px;
+        }
+
+      }
+
+      .change__value {
+
+        @include tendence-color();
+
+      }
+
+    }
+
+
+  }
+
+}
+
+
+
+
