@@ -1,0 +1,163 @@
+.common__table, .common__tablegroup {
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+
+  tbody .tr-row {
+    margin: 6px 0;
+    border-bottom: 2px solid $neutralBaseColor;
+  }
+
+  .th-cell {
+    background: $neutralBaseColor;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    padding: $defaultPadding;
+    text-align: left;
+    height: 40px !important;
+  }
+
+  .td-cell {
+    padding: $defaultPadding;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    line-height: 1.2rem;
+
+  }
+
+  .entry {
+    &__bank {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: $defaultPadding;
+
+      .bank {
+        &__logo {
+          width: 130px;
+          @media only screen and (max-width: $bp-l) {
+            width: 100%;
+          }
+          img {
+            width: 120px;
+          }
+        }
+
+        &__names {
+          padding-left: $defaultPadding;
+          @media only screen and (max-width: $bp-l) {
+            padding-left: 0;
+          }
+          line-height: 1.2em;
+          &.bank_only {
+            line-height: 42px;
+            vertical-align: middle;
+          }
+        }
+
+        &__name {
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+
+        &__product {
+          font-weight: bold;
+          margin-bottom: 0.5rem
+        }
+      }
+
+    }
+
+    &__diff-tendence {
+      text-align: left;
+      padding-top: 2px;
+      vertical-align: middle;
+      line-height: $small-font-size;
+
+      @include tendence-color();
+      @include direction-arrows();
+
+    }
+
+  }
+
+  tfoot {
+    background: $neutralBaseColor;
+    border-bottom: 2px white solid;
+
+    td {
+      padding: $defaultPadding;
+    }
+
+  }
+
+  .group {
+    &__title {
+      h3 {
+        color: $base-medium-color;
+        margin-bottom: 0;
+      }
+    }
+
+    &__subtables {
+      display: flex;
+      flex-wrap: wrap;
+      margin: $halfGutter * -1;
+
+      .subtable {
+        &__box {
+          margin: $halfGutter;
+          margin-bottom: 2rem;
+          @include set-cards-with(33.33%, 50%, 100%, 100%);
+          @media only screen and (max-width: $bp-s) {
+            margin-top: $gutter * 2;
+          }
+        }
+        &__emphasised {
+          font-style: italic;
+          font-size: 0.85em
+        }
+        &__bank {
+          .bank__logo, .bank__name {
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            vertical-align: middle;
+          }
+          .bank__name {
+            font-variant: petite-caps;
+            font-weight: bold;
+          }
+
+        }
+      }
+    }
+  }
+
+}
+
+.tablesort {
+  th[role=columnheader]:not([data-sort-method="none"]) {
+    cursor: pointer;
+    &:after {
+      content: $arrow-down;
+      font-family: FmhIcons;
+      font-size:  10px;
+      color: $neutralDarkColor;
+      padding-left: $defaultPadding;
+      margin-top: 7px;
+      visibility: visible;
+      opacity: 1;
+      -ms-user-select: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+  }
+  th[aria-sort=ascending]:not([data-sort-method="none"]):after {
+    content: $arrow-up;
+  }
+}
+
