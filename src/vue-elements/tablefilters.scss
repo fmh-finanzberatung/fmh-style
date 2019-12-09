@@ -8,13 +8,14 @@
 
     .filter__label {
       padding-right: $defaultPadding;
+      color: $neutralDarkColor;
       font-weight: bold;
       font-size: 85%;
       text-transform: uppercase;
     }
 
     .filter__options {
-      border: 2px solid $base-link-color;
+      border: 2px solid $neutralMediumColor;
     }
 
     .filter__button {
@@ -22,15 +23,15 @@
       font-size: 85%;
       background-color: white;
       border: none;
-      border-left: 2px solid $base-link-color;
-      color: $base-link-color;
+      border-left: 2px solid $neutralMediumColor;
+      color: $neutralMediumColor;
       padding: $defaultPadding/2 $defaultPadding*2;
       &:first-child {
         border-left: none;
       }
       &.selected {
-        background-color: $base-link-color;
-        color: white;
+        background-color: $neutralBaseColor;
+        color: $neutralDarkColor;
 
       }
 
