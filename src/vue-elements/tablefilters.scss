@@ -1,0 +1,48 @@
+.table__filters {
+  .filter__box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: $defaultPadding;
+    margin-bottom: $defaultPadding * -1;
+
+    .filter__label {
+      padding-right: $defaultPadding;
+      font-weight: bold;
+      font-size: 85%;
+      text-transform: uppercase;
+    }
+
+    .filter__options {
+      border: 2px solid $base-link-color;
+    }
+
+    .filter__button {
+      font-weight: bold;
+      font-size: 85%;
+      background-color: white;
+      border: none;
+      border-left: 2px solid $base-link-color;
+      color: $base-link-color;
+      padding: $defaultPadding/2 $defaultPadding*2;
+      &:first-child {
+        border-left: none;
+      }
+      &.selected {
+        background-color: $base-link-color;
+        color: white;
+
+      }
+
+      &::-moz-focus-inner {
+        border: 0;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+.table__filters--nodata {
+  padding: $defaultPadding,
+}
