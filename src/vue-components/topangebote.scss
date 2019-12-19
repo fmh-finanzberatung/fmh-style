@@ -1,0 +1,140 @@
+.editorscorner__topangebote {
+  font-family: $standard-font-family;
+  font-size: $standard-font-size;
+  max-width: $fullwidth;
+  padding: $defaultPadding;
+  margin: auto;
+
+  .topangebote {
+    &__overview {
+      margin-top: 0.5rem;
+      margin-bottom: 2rem;
+
+      .card-ranking- {
+        $top1Color: #008800;
+        $topLevelStep: -10%;
+        $top2Color: scale-color($top1Color, $lightness: $topLevelStep);
+        $top3Color: scale-color($top1Color, $lightness: $topLevelStep*2);
+        $top4Color: scale-color($top1Color, $lightness: $topLevelStep*3);
+        $top5Color: scale-color($top1Color, $lightness: $topLevelStep*4);
+        $topZColor: #dd0000;
+
+        &top1 {
+          .segment__ranking .ranking__count {
+            color: $top1Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top1Color solid;
+          }
+          .segment__banner {
+            border-top: 2px $top1Color solid;
+            border-bottom: 2px $top1Color solid;
+            background-color: $top1Color;
+          }
+        }
+        &top2 {
+          .segment__ranking .ranking__count {
+            color: $top2Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top2Color solid;
+          }
+          .segment__banner {
+            border-top: 2px $top2Color solid;
+            border-bottom: 2px $top2Color solid;
+            background-color: $top2Color;
+          }
+        }
+        &top3 {
+          .segment__ranking .ranking__count {
+            color: $top3Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top3Color solid;
+          }
+          .segment__banner {
+            border-top: 2px $top3Color solid;
+            border-bottom: 2px $top3Color solid;
+            background-color: $top3Color;
+          }
+        }
+        &top4 {
+          .segment__ranking .ranking__count {
+            color: $top4Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top4Color solid;
+          }
+          .segment__banner {
+            border-top: 2px $top4Color solid;
+            border-bottom: 2px $top4Color solid;
+            background-color: $top4Color;
+          }
+        }
+        &top5 {
+          .segment__ranking .ranking__count {
+            color: $top5Color;
+          }
+          .segment__content.separator {
+            border-top: 2px $top5Color solid;
+          }
+          .segment__banner {
+            border-top: 2px $top5Color solid;
+            border-bottom: 2px $top5Color solid;
+            background-color: $top5Color;
+          }
+        }
+        &topZ {
+          .segment__ranking .ranking__count {
+            color: $topZColor;
+          }
+          .segment__content.separator {
+            border-top-color: $topZColor;
+          }
+          .segment__banner {
+            border-top: 2px $topZColor solid;
+            border-bottom: 2px $topZColor solid;
+            background-color: $topZColor;
+          }
+        }
+      }
+
+      .card-chart .chart-image {
+        margin-left: auto;
+        margin-right: auto;
+        width: 240px;
+        @media only screen and (max-width: $bp-xs) {
+          width: 320px;
+        }
+      }
+
+    }
+
+    &__fullist {
+      .card__more {
+        text-align: center;
+        @media only screen and (max-width: $bp-s) {
+          border: none;
+          min-height: 3rem;
+          width: 100%;
+          padding: 0;
+          div {
+            padding: 0;
+          }
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &__noentries {
+      margin: 0.5rem;
+    }
+
+    &__charts {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+}

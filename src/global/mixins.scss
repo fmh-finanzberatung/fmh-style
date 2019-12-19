@@ -1,11 +1,11 @@
 //TODO Documentation
 @mixin set-cards-with($l-width, $m-width, $s-width, $xs-width) {
-    width: calc(#{$l-width} - #{$gutter});
+    width: calc(#{$l-width} - #{$gutter} - 2px);
     @media only screen and (max-width: $bp-l) {
-      width: calc(#{$m-width} - #{$gutter});
+      width: calc(#{$m-width} - #{$gutter} - 2px);
     }
     @media only screen and (max-width: $bp-s) {
-      width: calc(#{$s-width} - #{$gutter});
+      width: calc(#{$s-width} - #{$gutter} - 2px);
     }
     @media only screen and (max-width: $bp-xs) {
       width: $xs-width;
