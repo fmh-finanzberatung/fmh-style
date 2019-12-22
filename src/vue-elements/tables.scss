@@ -153,7 +153,8 @@
         }
         &__emphasised {
           font-style: italic;
-          font-size: 0.85em
+          font-size: 0.85em;
+          margin-bottom: -8px;
         }
         &__bank {
           .bank__logo, .bank__name {
