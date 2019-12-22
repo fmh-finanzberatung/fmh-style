@@ -137,4 +137,11 @@
       margin-bottom: 2rem;
     }
   }
+
+  .chart__component {
+    width: calc(100% - 8px);
+    height: 184px;
+    position: relative;
+  }
+
 }

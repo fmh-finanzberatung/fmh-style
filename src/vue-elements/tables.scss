@@ -171,8 +171,19 @@
       }
     }
   }
-
-
-
-
 }
+
+/**
+ * Vue-Good-Table
+ */
+.vgt-wrap {
+  .vgt-row-header {
+    text-align: left;
+    color: $base-medium-color;
+    font-size: $title-font-size;
+    padding: $defaultPadding;
+    padding-top: $defaultPadding*3;
+    border-bottom: 2px solid $neutralBaseColor;
+  }
+}
+
