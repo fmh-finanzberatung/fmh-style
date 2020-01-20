@@ -53,6 +53,12 @@
 
     .segment__title {
       padding-bottom: 0;
+      position: relative;
+      .title__hint {
+        position: absolute;
+        right: $defaultPadding;
+      }
+
     }
 
     .segment__bottom {
