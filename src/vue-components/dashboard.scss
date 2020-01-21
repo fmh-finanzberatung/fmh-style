@@ -53,6 +53,12 @@
 
     .segment__title {
       padding-bottom: 0;
+      position: relative;
+      .title__hint {
+        position: absolute;
+        right: $defaultPadding;
+      }
+
     }
 
     .segment__bottom {
@@ -215,8 +221,11 @@
   }
 }
 
+
 .domains__scrollist {
+  margin-top: 2rem;
   display: flex;
+  flex-flow: wrap;
 
   .subline {
     margin: 6px 0;
@@ -226,16 +235,20 @@
     list-style: none;
   }
 
-  a, a:hover, a:visited {
+  a, a:hover, a:visited, a:active, a:focus {
     text-decoration: none;
     color: $neutralDarkColor;
     box-shadow: none;
-
+    outline: none
   }
 
   .company__list {
     padding-left: 19px;
-    width: 50%;
+    width: 48%;
+    @media only screen and (max-width: $bp-m) {
+      width: 100%;
+      padding-bottom: 1rem;
+    }
     .logobox {
       height: 52px;
     }
@@ -304,4 +317,9 @@
       color: $neutralDarkColor;
     }
   }
+
+  button::-moz-focus-inner {
+    border: 0;
+  }
+
 }
