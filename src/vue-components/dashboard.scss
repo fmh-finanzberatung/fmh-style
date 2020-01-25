@@ -54,6 +54,7 @@
     .segment__title {
       padding-bottom: 0;
       position: relative;
+
       .title__hint {
         position: absolute;
         right: $defaultPadding;
@@ -69,8 +70,6 @@
 
     .segment__content {
       margin-bottom: 2.5rem;
-        //opacity: 0;
-        //transition: opacity 3000ms ease-in-out;
 
       &.loading {
         opacity: 0;
@@ -152,10 +151,73 @@
 
 
       }
-    }
 
+      .content__table-iib {
+        margin-bottom: $defaultPadding;
+        margin-left: auto;
+        margin-right: auto;
+
+        td {
+          line-height: 1.2em;
+        }
+
+        .item {
+          &__class {
+            width: 50%;
+            font-size: 110%;
+            font-variant: small-caps;
+          }
+          &__price {
+            width: 50%;
+            @include iib-tendence();
+          }
+        }
+
+      }
+      .content__center {
+        &.iib-dichte-light {
+          margin: 1rem auto;
+          .item__lights {
+            font-size: 150%;
+            font-weight: bold;
+            font-variant: small-caps;
+            &:before {
+              font-size: 120%;
+            }
+          }
+        }
+        &.iib-dichte-text {
+          font-size: 120%;
+          padding-bottom: $defaultPadding;
+        }
+      }
+
+      .content__table {
+        &.iib-vergleich-tabelle {
+          margin: $defaultPadding auto;
+          th {
+            text-align: left;
+            text-transform: uppercase;
+            font-weight: normal;
+          }
+          td, th {
+            line-height: 1.2em;
+          }
+          .item {
+            &__count {
+              width: 20%;
+            }
+            &__expensive, &__cheap {
+              width: 40%;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
   }
 }
+
 .dashboard__domains {
 
   .domains {

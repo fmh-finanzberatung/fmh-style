@@ -66,8 +66,8 @@
     &:before {
       font-family: "FmhIcons";
       content: '\e90a';
-      font-size: $small-font-size;
-      line-height: $small-font-size;
+      font-size: $title-font-size;
+      line-height: $title-font-size;
       vertical-align: middle;
       padding-right: $defaultPadding;
       padding-bottom: 2px;
@@ -78,8 +78,8 @@
     &:before {
       font-family: "FmhIcons";
       content: '\e90a';
-      font-size: $small-font-size;
-      line-height: $small-font-size;
+      font-size: $title-font-size;
+      line-height: $title-font-size;
       vertical-align: middle;
       padding-right: $defaultPadding;
       padding-bottom: 2px;
@@ -90,12 +90,77 @@
     &:before {
       font-family: "FmhIcons";
       content: '\e90a';
-      font-size: $small-font-size;
-      line-height: $small-font-size;
+      font-size: $title-font-size;
+      line-height: $title-font-size;
       vertical-align: middle;
       padding-right: $defaultPadding;
       padding-bottom: 2px;
       color: $badColor;
+    }
+  }
+}
+
+@mixin iib-tendence() {
+  &.iib-tendenz-1 {
+    &:after {
+      font-family: "FmhIcons";
+      content: '\e013';
+      transform: rotate(90deg);
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-left: $defaultPadding;
+      padding-bottom: 2px;
+      color: $badColor;
+    }
+  }
+  &.iib-tendenz-2 {
+    &:after {
+      font-family: "FmhIcons";
+      content: '\e012';
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-left: $defaultPadding;
+      padding-bottom: 2px;
+      color: $badColor;
+    }
+  }
+  &.iib-tendenz-3 {
+    &:after {
+      font-family: "FmhIcons";
+      content: '\e013';
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-left: $defaultPadding;
+      padding-bottom: 2px;
+      color: $neutralDarkColor;
+    }
+  }
+  &.iib-tendenz-4 {
+    &:after {
+      font-family: "FmhIcons";
+      content: '\e014';
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-left: $defaultPadding;
+      padding-bottom: 2px;
+      color: $goodColor;
+    }
+  }
+  &.iib-tendenz-5 {
+    &:after {
+      font-family: "FmhIcons";
+      content: '\e013';
+      transform: rotate(-90deg);
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      padding-left: $defaultPadding;
+      padding-bottom: 2px;
+      color: $goodColor;
     }
   }
 }

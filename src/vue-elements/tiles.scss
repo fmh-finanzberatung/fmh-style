@@ -40,9 +40,16 @@
               font-size: 105%;
             }
           }
+
           &__center {
             margin-bottom: $defaultPadding;
             text-align: center;
+          }
+
+          &__footnote {
+            font-size: 85%;
+            font-style: italic;
+            line-height: 115%;
           }
         }
         &.no-button {
@@ -72,6 +79,7 @@
       &__center {
         text-align: center;
       }
+
     }
 
 
