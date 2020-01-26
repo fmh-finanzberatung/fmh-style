@@ -238,19 +238,25 @@
 .dashboard__domain {
   margin-top: 3rem;
 
-  .logobar {
-    width: 100%;
-    text-align: right;
-    float: right;
-    padding: $defaultPadding;
-    margin-bottom: -4rem;
-    padding-right: 19px;
+  .domain__intro {
+    min-width: 250px;
+    margin: 15px 10px;
 
-    .logo {
-      width: 300px;
+    .intro {
+      &__logobar {
+        width: 100%;
+        text-align: right;
+        float: right;
+        padding: $defaultPadding;
+        margin-bottom: -4rem;
+        padding-right: 19px;
+
+        .logo {
+          width: 300px;
+        }
+      }
     }
   }
-
 }
 
 .domain__localizator {
