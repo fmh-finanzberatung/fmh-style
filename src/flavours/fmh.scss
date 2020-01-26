@@ -31,4 +31,11 @@ $button-hover_color: #3799D8;
       border: $button-hover_border;
     }
   }
+
+  .domain__localizator {
+    border-color:$primary-color-main;
+    .city {
+      color: $primary-color-main;
+    }
+  }
 }

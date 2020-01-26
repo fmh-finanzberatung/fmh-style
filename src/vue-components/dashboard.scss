@@ -276,6 +276,9 @@
     width: 50%;
     height: 2rem;
   }
+  .search {
+    text-align: right;
+  }
   .current {
     span {
       line-height: 2em;
@@ -284,14 +287,15 @@
   }
   .label {
     font-style: italic;
+    padding-right: $defaultPadding;
   }
   .city {
     font-size: 1.1em;
-    color: $base-medium-color;
     font-weight: bold;
   }
   .button {
     text-align: right;
+    padding-left: $defaultPadding;
   }
 }
 
