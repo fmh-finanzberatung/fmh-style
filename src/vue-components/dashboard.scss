@@ -222,6 +222,19 @@
       }
     }
   }
+
+  &__nodata {
+    margin: 10px;
+    padding: $defaultPadding;
+    width: $fullwidth - 32px;
+    background: $neutralLightColor;
+
+    h4 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
 }
 
 .dashboard__domains {
