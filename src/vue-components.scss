@@ -20,11 +20,11 @@
 /***************************************
 * Elements
 ****************************************/
-@import 'elements/cards';
 @import 'elements/charts';
 @import 'elements/sections';
 @import 'elements/buttons';
 @import 'elements/icons';
+@import 'vue-elements/cards';
 @import "vue-elements/tables";
 @import "vue-elements/tablefilters";
 @import "vue-elements/elements";
@@ -36,9 +36,9 @@
 ****************************************/
 @import 'vue-components/editorscorner';
 @import 'vue-components/dashboard';
-@import 'vue-components/transitions';
 @import 'vue-components/zinsen';
 @import 'vue-components/topangebote';
+@import 'vue-components/transitions';
 
 
 /***************************************
