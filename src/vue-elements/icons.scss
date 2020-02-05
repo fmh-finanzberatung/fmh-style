@@ -1,0 +1,36 @@
+.boolicon {
+    &:before {
+    font-family: $icon-font-family;
+    font-size: $small-font-size;
+    line-height: $small-font-size;
+    vertical-align: middle;
+    padding-right: $defaultPadding;
+    padding-bottom:  2px;
+  }
+  &.check:before {
+    color: $goodColor;
+    content: '\e625';
+  }
+  &.cancel:before {
+    color: $badColor;
+    content: '\e623';
+  }
+}
+.tendence-up, .tendence-down {
+  &:before {
+    font-family: $icon-font-family;
+    font-size: $small-font-size;
+    line-height: $small-font-size;
+    vertical-align: middle;
+    padding-right: $defaultPadding;
+    padding-bottom:  2px;
+  }
+}
+.tendence-up:before {
+  color: $tendence-good-color-dark;
+  content: '\E012';
+}
+.tendence-down:before {
+  color: $tendence-bad-color-dark;
+  content: '\E014';
+}

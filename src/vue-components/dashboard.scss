@@ -28,7 +28,7 @@
       vertical-align: baseline;
       padding-left: 4px;
       &:before {
-        font-family: FmhIcons;
+        font-family: $icon-font-family;
         font-size: 0.8em;
         line-height: 1.5em;
         vertical-align: baseline;
@@ -357,7 +357,7 @@
 
       }
       &:before {
-        font-family: "FmhIcons";
+        font-family: $icon-font-family;
         content: $arrow-down;
         font-size: $small-font-size;
         line-height: $small-font-size;

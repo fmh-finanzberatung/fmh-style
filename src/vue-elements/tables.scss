@@ -21,7 +21,7 @@
       cursor: pointer;
       &:after {
         content: $arrow-down;
-        font-family: FmhIcons;
+        font-family: $icon-font-family;
         font-size:  9px;
         color: $neutralDarkColor;
         padding-left: $defaultPadding;
@@ -172,7 +172,12 @@
       }
     }
   }
+
+
 }
+.item-centered {
+    text-align: center;
+  }
 
 /**
  * Vue-Good-Table

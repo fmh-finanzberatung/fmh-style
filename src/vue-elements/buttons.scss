@@ -1,0 +1,78 @@
+$defaultPadding: 6px;
+
+.button-bar {
+  width: 99%;
+  text-align: right;
+  padding: $defaultPadding;
+  margin-bottom: -1rem;
+  font-family: $standard-font-family;
+}
+
+button {
+  &.more-button {
+    text-transform: uppercase;
+    color: $button-active_color;
+    background: $button-active_background repeat scroll 0 0;
+    border: $button-active_border;
+    border-radius: 4px;
+    padding: 5px 5px;
+    cursor: pointer;
+    min-width: 120px;
+    &:before {
+      font-family: $icon-font-family;
+      font-size: 80%;
+      content: $arrow-right;
+      padding-right: 0.5em;
+    }
+    &:hover {
+      color: $button-hover_color;
+      background: $button-hover_background repeat scroll 0 0;
+      border: $button-hover_border;
+    }
+  }
+
+  &.more-future {
+    background-color: white;
+    border: 2px solid $base-link-color;
+    color: $base-link-color;
+    padding: $defaultPadding;
+    &:before {
+      font-family: $icon-font-family;
+      font-size: 80%;
+      content: $arrow-right;
+      padding-right: 0.5em;
+    }
+  }
+
+  &.menu-button {
+    font-family: $standard-font-family;
+    text-transform: uppercase;
+    color: $button-active_color;
+    background: $button-active_background repeat scroll 0 0;
+    border: $button-active_border;
+    border-radius: 4px;
+    padding: 5px 5px;
+    cursor: pointer;
+    &:before {
+      font-family: $icon-font-family;
+      font-size: 80%;
+      content: $home;
+      padding-right: 0.5em;
+    }
+    &:hover {
+      color: $button-hover_color;
+      background: $button-hover_background repeat scroll 0 0;
+      border: $button-hover_border;
+    }
+
+    &.dashboard:before {
+      content: $home
+    }
+    &.zinsen:before {
+      content: $coins
+    }
+    &.top:before {
+      content: $trend
+    }
+  }
+}

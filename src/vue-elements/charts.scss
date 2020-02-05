@@ -1,0 +1,51 @@
+.chart__component {
+  width: calc(100% - 8px);
+  height: 150px;
+  position: relative;
+}
+
+.chart__component canvas{
+  width: calc(100% - 8px);
+  height: 150px;
+  position: relative;
+}
+
+.chart__legend {
+  text-align: left;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 56px;
+  }
+
+  li {
+    display: inline-block;
+    font-size: $small-font-size;
+    margin-right: 10px;
+    color: $neutralDarkColor;
+
+    &:before {
+      font-family: $icon-font-family;
+      font-size: $small-font-size;
+      line-height: $small-font-size;
+      vertical-align: middle;
+      content: $immo-minus; /* "\e622"*/
+      padding-right: 4px;
+    }
+
+    &.orange {
+      color: $alertBaseColor;
+      &:before {
+        color: $alertBaseColor;
+      }
+    }
+    &.blue {
+      color: $base-dark-color;
+      &:before {
+        color: $base-dark-color;
+      }
+    }
+
+  }
+}

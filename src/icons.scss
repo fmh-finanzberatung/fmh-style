@@ -95,7 +95,7 @@ $trend:                 "\e00b";
 
 .icon {
   &::before {
-    font-family: 'FmhIcons'; 
+    font-family: $icon-font-family;
   }
 }
 

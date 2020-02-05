@@ -39,7 +39,7 @@
     }
   }
 
-  .card, .card__single, .card__double, .card__more {
+  .card, .card__single, .card__double, .card__more, .card__stats {
     border: $neutralMediumColor 1px solid;
     position: relative;
     margin: $halfGutter;
@@ -194,7 +194,19 @@
       }
     }
 
-
   }
 
+  .stats-card {
+    border: $neutralBaseColor 1px solid;
+    .segment__banner {
+      color: $base-text-color;
+      border-top: 2px $neutralBaseColor solid;
+      border-top: 2px $neutralBaseColor solid;
+      background-color: $neutralBaseColor;
+    }
+    .segment__content.separator {
+      border-top: 2px $neutralBaseColor solid;
+    }
+
+  }
 }
