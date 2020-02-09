@@ -80,6 +80,10 @@
         flex-wrap: wrap;
         margin: $defaultPadding;
 
+        .entry__bank {
+          width: 100%;
+        }
+
         .bank {
           &__logo {
             text-align: center;
