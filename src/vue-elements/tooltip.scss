@@ -1,11 +1,14 @@
 .tooltip {
   display: block !important;
   z-index: 10000;
+  margin: 0 auto;
+  width: 50%;
 
   .tooltip-inner {
-    background: black;
+    font-family: $standard-font-family;
+    background: $neutralDarkColor;
     color: white;
-    border-radius: 16px;
+    border-radius: 0;
     padding: 5px 10px 4px;
   }
 
@@ -15,7 +18,7 @@
     border-style: solid;
     position: absolute;
     margin: 5px;
-    border-color: black;
+    border-color: $neutralDarkColor;
     z-index: 1;
   }
 
