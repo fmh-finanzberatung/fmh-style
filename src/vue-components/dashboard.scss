@@ -217,6 +217,19 @@
             &__expensive, &__cheap {
               width: 40%;
               font-weight: bold;
+
+              .exp-link {
+                color: $iib-primary-color;
+                &:after {
+                  content: "\e016";
+                  font-family: $icon-font-family;
+                  font-size: $small-font-size;
+                  line-height: $small-font-size;
+                  vertical-align: middle;
+                  padding-left: $defaultPadding;
+                  padding-bottom:  2px;
+                }
+              }
             }
           }
         }
