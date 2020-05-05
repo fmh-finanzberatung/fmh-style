@@ -34,3 +34,9 @@
   color: $tendence-bad-color-dark;
   content: '\E014';
 }
+.tendence-down.inverted:before {
+  color: $tendence-good-color-dark;
+}
+.tendence-up.inverted:before {
+  color: $tendence-bad-color-dark;
+}
