@@ -271,6 +271,19 @@
 .dashboard__domain {
   margin-top: 3rem;
 
+  .logobar {
+        width: 100%;
+        text-align: right;
+        float: right;
+        padding: $defaultPadding;
+        margin-bottom: -4rem;
+        padding-right: 19px;
+
+        .logo {
+          width: 300px;
+        }
+      }
+
   .domain__intro {
     min-width: 250px;
     margin: 15px 10px;
@@ -289,6 +302,10 @@
         }
       }
     }
+  }
+
+  .domain__logobar {
+    width: 360px;
   }
 }
 
@@ -348,7 +365,7 @@
   }
 
   .company__list {
-    padding-left: 19px;
+    padding-left: 9px;
     width: 48%;
     @media only screen and (max-width: $bp-m) {
       width: 100%;
