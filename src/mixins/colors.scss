@@ -1,0 +1,9 @@
+$primary-color--darkest: #085191;
+$primary-color--darker: #0066a1;   
+// there should be a primary color
+$primary-color--lighter: #1792d0;   
+$primary-color--lightes: #00A6e1;   
+$error-color: #900;
+$text-color: #181818;
+$text-color--light: lighten($text-color, 60%);
+

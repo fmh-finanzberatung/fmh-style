@@ -1,0 +1,14 @@
+@import './colors.scss';
+@import './fonts.scss';
+@import './icons.scss';
+// color should be taken from colors.scss
+// but that's not working at the moment
+
+.form {}
+
+@mixin text-field {
+  border: 1px solid #ddd;
+  margin: 0;
+  padding: 0 0.5em;
+  border-radius: 0px;
+}

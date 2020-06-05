@@ -1,0 +1,10 @@
+.color-sample-box {
+  display: inline-block;
+  height: 50px;
+  width: 50px; }
+
+.primary-color--darkest {
+  background-color: #085191; }
+
+.primary-color--darker {
+  background-color: #0066a1; }

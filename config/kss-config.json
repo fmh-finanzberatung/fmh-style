@@ -1,0 +1,15 @@
+{
+  "source": [
+    "../src/"
+  ],
+  "homepage": "../src/homepage.md", 
+  "destination":  "../styleguide/",
+  "css": [
+    "custom/fmh.css",
+    "dist/colors.css",
+    "dist/form.css"
+  ],
+  "js": [
+    "custom/browser-refresh.js" 
+  ]
+}

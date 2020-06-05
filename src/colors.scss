@@ -1,36 +1,31 @@
-$base-dark-color: #003f8d;
-$base-medium-color: #1792d0; //was: #0078bb;
-//$base-light-color: #3faddb;
-$base-light-color: #3294cf;
-//$base-medium-line-color: #3faddb;
-$base-medium-line-color: #3294cf;
+@import './mixins/colors.scss';
 
-$base-alert-color: #f49a2a;
-$alertBaseColor: #f49a2a;
-$alertDarkColor: $alertBaseColor;
-$alertMediumColor: lighten(#f49a2a, 10);
-$alertLightColor: lighten(#f49a2a, 20);
+.color-sample-box {
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
 
-$error-color: #900;
+// Basisfarbe ganz dunkel
+//
+// Markup:
+// <div><div class="primary-color--darkest color-sample-box"></div>A Beispiel Primary Color</div>
+//
+// Style guide: Colors.primary-color.darkest
 
-// use for headlines, links etc
-$base-extra-text-color: #1792d0;
-$base-link-color: #1792d0;
+.primary-color--darkest {
+  background-color: $primary-color--darkest;
+}
 
-$base-text-color: #333;
-$soft-grey-text-color: #ddd;
-$medium-grey-text-color: #aaa;
-$dark-grey-text-color: #454545;
+// Basisfarbe sehr dunkel 
+//
+// Markup:
+// <div><div class="primary-color--darker color-sample-box"></div>B Beispiel Primary Color etwas dunkler</div>
+//
+// Style guide: Colors.primary-color.darker
 
-$light-grey-color: #eaeaea;
+.primary-color--darker {
+  background-color: $primary-color--darker;
+}
 
-$android-color: #a4c739;
 
-$neutralBaseColor: #ddd;
-$neutralDarkColor: #454545;
-$neutralMediumColor: #bbb;
-$neutralLightColor: #efefef;
-
-$dark-grey-text-color: #454545;
-
-$field-border-color: red;
