@@ -9,13 +9,15 @@
 
 .common__tiles {
   display: flex;
-  flex-wrap: wrap;
-  margin: $halfGutter * -1;
+  flex-flow: row wrap;
+  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 
   .tile__single, .tile__double {
     border: $neutralMediumColor 1px solid;
     position: relative;
-    margin: $halfGutter;
+    margin-top: 5px;
     padding: 0;
 
     .segment {
