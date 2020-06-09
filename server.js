@@ -1,54 +1,24 @@
 const express = require('express');
-const chokidar = require('chokidar');
-const path = require('path');
 const app = express();
-const port = 3002;
 const http = require('http');
-const SocketServer = require('websocket').server;
-const server = http.createServer(app);
-
-const wsServer = new SocketServer({
-  httpServer: server,
-  autoAcceptConnections: true 
-});
+const httpServer = http.createServer(app);
+const path = require('path');
+const port = process.env.FMH_STYLE_PORT || 3002;
+const watcher = require('./lib/server/sse-watcher');
 
 app.use(express.static(__dirname + '/styleguide/'));
 app.use('/custom/', express.static(__dirname + '/custom/'));
+app.use('/lib/browser/', express.static(__dirname + '/lib/browser/'));
 app.use('/dist/', express.static(__dirname + '/dist/'));
 
-app.get('/', (req, res) => {
-  res.redirect('index.html');
+app.get('/favicon.ico', (req, res) => {
+  // don't have one 
+  res.status(200).send('');
 });
 
-server.listen(port, () => {
+app.get('/event-stream', watcher); 
+
+httpServer.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);
-});
-
-const watcher = chokidar.watch('src/**/*', {
-  persistent: true
-});
-
-watcher.on('error', (err) => {
-  console.error(err); 
-});
-
-
-wsServer.on('request', (request) => {
-  console.log('request', request);
-
-});
-wsServer.on('connection', (socket) => {
-
-  console.log('connection established');
-
-  watcher.on('change', (path) => {
-    setTimeout(() => {
-      // need a little delay here to allow for
-      // css to build
-      console.log('path changed', path);
-      socket.sendUTF(path);
-    }, 1000);
-  });
-
 });
 
