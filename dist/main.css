@@ -1,4 +1,33 @@
 @charset "UTF-8";
+/*
+html,body {
+  height:100%; // fix IE11 
+  min-height:100%; // fix IE11   
+}
+body {
+  width: 100%
+}
+*/
+html, body {
+  height: 100%;
+  min-height: 100%; }
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px; }
+
 .icon::before {
   font-family: 'FmhIcons'; }
 
@@ -70,6 +99,17 @@
 
 .icon--speech-bubble::before {
   content: ""; }
+
+.color-sample-box {
+  display: inline-block;
+  height: 50px;
+  width: 50px; }
+
+.primary-color--darkest {
+  background-color: #085191; }
+
+.primary-color--darker {
+  background-color: #0066a1; }
 
 .text-field {
   border: 1px solid #ddd;

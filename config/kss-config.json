@@ -6,8 +6,7 @@
   "destination":  "../styleguide/",
   "css": [
     "custom/fmh.css",
-    "dist/colors.css",
-    "dist/form.css"
+    "dist/main.css"
   ],
   "js": [
     "custom/browser-refresh.js" 

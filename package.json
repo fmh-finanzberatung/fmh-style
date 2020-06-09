@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn build:css && yarn build:kss",
-    "build:css": "rimraf dist/* && node-sass src -o dist",
+    "build:css": "rimraf dist/* && node-sass src/main.scss -o dist",
     "build:kss": "yarn build:css && kss --config config/kss-config.json",
     "dev": "yarn build:kss && node server.js",
     "watch:scss": "yarn build:css && node-sass src/ -wor dist"
