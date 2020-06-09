@@ -1,4 +1,3 @@
-@import './colors.scss';
 /*
 html,body {
   height:100%; // fix IE11 
@@ -186,42 +185,6 @@ body {
 
 }
 
-$base-total: 1000;
 
-$base-margin: 15;
-
-$base-slim: 310;//(1000 - (4*$base-margin)) / 3; // one third
-
-$base-wide: 660;//($base-slim * 2) + ($base-margin * 2) ; // two thirds
-
-$base-half: 485;
-
-$base-fourth: 227.5;
-
-$base-three-fourths: 742.5;
-
-$base-narrow: 220;
-
-$base-banner: 750;
-
-$base-outline-total: 1000 + (2*$base-margin);
-
-$margin: percentage($base-margin/$base-outline-total);
-
-$slim: percentage($base-slim/$base-outline-total);
-
-$wide: percentage($base-wide/$base-outline-total);
-
-$half: percentage($base-half/$base-outline-total);
-
-$fourth: percentage($base-fourth/$base-outline-total);
-
-$three-fourths: percentage($base-three-fourths/$base-outline-total);
-
-$narrow: percentage($base-narrow/$base-outline-total);
-
-$banner: percentage($base-banner/$base-outline-total);
-
-$total: percentage($base-total/$base-outline-total);
 
 
