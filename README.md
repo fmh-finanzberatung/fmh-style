@@ -4,10 +4,10 @@
 
 $ yarn dev
 
-## autocompile css on each source scss change
+## build css 
 
-(in separate terminal)
+$ yarn build:css
 
-$ yarn watch:css
+## build styleguide
 
-
+$ yarn build:styleguide
