@@ -2,4 +2,5 @@
 *.swp
 *.log
 node_modules
+styleguide/**/*
 src/.sass-cache
