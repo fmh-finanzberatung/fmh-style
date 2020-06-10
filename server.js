@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
+const port = 3003;
 const http = require('http');
 const httpServer = http.createServer(app);
 const path = require('path');
-const port = process.env.FMH_STYLE_PORT || 3002;
 const watcher = require('./lib/server/sse-watcher');
 
 app.use(express.static(__dirname + '/styleguide/'));

@@ -96,7 +96,12 @@ $star-half:             "\e90d";
   }
 }
 
-
+// Icon Hypothek
+//
+// Markup:
+// <div><div class="icon icon--hypothek"></div>Beispiel Icon</div>
+//
+// Style guide: Icons.icon--hypothek
 .icon--hypothek {
   &::before {
     content: $hypotheken-darlehen;  

@@ -1,17 +1,16 @@
 {
   "name": "fmh-style",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "FMH SCSS styles",
   "main": "index.js",
   "repository": "https://github.com/fmh-finanzberatung/fmh-style.git",
   "author": "FMH-Finanzberatung <info@fmh.de>",
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:css && yarn build:kss",
-    "build:css": "rimraf dist/* && node-sass src -o dist",
-    "build:kss": "yarn build:css && kss --config kss-config.json",
-    "dev": "node server.js",
-    "watch:scss": "yarn build:css && node-sass src/ -wor dist"
+    "build": "yarn build:css && yarn build:styleguide",
+    "build:css": "rimraf dist/* && node-sass src/main.scss -o dist",
+    "build:styleguide": "yarn build:css && kss --config kss-config.json",
+    "dev": "node server.js"
   },
   "optionalDependencies": {
     "@babel/core": "^7.10.2",
