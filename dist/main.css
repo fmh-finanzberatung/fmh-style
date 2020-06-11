@@ -8,26 +8,49 @@ body {
   width: 100%
 }
 */
-html, body {
+.html, .body {
   height: 100%;
   min-height: 100%; }
 
-body {
+.body {
   width: 100%;
   margin: 0;
   padding: 0; }
 
-html {
-  font-size: 100%;
-  -webkit-text-size-adjust: 100%;
-  font-variant-ligatures: none;
-  -webkit-font-variant-ligatures: none;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px; }
+/*
+Typographie
 
+Style guide: Typography
+*/
+/*
+Font Größe
+
+Zeichensatz Größen sind liquid: dynamische Größenanpassung abhängig von der Bildschirmbreite 
+
+--small   - verkleinert
+--medium  - mittlere Größe zwischen normal und groß
+--large   - größte Größe
+
+Markup:
+<span class="sample__font-size{{modifier_class}}">Lorem Ipsum</span>
+
+Style guide: Typography.font-size
+*/
+/*
+Zeilenhöhe
+
+Die Zeilenhöhe hat immer das gleiche Verhältnis zur Fontgröße. Der graue Bereich zeigt die Zeilenhöhe
+
+--small   - für verkleinerten Text 
+--medium  - für mittlere Größe zwischen normal und groß
+--large   - für größte Größe
+
+Markup:
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">Lorem Ipsum</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">Lorem Ipsum<br/>mit mehreren<br/>Zeilen</div>
+
+Style guide: Typography.line-height
+*/
 .icon::before {
   font-family: 'FmhIcons'; }
 
@@ -99,11 +122,6 @@ html {
 
 .icon--speech-bubble::before {
   content: ""; }
-
-.color-sample-box {
-  display: inline-block;
-  height: 50px;
-  width: 50px; }
 
 .primary-color--darkest {
   background-color: #085191; }

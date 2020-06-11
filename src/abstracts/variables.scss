@@ -1,9 +1,29 @@
 // colors
 
-$primary-color: #1792D0;
+$primary-color--normal: #1792D0;
 $primary-color--lighter: #00A6E1;
 $primary-color--darker: #0066A1;
 $primary-color--darkest: #085191;
 
 $text-color: #181818;
 $text-color--lighter: rgba(24,24,24,0.6);
+
+// fonts
+
+$font-family--normal: 'Roboto', arial, helvetica, sans-serif;
+$font-family--headline: 'Roboto', arial, helvetica, sans-serif;
+
+$reference-font-size: 14.0;
+
+$font-size--large: #{18.0 / $reference-font-size}rem;  
+$font-size--medium: #{16.0 / $reference-font-size}rem; 
+$font-size: #{14.0 / $reference-font-size}rem;
+$font-size--small: #{12.0 / $reference-font-size}rem;
+
+$line-height-factor: 1.4;
+
+$line-height--large: #{(18 * $line-height-factor) / $reference-font-size}rem;  
+$line-height--medium: #{(16 * $line-height-factor) / $reference-font-size}rem; 
+$line-height: #{(14 * $line-height-factor) / $reference-font-size}rem;
+$line-height--small: #{(12 * $line-height-factor) / $reference-font-size}rem;
+

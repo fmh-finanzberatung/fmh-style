@@ -1,0 +1,71 @@
+@import './abstracts/mixins.scss'; 
+@import './abstracts/variables.scss'; 
+
+html {
+  @include root-font-size; 
+
+}
+
+.sample { 
+  &__font-size {
+    
+    font-size: $font-size;
+    
+    &--large {
+      font-size: $font-size--large;
+    }
+   
+    &--medium {
+      font-size: $font-size--medium;
+    }
+    
+    &--small {
+      font-size: $font-size--small;
+    }
+  }
+  &__line-height {
+    padding: 0.25em 0.5em;
+    display: inline-block;
+    background-color: #e4e4e4;
+    line-height: $line-height;
+    &--large {
+      line-height: $line-height--large;
+    }
+    &--medium {
+      line-height: $line-height--medium;
+    }
+    &--small {
+      line-height: $line-height--small;
+    }
+  }
+  &__color {
+    &--box {
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+    }
+  }
+}
+
+
+
+
+.kss-style {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+}
+
+
+.kss-modifier__example {
+  font-family: arial, sans-serif;
+}
