@@ -6,11 +6,10 @@ html {
 
 }
 
-.sample { 
+.sample {
   &__font-size {
-    
+    font-family: $font-family;
     font-size: $font-size;
-    
     &--large {
       font-size: $font-size--large;
     }
@@ -38,11 +37,29 @@ html {
       line-height: $line-height--small;
     }
   }
+  &__line-marker {
+    border-bottom: 1px dotted black;
+    &:last-child {
+      border-bottom: none;
+    } 
+  }
   &__color {
     &--box {
-      display: inline-block;
       height: 50px;
       width: 50px;
+    }
+  }
+  &__asset {
+    display: block;
+    max-width: 800px;
+    width: 40vw;
+    max-height: 150px;
+    height: 10vh;
+    &--fmh-logo {
+      background: url($fmh-logo-uri) left top no-repeat; 
+    }
+    &--fmh-claim {
+      background: url($fmh-claim-uri) left top no-repeat; 
     }
   }
 }
