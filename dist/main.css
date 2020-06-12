@@ -18,12 +18,47 @@ body {
   padding: 0; }
 
 /*
+
+Global
+
+Style Guide: Global
+
+*/
+/*
+
+Assets
+
+
+Style Guide: Global.assets
+
+*/
+/*
+
+FMH-Logo
+
+Markup:
+<div class="sample__asset sample__asset--fmh-logo"></div>
+
+Style Guide: Global.assets.logo
+
+*/
+/*
+
+FMH-Claim
+
+Markup:
+<div class="sample__asset sample__asset--fmh-claim"></div>
+
+Style Guide: Global.assets.claim
+
+*/
+/*
 Typographie
 
 Style guide: Typography
 */
 /*
-Font Größe
+Fontgröße
 
 Zeichensatz Größen sind liquid: dynamische Größenanpassung abhängig von der Bildschirmbreite 
 
@@ -46,9 +81,33 @@ Die Zeilenhöhe hat immer das gleiche Verhältnis zur Fontgröße. Der graue Ber
 --large   - für größte Größe
 
 Markup:
-<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">Lorem Ipsum</div>
-<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">Lorem Ipsum<br/>mit mehreren<br/>Zeilen</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  Lorem Ipsum
+</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  Lorem Ipsum
+  <br/>
+  mit mehreren
+  <br/>
+  Zeilen. 
+</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  <span>
+    <span class="sample__line-marker">
+      Lorem Ipsum
+    </span>
+    <br/>
+    <span class="sample__line-marker">
+      mit mehreren
+    </span>
+    <br/>
+    <span class="sample__line-marker">
+      Zeilen und Hilfslinien. 
+    </span>
+  </span>
+</div>
 
+  
 Style guide: Typography.line-height
 */
 .icon::before {
@@ -123,8 +182,23 @@ Style guide: Typography.line-height
 .icon--speech-bubble::before {
   content: ""; }
 
-.primary-color--darkest {
-  background-color: #085191; }
+/*
+Basisfarbe
 
-.primary-color--darker {
-  background-color: #0066A1; }
+--darkest - dunkelste Farbe
+--darker  - dunkler als Standard
+--lighter - heller als Standard
+
+Markup:
+<div class="primary-color{{modifier_class}} sample__color--box"></div>
+
+Style guide: Colors.primary-color
+*/
+.primary-color {
+  background-color: #1792D0; }
+  .primary-color--darkest {
+    background-color: #085191; }
+  .primary-color--darker {
+    background-color: #0066A1; }
+  .primary-color--lighter {
+    background-color: #00A6E1; }

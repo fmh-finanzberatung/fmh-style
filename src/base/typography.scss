@@ -7,7 +7,7 @@ Style guide: Typography
 */
 
 /*
-Font Größe
+Fontgröße
 
 Zeichensatz Größen sind liquid: dynamische Größenanpassung abhängig von der Bildschirmbreite 
 
@@ -31,8 +31,32 @@ Die Zeilenhöhe hat immer das gleiche Verhältnis zur Fontgröße. Der graue Ber
 --large   - für größte Größe
 
 Markup:
-<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">Lorem Ipsum</div>
-<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">Lorem Ipsum<br/>mit mehreren<br/>Zeilen</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  Lorem Ipsum
+</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  Lorem Ipsum
+  <br/>
+  mit mehreren
+  <br/>
+  Zeilen. 
+</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  <span>
+    <span class="sample__line-marker">
+      Lorem Ipsum
+    </span>
+    <br/>
+    <span class="sample__line-marker">
+      mit mehreren
+    </span>
+    <br/>
+    <span class="sample__line-marker">
+      Zeilen und Hilfslinien. 
+    </span>
+  </span>
+</div>
 
+  
 Style guide: Typography.line-height
 */

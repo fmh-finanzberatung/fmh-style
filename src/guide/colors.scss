@@ -1,23 +1,25 @@
-// Basisfarbe ganz dunkel
-//
-// Markup:
-// <div><div class="primary-color--darkest color-sample-box"></div>A Beispiel Primary Color</div>
-//
-// Style guide: Colors.primary-color.darkest
+/*
+Basisfarbe
 
-.primary-color--darkest {
-  background-color: $primary-color--darkest;
+--darkest - dunkelste Farbe
+--darker  - dunkler als Standard
+--lighter - heller als Standard
+
+Markup:
+<div class="primary-color{{modifier_class}} sample__color--box"></div>
+
+Style guide: Colors.primary-color
+*/
+
+.primary-color {
+  background-color: $primary-color;
+  &--darkest {
+    background-color: $primary-color--darkest;
+  }
+  &--darker {
+    background-color: $primary-color--darker;
+  }
+  &--lighter {
+    background-color: $primary-color--lighter;
+  }
 }
-
-// Basisfarbe sehr dunkel 
-//
-// Markup:
-// <div><div class="primary-color--darker color-sample-box"></div>B Beispiel Primary Color etwas dunkler</div>
-//
-// Style guide: Colors.primary-color.darker
-
-.primary-color--darker {
-  background-color: $primary-color--darker;
-}
-
-
