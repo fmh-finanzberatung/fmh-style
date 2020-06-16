@@ -1,0 +1,115 @@
+/*
+Text input 
+ 
+Markup:
+<input type="text" name="text" class="text{{modifier_class}}">
+ 
+Style guide: Components.Form.text-field
+*/
+.text-field {
+  color: white;
+  font-size: 0.75rem;
+  line-height: 10px;
+  border: yellowgreen 1px solid;
+}
+
+/*
+Select input
+
+Markup: ../guide/select.hbs
+
+Style guide: Components.Form.select-field
+*/
+.select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background-color: white;
+  background-image: url($select-arrow-down);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: none;
+  border-radius: $border-radius;
+  outline: none;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  margin: 0 10px 8px 0;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 25px;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+label {
+  font-size: 1rem;
+}
+
+/* 
+Button input 
+
+--primary - dunkler Button
+--secondary - transparenter Button
+
+Markup: ../guide/button.hbs
+ 
+Style guide: Components.Form.button
+*/
+%button-base {
+  border-radius: $border-radius;
+  border: 1px solid $primary-color;
+  line-height: 1.42rem;
+  font-size: 0.87rem;
+  text-transform: uppercase;
+  padding: 8px 10.5px;
+}
+.button {
+  @extend %button-base;
+
+  &--primary {
+    @extend %button-base;
+    background-color: $primary-color;
+    color: white;
+  }
+  &--secondary {
+    @extend %button-base;
+    background-color: transparent;
+    color: $primary-color;
+  }
+}
+
+/*
+Checkbox input
+
+Markup: 
+<label><input type="checkbox" name="checkbox" class="checkbox{{modifier_class}}"> Checkbox 1</label>
+
+Style guide: Components.Form.checkbox
+*/
+input[type="checkbox"] {
+  font-size: 1rem;
+  line-height: 2rem;
+  line-height: 200px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+input[type="checkbox"]:checked:after {
+  position: relative;
+  bottom: 3px;
+  left: 1px;
+  color: white;
+  background-color: black;
+  content: "\2713"; /* check mark */
+}

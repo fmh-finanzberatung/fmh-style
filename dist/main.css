@@ -15,7 +15,8 @@ body {
   font-style: normal;
   font-display: block; }
 
-.html, .body {
+.html,
+.body {
   height: 100%;
   min-height: 100%; }
 
@@ -33,7 +34,8 @@ body {
 .body {
   width: 100%;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  font-family: "Roboto", arial, helvetica, sans-serif; }
 
 /*
 
@@ -134,6 +136,113 @@ Markup:
   
 Style guide: Typography.line-height
 */
+/*
+Text input 
+ 
+Markup:
+<input type="text" name="text" class="text{{modifier_class}}">
+ 
+Style guide: Components.Form.text-field
+*/
+.text-field {
+  color: white;
+  font-size: 0.75rem;
+  line-height: 10px;
+  border: yellowgreen 1px solid; }
+
+/*
+Select input
+
+Markup: ../guide/select.hbs
+
+Style guide: Components.Form.select-field
+*/
+.select {
+  -moz-appearance: none;
+  /* Firefox */
+  -webkit-appearance: none;
+  /* Safari and Chrome */
+  appearance: none;
+  background-color: white;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='grey' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  margin: 0 10px 8px 0;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 25px;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+label {
+  font-size: 1rem; }
+
+/* 
+Button input 
+
+--primary - dunkler Button
+--secondary - transparenter Button
+
+Markup: ../guide/button.hbs
+ 
+Style guide: Components.Form.button
+*/
+.button, .button--primary, .button--secondary {
+  border-radius: 4px;
+  border: 1px solid #1792D0;
+  line-height: 1.42rem;
+  font-size: 0.87rem;
+  text-transform: uppercase;
+  padding: 8px 10.5px; }
+
+.button--primary {
+  background-color: #1792D0;
+  color: white; }
+
+.button--secondary {
+  background-color: transparent;
+  color: #1792D0; }
+
+/*
+Checkbox input
+
+Markup: 
+<label><input type="checkbox" name="checkbox" class="checkbox{{modifier_class}}"> Checkbox 1</label>
+
+Style guide: Components.Form.checkbox
+*/
+input[type="checkbox"] {
+  font-size: 1rem;
+  line-height: 2rem;
+  line-height: 200px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  vertical-align: middle;
+  width: 1rem;
+  height: 1rem;
+  background: white;
+  border: 1px solid gray;
+  border-radius: 4px; }
+
+input[type="checkbox"]:checked:after {
+  position: relative;
+  bottom: 3px;
+  left: 1px;
+  color: white;
+  background-color: black;
+  content: "\2713";
+  /* check mark */ }
+
 /*
 Icons
 

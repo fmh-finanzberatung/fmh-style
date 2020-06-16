@@ -9,6 +9,7 @@
 //@import
 //    'vendors/normalize';
 
+
 // 3. Base stuff
 @import
     //'base/base',
@@ -16,6 +17,7 @@
     'base/fonts',
     'base/global',
     'base/typography',
+    'base/form',
     'base/icons';
 
 // 4. Layout-related sections
@@ -37,5 +39,4 @@
 
 // 8. Special stuff
 @import 
-    'guide/colors',
-    'guide/form';
+    'guide/colors';
