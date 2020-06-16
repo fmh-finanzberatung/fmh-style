@@ -7,6 +7,7 @@ const path = require('path');
 const watcher = require('./lib/server/sse-watcher');
 
 app.use(express.static(__dirname + '/styleguide/'));
+app.use('/fonts/', express.static(__dirname + '/fonts/'));
 app.use('/custom/', express.static(__dirname + '/custom/'));
 app.use('/lib/browser/', express.static(__dirname + '/lib/browser/'));
 app.use('/dist/', express.static(__dirname + '/dist/'));
