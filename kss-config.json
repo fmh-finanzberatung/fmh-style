@@ -1,0 +1,14 @@
+{
+  "source": [
+    "src/"
+  ],
+  "homepage": "src/homepage.md", 
+  "destination":  "styleguide/",
+  "css": [
+    "dist/styleguide-helper.css",
+    "dist/main.css"
+  ],
+  "js": [
+    "lib/browser/sse-browser-refresh.js" 
+  ]
+}

@@ -1,0 +1,70 @@
+/*
+Icons
+
+Some icon stuff
+
+--graph-line    - grafisch Linienfarbe
+--graph-fill    - grafisch Füllfarbe
+--pdf           - PDF 
+--print         - print
+--chevron-right - chevron rechts (Nav) 
+--collapse      - einklappen
+--expand        - expandieren
+--menu          - menu (Hamburger)
+--close         - schließen 
+--search        - suchen
+
+
+Markup:
+<div class="icon icon{{modifier_class}}"><div>
+
+Style guide: Icons
+*/
+
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fmh-icons-v2' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &--graph-line:before {
+    content: '\e906';
+  }
+  &--graph-fill:before {
+    content: '\e907';
+  }
+  &--pdf:before {
+    content: '\e908';
+  }
+  &--print:before {
+    content: '\e909';
+  }
+  &--chevron-right:before {
+    content: '\e900';
+  }
+  &--collapse:before {
+    content: '\e901';
+  }
+  &--expand:before {
+    content: '\e902';
+  }
+  &--menu:before {
+    content: '\e903';
+  }
+  &--close:before {
+    content: '\e904';
+  }
+  &--search:before {
+    content: '\e905';
+  }
+}
+

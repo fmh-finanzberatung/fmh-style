@@ -1,0 +1,80 @@
+/*
+Header
+
+<div class="header">
+  <div class="fmh-logo header__fmh-logo">
+  </div>
+  <div class="fmh-claim header__fmh-claim">
+  </div>
+  <nav class="header__nav">
+    <ul class="header__menu">
+      <li class="header__menu-item">
+        <label>
+          <span class="title">
+            Zinsvergleiche
+          </span>
+          <input type="checkbox" 
+            class="expandable" />
+          <ul class="header__submenu">
+            <li class="header__submenu-item">
+              <a href="#">Hypotheken</a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="#">Forward-Darlehen</a>
+            </li>
+          </ul>
+        </label>
+      </li>
+      <li class="header__menu-item">
+        <label>
+          <span class="title">
+            Finanzrechner 
+          </span>
+          <input type="checkbox" 
+            class="expandable" />
+          <ul class="header__submenu">
+            <li class="header__submenu-item">
+              <a href="#">Baufinanzierung</a>
+            </li>
+            <li class="header__submenu-item">
+              <a href="#">Geldanlage</a>
+            </li>
+          </ul>
+        </label>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+Style guide: header
+*/
+
+.header {
+  
+  &, & * {
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+  }
+  max-width: $screen--max-width;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  &__fmh-logo {
+    flex: 200px 1 1;
+  }
+  &__fmh-claim {
+    height: 100px;
+    flex: 200px 1 1;
+  }
+  &__nav {
+    flex: 1 1 100%;
+    display: block;
+  }
+  &__menu {
+    display: flex;
+    flex-flow: row nowrap; 
+    justify-content: space-around;
+    list-style: none; 
+  }
+}

@@ -1,0 +1,62 @@
+@import '../abstracts/variables';
+
+/*
+Typographie
+
+Style guide: Typography
+*/
+
+/*
+Fontgröße
+
+Zeichensatz Größen sind liquid: dynamische Größenanpassung abhängig von der Bildschirmbreite 
+
+--small   - verkleinert
+--medium  - mittlere Größe zwischen normal und groß
+--large   - größte Größe
+
+Markup:
+<span class="sample__font-size{{modifier_class}}">Lorem Ipsum</span>
+
+Style guide: Typography.font-size
+*/
+
+/*
+Zeilenhöhe
+
+Die Zeilenhöhe hat immer das gleiche Verhältnis zur Fontgröße. Der graue Bereich zeigt die Zeilenhöhe
+
+--small   - für verkleinerten Text 
+--medium  - für mittlere Größe zwischen normal und groß
+--large   - für größte Größe
+
+Markup:
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  Lorem Ipsum
+</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  Lorem Ipsum
+  <br/>
+  mit mehreren
+  <br/>
+  Zeilen. 
+</div>
+<div class="sample__font-size{{modifier_class}} sample__line-height sample__line-height{{modifier_class}}">
+  <span>
+    <span class="sample__line-marker">
+      Lorem Ipsum
+    </span>
+    <br/>
+    <span class="sample__line-marker">
+      mit mehreren
+    </span>
+    <br/>
+    <span class="sample__line-marker">
+      Zeilen und Hilfslinien. 
+    </span>
+  </span>
+</div>
+
+  
+Style guide: Typography.line-height
+*/

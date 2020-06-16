@@ -1,0 +1,112 @@
+.html,
+.body {
+  height: 100%; // fix IE11
+  min-height: 100%; // fix IE11
+}
+
+.html {
+  // Adjust font size
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  // Font variant
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  // Smoothing
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+
+
+.body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+}
+
+
+
+
+/*
+
+Global
+
+Style Guide: Global
+
+*/
+
+/*
+
+Assets
+
+
+Style Guide: Global.assets
+
+*/
+
+/*
+
+FMH-Logo
+
+Markup:
+<div class="sample__asset sample__asset fmh-logo"></div>
+
+Style Guide: Global.assets.logo
+
+*/
+.fmh-logo {
+  background: url($fmh-logo-uri) left top no-repeat; 
+}
+
+
+/*
+
+FMH-Claim
+
+Markup:
+<div class="sample__asset sample__asset fmh-claim"></div>
+
+Style Guide: Global.assets.claim
+
+*/
+
+.fmh-claim {
+  background: url($fmh-claim-uri) left top no-repeat; 
+}
+
+
+/*
+Expandable (checkbox hack)
+
+Markup:
+<label>
+  Expand me
+  <input type="checkbox" class="expandable" />
+  <div>Can you see me?</div>
+</label> 
+
+Style Guide: Global.expandable
+*/
+
+.expandable {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  & + * {
+    position: absolute;
+    overflow-y: hidden; 
+    height: auto;
+    max-height: 0;
+    transition: height 0.5s ease; 
+  }
+  &:checked, &:hover  {
+    & + * {
+      max-height: 500px;
+    }
+  }
+}

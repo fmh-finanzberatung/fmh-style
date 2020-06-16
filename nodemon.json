@@ -1,0 +1,11 @@
+{
+  "ignore": [
+    "styleguide", 
+    "dist",
+    ".git",
+    "node_modules/**/node_modules"
+  ],
+  "verbose": true,
+  "ext": "scss"
+  
+}

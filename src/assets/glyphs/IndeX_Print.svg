@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Banken-IndeX_Print</title>
+    <g id="Banken-IndeX_Print" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="local_printshop-24px">
+            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+            <path d="M1,7.55555556 L1,17.5555556 L5.4,17.5555556 L5.4,22 L18.6,22 L18.6,17.5555556 L23,17.5555556 L23,7.55555556 L1,7.55555556 Z M16.4,19.7777778 L7.6,19.7777778 L7.6,14.2222222 L16.4,14.2222222 L16.4,19.7777778 Z M19.7,12 C19.095,12 18.6,11.5 18.6,10.8888889 C18.6,10.2777778 19.095,9.77777778 19.7,9.77777778 C20.305,9.77777778 20.8,10.2777778 20.8,10.8888889 C20.8,11.5 20.305,12 19.7,12 Z M18.6,2 L5.4,2 L5.4,6.44444444 L18.6,6.44444444 L18.6,2 Z" id="Shape" fill="#000000" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

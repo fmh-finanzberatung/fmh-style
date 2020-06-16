@@ -1,0 +1,88 @@
+@import './abstracts/mixins.scss'; 
+@import './abstracts/variables.scss'; 
+
+html {
+  @include root-font-size; 
+
+}
+
+.sample {
+  &__font-size {
+    font-family: $font-family;
+    font-size: $font-size;
+    &--large {
+      font-size: $font-size--large;
+    }
+   
+    &--medium {
+      font-size: $font-size--medium;
+    }
+    
+    &--small {
+      font-size: $font-size--small;
+    }
+  }
+  &__line-height {
+    padding: 0.25em 0.5em;
+    display: inline-block;
+    background-color: #e4e4e4;
+    line-height: $line-height;
+    &--large {
+      line-height: $line-height--large;
+    }
+    &--medium {
+      line-height: $line-height--medium;
+    }
+    &--small {
+      line-height: $line-height--small;
+    }
+  }
+  &__line-marker {
+    border-bottom: 1px dotted black;
+    &:last-child {
+      border-bottom: none;
+    } 
+  }
+  &__color {
+    &--box {
+      height: 50px;
+      width: 50px;
+    }
+  }
+  &__asset {
+    display: block;
+    max-width: 800px;
+    width: 40vw;
+    max-height: 150px;
+    height: 10vh;
+    &--fmh-logo {
+      background: url($fmh-logo-uri) left top no-repeat; 
+    }
+    &--fmh-claim {
+      background: url($fmh-claim-uri) left top no-repeat; 
+    }
+  }
+}
+
+
+
+
+.kss-style {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 26px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+  h4 {
+    font-size: 22px;
+  }
+}
+
+
+.kss-modifier__example {
+  font-family: arial, sans-serif;
+}

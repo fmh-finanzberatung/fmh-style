@@ -1,0 +1,149 @@
+/*
+Text input 
+ 
+Markup:
+<input type="text" name="text" class="text{{modifier_class}}">
+ 
+Style guide: Components.Form.text-field
+*/
+.text-field {
+  color: white;
+  font-size: 0.75rem;
+  line-height: 10px;
+  border: yellowgreen 1px solid;
+}
+
+/*
+Select input
+
+Markup: ../guide/select.hbs
+
+Style guide: Components.Form.select-field
+*/
+.select {
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+  background-color: white;
+  background-image: url($select-arrow-down);
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+  border: none;
+  border-radius: $border-radius;
+  outline: none;
+  height: 2rem;
+  line-height: 2rem;
+  font-size: 1rem;
+  margin: 0 10px 8px 0;
+  padding: 0;
+  padding-left: 5px;
+  padding-right: 25px;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.label {
+  font-size: 1rem;
+}
+
+/* 
+Button input 
+
+--primary - dunkler Button
+--secondary - transparenter Button
+
+Markup: ../guide/button.hbs
+ 
+Style guide: Components.Form.button
+*/
+%button-base {
+  border-radius: $border-radius;
+  border: 1px solid $primary-color;
+  line-height: 1.42rem;
+  font-size: 0.87rem;
+  text-transform: uppercase;
+  padding: 8px 10.5px;
+}
+.button {
+  @extend %button-base;
+
+  &--primary {
+    @extend %button-base;
+    background-color: $primary-color;
+    color: white;
+  }
+  &--secondary {
+    @extend %button-base;
+    background-color: transparent;
+    color: $primary-color;
+  }
+}
+
+/*
+Checkbox input
+
+:checked - angeklickt bzw. aktiv
+
+Markup: 
+<label class="label"><input type="checkbox" name="checkbox" class="checkbox {{modifier_class}}" /><span class="checkbox__box">Checkbox</span></label>
+
+Style guide: Components.Form.checkbox
+*/
+.checkbox {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  &__box {
+    &, &::before, &::after, & * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: $line-height;
+    font-size: $font-size; 
+    display: inline-block;
+    vertical-align: middle;
+    &::before, &::after {
+      display: block; 
+      left: 0;
+      top: 0.1rem;
+      position: absolute;
+    }
+    &::before {
+      color: #333;
+      text-align:center;
+      border-radius: 0.15rem; 
+      border: 2px solid #555;
+      display: inline-block;
+      height: 1.1rem;
+      width: 1.1rem;
+      content: '';
+    }
+    &::after {
+      left: 0.35rem;
+      top: 0.145rem;
+      position: absolute;
+    }
+  } 
+  &:checked, &pseudo-class-checked {
+    & + * {
+      &::before {
+        border-width: 0;
+        background-color: #333;
+      }
+      &::after {
+        content: '';
+        transform: rotate(45deg);
+        border-right: 2px solid white; 
+        border-bottom: 2px solid white; 
+        height: 0.75rem;
+        width: 0.375rem;; 
+      }
+    }
+  }
+}

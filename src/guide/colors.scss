@@ -1,0 +1,25 @@
+/*
+Basisfarbe
+
+--darkest - dunkelste Farbe
+--darker  - dunkler als Standard
+--lighter - heller als Standard
+
+Markup:
+<div class="primary-color{{modifier_class}} sample__color--box"></div>
+
+Style guide: Colors.primary-color
+*/
+
+.primary-color {
+  background-color: $primary-color;
+  &--darkest {
+    background-color: $primary-color--darkest;
+  }
+  &--darker {
+    background-color: $primary-color--darker;
+  }
+  &--lighter {
+    background-color: $primary-color--lighter;
+  }
+}
