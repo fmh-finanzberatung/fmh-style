@@ -211,7 +211,7 @@ Style guide: Components.Form.select-field
   -ms-user-select: none;
   user-select: none; }
 
-label {
+.label {
   font-size: 1rem; }
 
 /* 
@@ -243,32 +243,55 @@ Style guide: Components.Form.button
 /*
 Checkbox input
 
+:checked - angeklickt bzw. aktiv
+
 Markup: 
-<label><input type="checkbox" name="checkbox" class="checkbox{{modifier_class}}"> Checkbox 1</label>
+<label class="label"><input type="checkbox" name="checkbox" class="checkbox {{modifier_class}}" /><span class="checkbox__box">Checkbox</span></label>
 
 Style guide: Components.Form.checkbox
 */
-input[type="checkbox"] {
-  font-size: 1rem;
-  line-height: 2rem;
-  line-height: 200px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  vertical-align: middle;
-  width: 1rem;
-  height: 1rem;
-  background: white;
-  border: 1px solid gray;
-  border-radius: 4px; }
-
-input[type="checkbox"]:checked:after {
-  position: relative;
-  bottom: 3px;
-  left: 1px;
-  color: white;
-  background-color: black;
-  content: "\2713";
-  /* check mark */ }
+.checkbox {
+  visibility: hidden;
+  height: 0;
+  width: 0; }
+  .checkbox__box {
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.4rem;
+    font-size: 1rem;
+    display: inline-block;
+    vertical-align: middle; }
+    .checkbox__box, .checkbox__box::before, .checkbox__box::after, .checkbox__box * {
+      box-sizing: border-box;
+      margin: 0; }
+    .checkbox__box::before, .checkbox__box::after {
+      display: block;
+      left: 0;
+      top: 0.1rem;
+      position: absolute; }
+    .checkbox__box::before {
+      color: #333;
+      text-align: center;
+      border-radius: 0.15rem;
+      border: 2px solid #555;
+      display: inline-block;
+      height: 1.1rem;
+      width: 1.1rem;
+      content: ''; }
+    .checkbox__box::after {
+      left: 0.35rem;
+      top: 0.145rem;
+      position: absolute; }
+  .checkbox:checked + *::before, .checkboxpseudo-class-checked + *::before {
+    border-width: 0;
+    background-color: #333; }
+  .checkbox:checked + *::after, .checkboxpseudo-class-checked + *::after {
+    content: '';
+    transform: rotate(45deg);
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    height: 0.75rem;
+    width: 0.375rem; }
 
 /*
 Icons
