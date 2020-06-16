@@ -1,0 +1,26 @@
+/*
+Header
+
+<div class="header">
+  <div class="fmh-logo header__fmh-logo">
+  </div>
+  <div class="fmh-claim header__fmh-claim">
+  </div>
+</div>
+
+Style guide: header
+*/
+
+.header {
+  display: flex;
+  flex-flow: row-wrap;
+  justify-content: space-around;
+  &__fmh-logo {
+    flex: 200px 1 1;
+  }
+  &__fmh-claim {
+    height: 100px;
+    flex: 200px 1 1;
+
+  }
+}
