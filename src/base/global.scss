@@ -77,3 +77,36 @@ Style Guide: Global.assets.claim
   background: url($fmh-claim-uri) left top no-repeat; 
 }
 
+
+/*
+Expandable (checkbox hack)
+
+Markup:
+<label>
+  Expand me
+  <input type="checkbox" class="expandable" />
+  <div>Can you see me?</div>
+</label> 
+
+Style Guide: Global.expandable
+*/
+
+.expandable {
+  display: block;
+  position: relative;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  & + * {
+    position: absolute;
+    overflow-y: hidden; 
+    height: auto;
+    max-height: 0;
+    transition: height 0.5s ease; 
+  }
+  &:checked, &:hover  {
+    & + * {
+      max-height: 500px;
+    }
+  }
+}
