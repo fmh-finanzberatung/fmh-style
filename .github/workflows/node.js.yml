@@ -27,4 +27,4 @@ jobs:
           NODE_ENV: development
       - uses: borales/actions-yarn@v2.0.0 
         with: 
-        cmd: "build:styleguide" 
+          cmd: "build:styleguide" 
