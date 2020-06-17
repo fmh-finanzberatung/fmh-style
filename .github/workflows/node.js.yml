@@ -25,6 +25,11 @@ jobs:
           cmd: install 
         env: 
           NODE_ENV: development
-      - uses: borales/actions-yarn@v2.0.0 
+      - name: "build CSS files" 
+        uses: borales/actions-yarn@v2.0.0 
+        with: 
+          cmd: "build:css" 
+      - name: "build styleguide files" 
+        uses: borales/actions-yarn@v2.0.0 
         with: 
           cmd: "build:styleguide" 

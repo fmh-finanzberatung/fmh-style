@@ -9,7 +9,7 @@
   "scripts": {
     "build": "yarn build:css && yarn build:styleguide",
     "build:css": "rimraf dist/* && node-sass src/main.scss -o dist",
-    "build:styleguide": "yarn build:css && kss --config kss-config.json",
+    "build:styleguide": "kss --config kss-config.json",
     "dev": "node server.js"
   },
   "optionalDependencies": {
