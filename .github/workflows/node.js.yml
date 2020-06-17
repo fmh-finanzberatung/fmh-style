@@ -20,7 +20,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: yarn install 
+      - uses: borales/actions-yarn@v2.0.0 
+        with: 
+          cmd: install 
         env: 
           NODE_ENV: development
-      - run: yarn build --if-present
+      - uses: borales/actions-yarn@v2.0.0 
+        with: 
+          cmd: yarn build 
