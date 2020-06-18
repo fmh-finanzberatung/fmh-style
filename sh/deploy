@@ -1,0 +1,53 @@
+#!/usr/local/bin/bash
+
+CHECKOUT_BRANCH=master
+
+source "./.deploy_env"
+
+if [ ! -f ".deploy_env" ] 
+then
+  echo could not find .deploy_env 
+fi
+
+if [ ! -z "$FMH_STYLE_USER" ] 
+then
+  echo please provide env var FMH_STYLE_USER
+fi
+
+if [ ! -z "$FMH_STYLE_HOST" ] 
+then
+  echo please provide env var FMH_STYLE_HOST
+fi
+
+if [ ! -z "$FMH_STYLE_PORT" ] 
+then
+  echo please provide env var FMH_STYLE_PORT
+fi
+
+if [ ! -z "$FMH_STYLE_PATH" ] 
+then
+  echo please provide env var FMH_STYLE_PATH
+fi
+
+echo port $FMH_STYLE_PORT
+echo user $FMH_STYLE_USER
+echo host $FMH_STYLE_HOST
+echo path $FMH_STYLE_PATH
+
+read -p "Which branch/tag should be deployed [MASTER]? " SELECTED_BRANCH
+
+if [ ! -z "$SELECTED_BRANCH" ] 
+then
+  CHECKOUT_BRANCH=$SELECTED_BRANCH  
+fi
+
+# scp -r -P $FMH_STYLE_PORT ./styleguide ${FMH_STYLE_USER}@${FMH_STYLE_HOST}:${FMH_STYLE_PATH}
+
+echo deployment branch $CHECKOUT_BRANCH 
+
+ssh -p $FMH_STYLE_PORT ${FMH_STYLE_USER}@${FMH_STYLE_HOST} \
+&& cd ${FMH_STYLE_PATH} \
+&& git checkout origin $CHECKOUT_BRANCH
+
+
+

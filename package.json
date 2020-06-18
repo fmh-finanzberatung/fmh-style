@@ -10,7 +10,8 @@
     "build": "yarn build:css && yarn build:styleguide",
     "build:css": "rimraf dist/* && node-sass src/main.scss -o dist",
     "build:styleguide": "kss --config kss-config.json",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "deploy": "sh/deploy"
   },
   "optionalDependencies": {
     "@babel/core": "^7.10.2",
@@ -21,7 +22,6 @@
     "express": "^4.17.1",
     "kss": "^3.0.1",
     "node-sass": "^4.13.0",
-    "nodemon": "^2.0.1",
     "rimraf": "^3.0.0",
     "typeface-roboto": "^0.0.54"
   }

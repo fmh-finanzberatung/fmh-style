@@ -1,6 +1,6 @@
 *.swo
 *.swp
 *.log
+.deploy_env
 node_modules
-styleguide/**/*
 src/.sass-cache
