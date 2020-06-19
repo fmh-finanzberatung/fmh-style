@@ -1,6 +1,6 @@
 {
   "name": "fmh-style",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "FMH SCSS styles",
   "main": "index.js",
   "repository": "https://github.com/fmh-finanzberatung/fmh-style.git",
