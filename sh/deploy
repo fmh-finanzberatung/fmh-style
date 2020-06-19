@@ -45,7 +45,7 @@ fi
 
 echo deployment branch $CHECKOUT_BRANCH 
 
-REMOTE_CMD="cd ${FMH_STYLE_PATH} && /usr/local/bin/git fetch --all && /usr/local/bin/git checkout --force ${CHECKOUT_BRANCH}"
+REMOTE_CMD="cd ${FMH_STYLE_PATH} && /usr/local/bin/git fetch --all && /usr/local/bin/git checkout --force ${CHECKOUT_BRANCH} && git pull origin"
 
 echo executing remote command ${REMOTE_CMD}
 
