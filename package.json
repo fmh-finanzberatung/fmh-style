@@ -1,6 +1,6 @@
 {
   "name": "fmh-style",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "FMH SCSS styles",
   "main": "index.js",
   "repository": "https://github.com/fmh-finanzberatung/fmh-style.git",
@@ -8,7 +8,7 @@
   "license": "MIT",
   "scripts": {
     "build": "yarn build:css && yarn build:styleguide",
-    "build:css": "rimraf dist/* && node-sass src/main.scss -o dist",
+    "build:css": "rimraf dist/* && node-sass src/main.scss -o dist && node-sass src/styleguide-helper.scss -o dist",
     "build:styleguide": "kss --config kss-config.json",
     "dev": "node server.js",
     "deploy": "sh/deploy"
