@@ -9,22 +9,22 @@ then
   echo could not find .deploy_env 
 fi
 
-if [ ! -z "$FMH_STYLE_USER" ] 
+if [ -z "$FMH_STYLE_USER" ] 
 then
   echo please provide env var FMH_STYLE_USER
 fi
 
-if [ ! -z "$FMH_STYLE_HOST" ] 
+if [ -z "$FMH_STYLE_HOST" ] 
 then
   echo please provide env var FMH_STYLE_HOST
 fi
 
-if [ ! -z "$FMH_STYLE_PORT" ] 
+if [ -z "$FMH_STYLE_PORT" ] 
 then
   echo please provide env var FMH_STYLE_PORT
 fi
 
-if [ ! -z "$FMH_STYLE_PATH" ] 
+if [ -z "$FMH_STYLE_PATH" ] 
 then
   echo please provide env var FMH_STYLE_PATH
 fi
