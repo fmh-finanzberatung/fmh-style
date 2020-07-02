@@ -341,10 +341,9 @@
 
 .domain__localizator {
   line-height: 2em;
-  margin: 12px;
+  margin: 10px;
   border: 1px solid $base-medium-color;
   padding: $defaultPadding;
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
   align-items: baseline;
@@ -401,8 +400,7 @@
   }
 
   .autosuggest__results-item--highlighted {
-    background-color: rgba(53, 160, 55, 0.2);
-
+    background-color: rgba(250, 200, 20, 0.2);
   }
 
   .search {
