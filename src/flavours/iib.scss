@@ -38,4 +38,9 @@ $button-hover_color: $primary-color-main;
       color: $primary-color-main;
     }
   }
+
+  .logobar .logo {
+    max-height: 50px;
+    width: auto;
+  }
 }

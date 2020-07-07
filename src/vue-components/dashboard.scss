@@ -463,7 +463,8 @@
     }
 
     .logo {
-      width: 360px;
+      width: auto;
+      max-height: 40px;
       padding-right: 19px;
     }
   }
