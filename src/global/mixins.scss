@@ -1,6 +1,6 @@
 //TODO Documentation
 @mixin set-cards-with($l-width, $m-width, $s-width, $xs-width) {
-    width: calc(#{$l-width} - #{$gutter} - 2px);
+    width: calc(#{$l-width} - #{$gutter} - 3px);
     @media only screen and (max-width: $bp-l) {
       width: calc(#{$m-width} - #{$gutter} - 2px);
     }

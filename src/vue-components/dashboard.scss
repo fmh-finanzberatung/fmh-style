@@ -447,7 +447,8 @@
     text-decoration: none;
     color: $neutralDarkColor;
     box-shadow: none;
-    outline: none
+    outline: none;
+    //font-size: 20px;
   }
 
   .company__list {
@@ -479,8 +480,10 @@
       }
 
       &:before {
-        font-family: $icon-font-family;
-        content: $arrow-down;
+        //font-family: $icon-font-family;
+        //background: url('data:image/svg+xml;charset=UTF-8,<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <polygon id="Path" fill="#000000" fill-rule="nonzero" points="9.52226721 6 8 7.41 12.9446694 12 8 16.59 9.52226721 18 16 12"></polygon> </g> </svg>');
+        //content: $arrow-down;
+        content: '⟩';
         font-size: $small-font-size;
         line-height: $small-font-size;
         vertical-align: middle;

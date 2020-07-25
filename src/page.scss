@@ -1,0 +1,52 @@
+.header-site__logo {
+  margin: 5px 5px 5px 0px;
+}
+
+.header-site{
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-site__login {
+}
+
+.header-site__logo-bar {
+  font-family: $standard-font-family;
+  font-size: 10px;
+  padding-bottom: 15px;
+
+  figure {
+    padding-right: 10px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+  }
+  img {
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+}
+
+.page__subtitle {
+  font-weight: 500;
+}
+
+.page__nav-site {
+  font-family: $standard-font-family;
+  padding-top: 66px;
+  padding-bottom: 30px;
+
+  img {
+    padding-right: 25px;
+  }
+
+  .claim {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+
+    color: white;
+    font-size: 20px;
+  }
+}

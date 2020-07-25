@@ -19,6 +19,7 @@
   display: flex;
   flex-wrap: wrap;
   margin: $halfGutter * -1;
+  justify-content: space-between;
 
   .cards__title, .cards__footer {
     width: 100%;
