@@ -3,11 +3,10 @@
 }
 
 .header-site{
+  font-family: $standard-font-family;
   display: flex;
   justify-content: space-between;
-}
-
-.header-site__login {
+  padding-top: 5px;
 }
 
 .header-site__logo-bar {
@@ -23,6 +22,20 @@
   img {
     margin-top: 10px;
     padding-left: 10px;
+  }
+}
+
+.header-site__login {
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  flex-grow: 1;
+  .login__cta {
+    padding-left: 20px;
+  }
+  .login__text{
+    color: $base-medium-color;
+    font-size: 0.8rem;
   }
 }
 
