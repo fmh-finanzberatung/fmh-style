@@ -2,7 +2,7 @@
   margin: 5px 5px 5px 0px;
 }
 
-.header-site{
+.header-site {
   font-family: $standard-font-family;
   display: flex;
   justify-content: space-between;
@@ -13,12 +13,14 @@
   font-family: $standard-font-family;
   font-size: 10px;
   padding-bottom: 15px;
+  padding-left: 10px;
 
   figure {
     padding-right: 10px;
     margin-top: 10px;
     padding-bottom: 5px;
   }
+
   img {
     margin-top: 10px;
     padding-left: 0px;
@@ -31,10 +33,12 @@
   align-self: center;
   flex-grow: 1;
   flex-wrap: wrap;
+
   .login__cta {
     padding-left: 20px;
   }
-  .login__text{
+
+  .login__text {
     color: $base-medium-color;
     font-size: 0.8rem;
   }
@@ -57,16 +61,17 @@
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 0;
+    padding-left: 10px;
     padding-right: 0;
 
     color: white;
     font-size: 20px;
   }
 
-  @media screen and (max-width: 1074px) {
-    .claim {
-      padding-left: 10px;
-    }
+}
+
+@media screen and (max-width: 1074px) {
+  .page__nav-site {
+    padding-top: 24px;
   }
 }
