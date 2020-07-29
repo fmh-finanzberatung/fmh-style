@@ -21,7 +21,7 @@
   }
   img {
     margin-top: 10px;
-    padding-left: 10px;
+    padding-left: 0px;
   }
 }
 
@@ -30,6 +30,7 @@
   justify-content: flex-end;
   align-self: center;
   flex-grow: 1;
+  flex-wrap: wrap;
   .login__cta {
     padding-left: 20px;
   }
@@ -61,5 +62,11 @@
 
     color: white;
     font-size: 20px;
+  }
+
+  @media screen and (max-width: 1074px) {
+    .claim {
+      padding-left: 10px;
+    }
   }
 }
