@@ -23,7 +23,7 @@
 
   img {
     margin-top: 10px;
-    padding-left: 0px;
+    padding-left: 17px;
   }
 }
 
@@ -73,5 +73,6 @@
 @media screen and (max-width: 1074px) {
   .page__nav-site {
     padding-top: 24px;
+    box-shadow: none;
   }
 }
