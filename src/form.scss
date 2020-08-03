@@ -66,10 +66,24 @@ $field-placeholder-color: #d4d4d4;
     @extend %button-base;
     background-color: $base-medium-color;
     color: white;
+
+    &:hover {
+      background-color: $button-hover_color;
+    }
+    &:focus {
+      background-color: $button-focus_color;
+    }
   }
   &--secondary {
     @extend %button-base;
     background-color: white;
     color: $base-medium-color;
+
+    &:hover {
+      background-color: $button-sec-hover_color;
+    }
+    &:focus {
+      background-color: $button-sec-focus_color;
+    }
   }
 }

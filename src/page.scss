@@ -7,6 +7,10 @@
   display: flex;
   justify-content: space-between;
   padding-top: 5px;
+
+  a {
+    color: $base-medium-color;
+  }
 }
 
 .header-site__logo-bar {
