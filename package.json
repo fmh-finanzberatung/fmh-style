@@ -21,7 +21,7 @@
   "devDependencies": {
     "express": "^4.17.1",
     "kss": "^3.0.1",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "rimraf": "^3.0.0",
     "typeface-roboto": "^0.0.54"
   }
